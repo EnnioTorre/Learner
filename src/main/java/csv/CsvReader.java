@@ -40,16 +40,24 @@ import static eu.cloudtm.autonomicManager.commons.Param.RemoteUpdateTxRollbackSe
 import eu.cloudtm.autonomicManager.commons.ReplicationProtocol;
 import java.io.File;
 import java.io.IOException;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import parse.radargun.Ispn5_2CsvParser;
+import testsimulator.testsimulatorforecast;
 /**
  *
  * @author etorre
  */
 public class CsvReader {
     public Ispn5_2CsvParser csvParser;
+    static Logger logger = Logger.getLogger(testsimulatorforecast.class.getName());   
+     
+   
+  
     
     public CsvReader(String path) {
       try {
+         PropertyConfigurator.configure("conf/log4jLearner.properties"); 
          this.csvParser = new Ispn5_2CsvParser(path);
       } catch (IOException e) {
          throw new IllegalArgumentException("Path " + path + " is nonexistent");
@@ -58,6 +66,7 @@ public class CsvReader {
     
      public CsvReader(File f) {
       try {
+          PropertyConfigurator.configure("conf/log4jLearner.properties");
          this.csvParser = new Ispn5_2CsvParser(f.getAbsolutePath());
       } catch (IOException e) {
          throw new IllegalArgumentException("Path " + f.getAbsolutePath() + " is nonexistent");
@@ -126,7 +135,9 @@ public class CsvReader {
          case AvgClusteredGetCommandReplySize:
              return  AvgClusteredGetCommandReplySize();
          default:
-            throw new IllegalArgumentException("Param " + param + " is not present");
+         {logger.warn("Param " + param + " is not present return 0");
+             return 0D;
+         }
       }
 
    }
