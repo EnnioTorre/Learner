@@ -75,7 +75,7 @@ public class CsvReader {
     
      
    public Double getParam(Param param) {
-      switch (param) {
+         switch (param) {
          case NumNodes:
             return  numNodes();
          case ReplicationDegree:
@@ -135,8 +135,8 @@ public class CsvReader {
          case AvgClusteredGetCommandReplySize:
              return  AvgClusteredGetCommandReplySize();
          default:
-         {logger.warn("Param " + param + " is not present return 0");
-             return 0D;
+         {logger.warn("Param " + param + " is not present ");
+             throw new IllegalArgumentException("Param " + param + " is not present");
          }
       }
 
@@ -153,6 +153,19 @@ public class CsvReader {
             return   cpus();
          default:
             throw new IllegalArgumentException("Param " + evaluatedParam + " is not present");
+      }
+   }
+   
+   public double getForecastParam(ForecastParam forecastParam) {
+      switch (forecastParam) {
+         case ReplicationProtocol:
+            return replicationProtocol();
+         case ReplicationDegree:
+            return replicationDegree();
+         case NumNodes:
+            return numNodes();
+         default:
+            throw new IllegalArgumentException("Param " + forecastParam + " is not present");
       }
    }
 
@@ -195,12 +208,12 @@ public class CsvReader {
       return 2;
    }
 
-   private ReplicationProtocol replicationProtocol() {
-       System.out.println(csvParser.getReplicationProtocol());
-       if(csvParser.getReplicationProtocol().equals("2PC"))
-        return ReplicationProtocol.TWOPC;  
+   private double replicationProtocol() {
+      
+       
+        return 2;  
           
-      return ReplicationProtocol.valueOf(csvParser.getReplicationProtocol());
+      
               }
 
    private double getsPerRoXact() {

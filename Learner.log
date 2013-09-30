@@ -1,29 +1,1165 @@
 INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-INFO [main] testsimulator.testsimulatorforecast - primo append
-WARN [main] testsimulator.testsimulatorforecast - Param NumAbortedTxDueToReadLock is not present return 0
+INFO [main] Utilities.DataSetCreator - csvfile/new/9.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/15.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/22.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/23.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/3.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/12.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/7.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/2.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/10.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/1.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/19.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/16.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/11.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/4.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/6.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/8.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+20,2,5,3107.9,194.919706,10,10,3199.05,1865.5,746.4,215.7,660.4,257.8,69.45,609.65,154.95,76.25,2576.2,0.100028,0.100028,329.3,24234.75,26604.45,3199.05,0.024395,0,1000,1049,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/13.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+20,2,5,3107.9,194.919706,10,10,3199.05,1865.5,746.4,215.7,660.4,257.8,69.45,609.65,154.95,76.25,2576.2,0.100028,0.100028,329.3,24234.75,26604.45,3199.05,0.024395,0,1000,1049,2,2,0.001,2
+10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/14.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+20,2,5,3107.9,194.919706,10,10,3199.05,1865.5,746.4,215.7,660.4,257.8,69.45,609.65,154.95,76.25,2576.2,0.100028,0.100028,329.3,24234.75,26604.45,3199.05,0.024395,0,1000,1049,2,2,0.001,2
+10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,2
+20,2,5,3107.95,198.622668,10,10,3437.2,1798.25,714.4,185.75,565.15,306.1,96,728.6,136.65,39.9,3102.3,0.900851,0.900851,512.35,29720.7,34173.5,3437.2,0.003448,0,1000,1049.1,2,2,0.001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/0.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+20,2,5,3107.9,194.919706,10,10,3199.05,1865.5,746.4,215.7,660.4,257.8,69.45,609.65,154.95,76.25,2576.2,0.100028,0.100028,329.3,24234.75,26604.45,3199.05,0.024395,0,1000,1049,2,2,0.001,2
+10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,2
+20,2,5,3107.95,198.622668,10,10,3437.2,1798.25,714.4,185.75,565.15,306.1,96,728.6,136.65,39.9,3102.3,0.900851,0.900851,512.35,29720.7,34173.5,3437.2,0.003448,0,1000,1049.1,2,2,0.001,2
+10,10,5,3107,383.541109,10,10,3782.8,4005.9,704.2,420.9,571.1,0,0,4468.1,109.6,83.1,3459,0.499313,0.499313,639.7,66033.8,7255.9,3782.8,0.003114,0,100000,0,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/18.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+20,2,5,3107.9,194.919706,10,10,3199.05,1865.5,746.4,215.7,660.4,257.8,69.45,609.65,154.95,76.25,2576.2,0.100028,0.100028,329.3,24234.75,26604.45,3199.05,0.024395,0,1000,1049,2,2,0.001,2
+10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,2
+20,2,5,3107.95,198.622668,10,10,3437.2,1798.25,714.4,185.75,565.15,306.1,96,728.6,136.65,39.9,3102.3,0.900851,0.900851,512.35,29720.7,34173.5,3437.2,0.003448,0,1000,1049.1,2,2,0.001,2
+10,10,5,3107,383.541109,10,10,3782.8,4005.9,704.2,420.9,571.1,0,0,4468.1,109.6,83.1,3459,0.499313,0.499313,639.7,66033.8,7255.9,3782.8,0.003114,0,100000,0,2,2,0.00001,2
+30,2,5,3206.833333,307.699944,10,10,4512.533333,2330,900.766667,280.766667,1018.7,361.466667,283.466667,801.966667,162.466667,109.9,3717.3,0.10039,0.10039,465.166667,30546.833333,41770.333333,4512.533333,0.041139,0,100000,1290,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/20.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+20,2,5,3107.9,194.919706,10,10,3199.05,1865.5,746.4,215.7,660.4,257.8,69.45,609.65,154.95,76.25,2576.2,0.100028,0.100028,329.3,24234.75,26604.45,3199.05,0.024395,0,1000,1049,2,2,0.001,2
+10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,2
+20,2,5,3107.95,198.622668,10,10,3437.2,1798.25,714.4,185.75,565.15,306.1,96,728.6,136.65,39.9,3102.3,0.900851,0.900851,512.35,29720.7,34173.5,3437.2,0.003448,0,1000,1049.1,2,2,0.001,2
+10,10,5,3107,383.541109,10,10,3782.8,4005.9,704.2,420.9,571.1,0,0,4468.1,109.6,83.1,3459,0.499313,0.499313,639.7,66033.8,7255.9,3782.8,0.003114,0,100000,0,2,2,0.00001,2
+30,2,5,3206.833333,307.699944,10,10,4512.533333,2330,900.766667,280.766667,1018.7,361.466667,283.466667,801.966667,162.466667,109.9,3717.3,0.10039,0.10039,465.166667,30546.833333,41770.333333,4512.533333,0.041139,0,100000,1290,2,2,0.00001,2
+20,2,5,3128.95,351.641657,10,10,4650.6,2326.6,698.45,301.3,648.05,398.65,481.15,1442.35,103.5,91.5,4058,0.500446,0.500446,928.85,40370.9,51488.5,4650.6,0.010001,0,100000,1050,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/21.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+20,2,5,3107.9,194.919706,10,10,3199.05,1865.5,746.4,215.7,660.4,257.8,69.45,609.65,154.95,76.25,2576.2,0.100028,0.100028,329.3,24234.75,26604.45,3199.05,0.024395,0,1000,1049,2,2,0.001,2
+10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,2
+20,2,5,3107.95,198.622668,10,10,3437.2,1798.25,714.4,185.75,565.15,306.1,96,728.6,136.65,39.9,3102.3,0.900851,0.900851,512.35,29720.7,34173.5,3437.2,0.003448,0,1000,1049.1,2,2,0.001,2
+10,10,5,3107,383.541109,10,10,3782.8,4005.9,704.2,420.9,571.1,0,0,4468.1,109.6,83.1,3459,0.499313,0.499313,639.7,66033.8,7255.9,3782.8,0.003114,0,100000,0,2,2,0.00001,2
+30,2,5,3206.833333,307.699944,10,10,4512.533333,2330,900.766667,280.766667,1018.7,361.466667,283.466667,801.966667,162.466667,109.9,3717.3,0.10039,0.10039,465.166667,30546.833333,41770.333333,4512.533333,0.041139,0,100000,1290,2,2,0.00001,2
+20,2,5,3128.95,351.641657,10,10,4650.6,2326.6,698.45,301.3,648.05,398.65,481.15,1442.35,103.5,91.5,4058,0.500446,0.500446,928.85,40370.9,51488.5,4650.6,0.010001,0,100000,1050,2,2,0.00001,2
+30,2,5,3206.6,226.663714,10,10,29423.566667,2578.133333,1125.966667,366.733333,994.333333,2748.766667,2246.766667,1865.533333,178.933333,115.566667,28669.4,0.505613,0.505613,11411.1,362969.233333,285882.1,29423.566667,0.003722,0,100000,1290,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/5.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+20,2,5,3107.9,194.919706,10,10,3199.05,1865.5,746.4,215.7,660.4,257.8,69.45,609.65,154.95,76.25,2576.2,0.100028,0.100028,329.3,24234.75,26604.45,3199.05,0.024395,0,1000,1049,2,2,0.001,2
+10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,2
+20,2,5,3107.95,198.622668,10,10,3437.2,1798.25,714.4,185.75,565.15,306.1,96,728.6,136.65,39.9,3102.3,0.900851,0.900851,512.35,29720.7,34173.5,3437.2,0.003448,0,1000,1049.1,2,2,0.001,2
+10,10,5,3107,383.541109,10,10,3782.8,4005.9,704.2,420.9,571.1,0,0,4468.1,109.6,83.1,3459,0.499313,0.499313,639.7,66033.8,7255.9,3782.8,0.003114,0,100000,0,2,2,0.00001,2
+30,2,5,3206.833333,307.699944,10,10,4512.533333,2330,900.766667,280.766667,1018.7,361.466667,283.466667,801.966667,162.466667,109.9,3717.3,0.10039,0.10039,465.166667,30546.833333,41770.333333,4512.533333,0.041139,0,100000,1290,2,2,0.00001,2
+20,2,5,3128.95,351.641657,10,10,4650.6,2326.6,698.45,301.3,648.05,398.65,481.15,1442.35,103.5,91.5,4058,0.500446,0.500446,928.85,40370.9,51488.5,4650.6,0.010001,0,100000,1050,2,2,0.00001,2
+30,2,5,3206.6,226.663714,10,10,29423.566667,2578.133333,1125.966667,366.733333,994.333333,2748.766667,2246.766667,1865.533333,178.933333,115.566667,28669.4,0.505613,0.505613,11411.1,362969.233333,285882.1,29423.566667,0.003722,0,100000,1290,2,2,0.00001,2
+20,14,5,3167.5,261.041395,10,10,19625.95,3635.8,1327.1,46.85,386.6,1530.75,2200.35,8105.7,236.05,126.9,19012.3,0.10381,0.10381,9373.75,1069986.15,301509.65,19625.95,0.002241,0,100000,1050,2,2,0.00001,2
+INFO [main] Utilities.DataSetCreator - csvfile/new/17.csv@relation dataset3
+
+@attribute NumNodes numeric
+@attribute ReplicationDegree numeric
+@attribute AvgPutsPerWrTransaction numeric
+@attribute AvgPrepareCommandSize numeric
+@attribute MemoryInfo_used numeric
+@attribute AvgGetsPerROTransaction numeric
+@attribute AvgGetsPerWrTransaction numeric
+@attribute LocalUpdateTxLocalServiceTime numeric
+@attribute LocalUpdateTxPrepareServiceTime numeric
+@attribute LocalUpdateTxCommitServiceTime numeric
+@attribute LocalUpdateTxLocalRollbackServiceTime numeric
+@attribute LocalUpdateTxRemoteRollbackServiceTime numeric
+@attribute RemoteGetServiceTime numeric
+@attribute GMUClusteredGetCommandServiceTime numeric
+@attribute RemoteUpdateTxPrepareServiceTime numeric
+@attribute RemoteUpdateTxCommitServiceTime numeric
+@attribute RemoteUpdateTxRollbackServiceTime numeric
+@attribute ReadOnlyTxTotalCpuTime numeric
+@attribute PercentageSuccessWriteTransactions numeric
+@attribute PercentageWriteTransactions numeric
+@attribute AvgLocalGetTime numeric
+@attribute LocalUpdateTxPrepareResponseTime numeric
+@attribute LocalUpdateTxLocalResponseTime numeric
+@attribute AverageWriteTime numeric
+@attribute AvgTxArrivalRate numeric
+@attribute AvgNTCBTime numeric
+@attribute NumberOfEntries numeric
+@attribute AvgClusteredGetCommandReplySize numeric
+@attribute MAX_ACTIVE_THREADS numeric
+@attribute CORE_PER_CPU numeric
+@attribute ACF numeric
+@attribute ReplicationProtocol numeric
+
+@data
+30,2,5,3186.133333,174.997214,10,10,3817.166667,2020.333333,841.4,216.433333,756.3,303.866667,81.533333,550.1,168.866667,80.633333,3117.233333,0.100255,0.100255,456.366667,26848.2,33381.2,3817.166667,0.041131,0,1000,1289,2,2,0.001,2
+30,2,5,3186.166667,167.642948,10,10,4062.3,1932.766667,834.133333,207,679.833333,357.266667,105,512.166667,171.733333,43.6,3778.9,0.898901,0.898901,578.933333,31696.933333,39419.733333,4062.3,0.004436,0,1000,1289.066667,2,2,0.001,2
+10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,2
+20,2,5,3129,293.032355,10,10,12749.4,2099.65,762.75,275.35,699.55,1166.2,1139.25,1386.55,120.35,90.2,12776.4,0.898296,0.898296,4124.2,123756.5,118630.15,12749.4,0.003011,0,100000,1049.9,2,2,0.00001,2
+20,14,5,3140.45,120.380025,10,10,9737.45,3006.9,1239.85,604.65,683.75,1119.1,905,3434.8,325.3,91.4,9146.65,0.098252,0.098252,4681.55,487165.5,94028.5,9737.45,0.001864,0,1000,1049.85,2,2,0.001,2
+30,2,5,3186.033333,174.976269,10,10,4034.5,1937.2,828.633333,208.2,683.733333,350.533333,102.733333,541.533333,168.3,45.266667,3597,0.500634,0.500634,597.266667,31350.933333,38971.133333,4034.5,0.00828,0,1000,1289.033333,2,2,0.001,2
+10,2,5,3033.1,215.940802,10,10,2614.9,1866.6,631.5,218.7,522,230,61.5,799.1,153.3,76.4,2091.1,0.100883,0.100883,149.3,19625.4,19103.5,2614.9,0.008966,0,1000,809,2,2,0.001,2
+30,11,5,3225.7,250.680945,10,10,20343.1,4887.9,1995.1,99.733333,972.8,1761.1,2241.666667,4481.066667,252.533333,125.566667,20003.9,0.09735,0.09735,16462.933333,1447498,534525.8,20343.1,0.002706,0,100000,1290,2,2,0.00001,2
+10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,2
+10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,2
+10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,2
+10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,2
+20,2,5,3107.8,198.506145,10,10,3371.3,1810.85,713.15,189.8,574.6,297.2,91.8,738.55,133.55,42.7,3007.4,0.499509,0.499509,511,29269.35,33276.75,3371.3,0.006259,0,1000,1049.05,2,2,0.001,2
+20,14,5,3140.3,120.359625,10,10,13084.8,3001.95,1128.25,556.7,672.35,1232,1330.5,4863.4,306.25,85.4,12208.8,0.502209,0.502209,5433.8,335788.05,117568.65,13084.8,0.000519,0,1000,1049.8,2,2,0.001,2
+20,14,5,3167.45,255.777174,10,10,36670.8,3663,1094.95,187.4,1060.35,1834.95,4737.45,16604.7,201.4,109.6,36700.65,0.494576,0.494576,20552.35,794775.2,394684.6,36670.8,0.000894,0,100000,1050,2,2,0.00001,2
+20,2,5,3107.9,194.919706,10,10,3199.05,1865.5,746.4,215.7,660.4,257.8,69.45,609.65,154.95,76.25,2576.2,0.100028,0.100028,329.3,24234.75,26604.45,3199.05,0.024395,0,1000,1049,2,2,0.001,2
+10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,2
+20,2,5,3107.95,198.622668,10,10,3437.2,1798.25,714.4,185.75,565.15,306.1,96,728.6,136.65,39.9,3102.3,0.900851,0.900851,512.35,29720.7,34173.5,3437.2,0.003448,0,1000,1049.1,2,2,0.001,2
+10,10,5,3107,383.541109,10,10,3782.8,4005.9,704.2,420.9,571.1,0,0,4468.1,109.6,83.1,3459,0.499313,0.499313,639.7,66033.8,7255.9,3782.8,0.003114,0,100000,0,2,2,0.00001,2
+30,2,5,3206.833333,307.699944,10,10,4512.533333,2330,900.766667,280.766667,1018.7,361.466667,283.466667,801.966667,162.466667,109.9,3717.3,0.10039,0.10039,465.166667,30546.833333,41770.333333,4512.533333,0.041139,0,100000,1290,2,2,0.00001,2
+20,2,5,3128.95,351.641657,10,10,4650.6,2326.6,698.45,301.3,648.05,398.65,481.15,1442.35,103.5,91.5,4058,0.500446,0.500446,928.85,40370.9,51488.5,4650.6,0.010001,0,100000,1050,2,2,0.00001,2
+30,2,5,3206.6,226.663714,10,10,29423.566667,2578.133333,1125.966667,366.733333,994.333333,2748.766667,2246.766667,1865.533333,178.933333,115.566667,28669.4,0.505613,0.505613,11411.1,362969.233333,285882.1,29423.566667,0.003722,0,100000,1290,2,2,0.00001,2
+20,14,5,3167.5,261.041395,10,10,19625.95,3635.8,1327.1,46.85,386.6,1530.75,2200.35,8105.7,236.05,126.9,19012.3,0.10381,0.10381,9373.75,1069986.15,301509.65,19625.95,0.002241,0,100000,1050,2,2,0.00001,2
+20,2,5,3128.85,329.082458,10,10,3634.45,2115.55,756.6,166.7,786.05,298.3,255.85,827.7,145.3,102.05,2987,0.09952,0.09952,313.75,26503.2,32670.45,3634.45,0.022908,0,100000,1050,2,2,0.00001,2

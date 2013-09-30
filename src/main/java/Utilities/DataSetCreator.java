@@ -7,6 +7,7 @@ import csv.CsvReader;
 import eu.cloudtm.autonomicManager.commons.Param;
 import eu.cloudtm.autonomicManager.commons.EvaluatedParam;
 import eu.cloudtm.autonomicManager.commons.ForecastParam;
+import static eu.cloudtm.autonomicManager.commons.ForecastParam.NumNodes;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +20,8 @@ import weka.core.Instance;
 import java.io.IOException;
 
 import weka.core.Instances;
-import weka.core.converters.CSVLoader;
+
+import weka.core.converters.ConverterUtils.DataSource;
 /**
  *
  * @author etorre
@@ -33,8 +35,10 @@ public class DataSetCreator {
     
     private int numberOfFeatures;
     
-    public DataSetCreator(String Directory_path) throws IOException{
+    public DataSetCreator(String Directory_path) throws Exception{
          PropertyConfigurator.configure("conf/log4jLearner.properties");
+         
+         AcquiringDatasetInformation("conf/K-NN/dataset.arff");
          
         File dir = new File(Directory_path);
       for (File nextdir : dir.listFiles()) {
@@ -46,10 +50,10 @@ public class DataSetCreator {
                else{
                  
                    reader=new CsvReader(csv);
-                 AcquiringDatasetInformation(csv);
+                 
                  
                  data.add(FillInstance());
-                 logger.info(data.instance(1));
+                 logger.info(csv.toString()+data.toString());
                
                }  
             }
@@ -61,50 +65,65 @@ public class DataSetCreator {
     
     private Instance FillInstance(){
         
-       int numberOfattribute=numberOfFeatures;
+       
         // Create empty instance with numberOffeatures attribute values
-       Instance inst = new DenseInstance(numberOfattribute);
+       Instance inst = new DenseInstance(numberOfFeatures);//total number of features needed by oracles
         // Set instance's values for the attributes
-       for(Param p :Param.values()){
+       for(int i=0;i<data.numAttributes();i++){
+           String parameter=data.attribute(i).name();
+           System.out.println(parameter+"2");
+           
+           try{
+              
+               
+               inst.setValue(data.attribute(i), reader.getParam(Param.valueOf(parameter)));
+               System.out.println(parameter);
+           
+           }
+           
+           catch (IllegalArgumentException e){
+           
+               try{
+                    inst.setValue(data.attribute(i), reader.getForecastParam(ForecastParam.valueOf(parameter)));
+                }
+                  catch (IllegalArgumentException ef){
+                   
+                 try{
+                    inst.setValue(data.attribute(i), reader.getEvaluatedParam(EvaluatedParam.valueOf(parameter)));
+                 }
+                 catch (IllegalArgumentException ex){
+                    throw new IllegalArgumentException(parameter+"is not a valid parameter");
+                 }
+               }
+               
+           }
+           
+           
+           }
        
-       inst.setValue(new Attribute(p.getKey()), reader.getParam(p));
-       }
-      
-       for(EvaluatedParam p :EvaluatedParam.values()){
-     
-        
-        inst.setValue(new Attribute(p.getKey()), reader.getEvaluatedParam(p));
-       }
-       
-       //serve solo a  contare l'inserimento successivo di ReplicationProtoco
-       Attribute ReplicationProtocol = new Attribute("ReplicationProtocol");
-       inst.setValue(ReplicationProtocol,"TWOPC");
+       System.out.println(inst);
        
        return inst;
          
 }
+    
     private static boolean csv(File f) {
       System.out.println(f);
       return f.toString().endsWith("csv");
    }
     
-    private void AcquiringDatasetInformation(File f)throws IOException{
+    private void AcquiringDatasetInformation(String f)throws Exception{
+       System.out.println(new File(f).exists());
+        DataSource source = new DataSource(f);
         
-       CSVLoader loader = new CSVLoader();
-        loader.setSource(f);
-        Instances tmp = loader.getDataSet();
-        
-        if(numberOfFeatures==0){
-            data=tmp;
+         data = source.getStructure();
+
             numberOfFeatures=data.numAttributes();
-            data.delete();
+         
              }
-        else if(numberOfFeatures!=tmp.numAttributes()){
-           logger.warn("csv file not appropriate:numberOfFeatures!=numAttributes");
-           throw new IOException("csv file not appropriate:numberOfFeatures!=numAttributes");
-        }
         
         
     }
 
-}
+
+
