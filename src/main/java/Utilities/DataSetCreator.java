@@ -18,6 +18,7 @@ import weka.core.Attribute;
 import weka.core.DenseInstance;
 import weka.core.Instance;
 import java.io.IOException;
+import java.util.Map.Entry;
 
 import weka.core.Instances;
 
@@ -29,7 +30,7 @@ import weka.core.converters.ConverterUtils.DataSource;
 public class DataSetCreator {
     static Logger logger = Logger.getLogger(DataSetCreator.class.getName());
     private Instances data;
-    private HashMap<EvaluatedParam, Attribute> EMap = new HashMap<EvaluatedParam, Attribute>();
+    private HashMap<String, Instances> DataSets = new HashMap<String, Instances>();
     private HashMap<ForecastParam, Attribute> FMap = new HashMap<ForecastParam, Attribute>();
     private CsvReader reader;
     
@@ -51,7 +52,28 @@ public class DataSetCreator {
                  
                    reader=new CsvReader(csv);
                  
+                 for(int i=0;i<4;i++){
                  
+                     switch(i){
+                         
+                         case 0:{
+                             data.add(FillInstance());
+                             DataSets.put("data", new Instances(data));
+                         
+                         
+                         }
+                             
+                          case 1:{
+                                 Instance i1 = new DenseInstance(1);
+                                 i1.setValue(new Attribute(Throughput), Directory_path);
+                                 data.add(FillInstance());
+                                 DataSets.put("data", new Instances(data));
+                         
+                         
+                         }
+                     
+                     }
+                 }
                  data.add(FillInstance());
                  logger.info(csv.toString()+data.toString());
                
@@ -61,6 +83,8 @@ public class DataSetCreator {
          
       }
     }
+    
+
     
     
     private Instance FillInstance(){
@@ -116,11 +140,20 @@ public class DataSetCreator {
        System.out.println(new File(f).exists());
         DataSource source = new DataSource(f);
         
-         data = source.getStructure();
+        for(Map.Entry<String, Instances>entry :DataSets.entrySet()){
+        
+          
+        
+        }
+             data = source.getStructure();
 
             numberOfFeatures=data.numAttributes();
          
              }
+    
+    public Instances getDataSet() {
+        return data;
+    }
         
         
     }

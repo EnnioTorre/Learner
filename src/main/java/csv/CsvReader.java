@@ -177,6 +177,7 @@ public class CsvReader {
     */
 
    private double numNodes() {
+       
       return csvParser.getNumNodes();
    }
 
@@ -305,6 +306,37 @@ public class CsvReader {
    
        return csvParser.getAvgParam("AvgClusteredGetCommandReplySize");
    }
+   
+   public double ThroughputRO (){
+   
+       return csvParser.usecThroughput()*csvParser.numReadXact();
+   }
+   
+   public double ThroughputWR (){
+   
+       return csvParser.usecThroughput()*csvParser.numWriteXact();
+   }
+   
+   public double ResponseTimeRO (){
+   
+       return csvParser.localResponseTimeROXact();
+   }
+   
+   public double ResponseTimeWR (){
+   
+       return ((numThreadsPerNode() * numNodes())/csvParser.usecThroughput()-((1-csvParser.writePercentageXact()))/csvParser.localResponseTimeROXact());
+   }
+   
+   public double AbortRateRO (){
+   
+       return 0D;
+   }
+   
+   public double AbortRateWR (){
+   
+       return csvParser.numAborts();
+   }
+   
 
 }
 
