@@ -36,8 +36,7 @@ static String path="csvfile/new/infinispan4_cloudtm_4.csv";
       
       logger.info("primo append");
      
-          NewClass z=new NewClass();
-          z.CsvLoader(path);
+          
           DataSetCreator i=new DataSetCreator("csvfile");
          
          SimulatorOracle simulatorOracle = new SimulatorOracle();

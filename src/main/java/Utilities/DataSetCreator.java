@@ -8,6 +8,11 @@ import eu.cloudtm.autonomicManager.commons.Param;
 import eu.cloudtm.autonomicManager.commons.EvaluatedParam;
 import eu.cloudtm.autonomicManager.commons.ForecastParam;
 import static eu.cloudtm.autonomicManager.commons.ForecastParam.NumNodes;
+import eu.cloudtm.autonomicManager.oracles.InputOracle;
+import eu.cloudtm.autonomicManager.oracles.Oracle;
+import eu.cloudtm.autonomicManager.oracles.OutputOracle;
+import eu.cloudtm.autonomicManager.oracles.exceptions.OracleException;
+import eu.cloudtm.autonomicManager.simulator.SimulatorOracle;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +23,12 @@ import weka.core.Attribute;
 import weka.core.DenseInstance;
 import weka.core.Instance;
 import java.io.IOException;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Map.Entry;
+import morphr.MorphR;
+import tasOracle.TasOracle;
 
 import weka.core.Instances;
 
@@ -29,17 +39,20 @@ import weka.core.converters.ConverterUtils.DataSource;
  */
 public class DataSetCreator {
     static Logger logger = Logger.getLogger(DataSetCreator.class.getName());
-    private Instances data;
-    private HashMap<String, Instances> DataSets = new HashMap<String, Instances>();
-    private HashMap<ForecastParam, Attribute> FMap = new HashMap<ForecastParam, Attribute>();
+    private Instances ARFFDataSet;
+    private HashMap<Instance,OutputOracle>ValidationSet;
+    private HashMap<Oracle,HashMap<Instance,OutputOracle>> predictionResults;
+    private HashMap<Instance,OutputOracle>TrainingSet=new HashMap<Instance,OutputOracle>();
     private CsvReader reader;
     
     private int numberOfFeatures;
     
+    
+    
     public DataSetCreator(String Directory_path) throws Exception{
          PropertyConfigurator.configure("conf/log4jLearner.properties");
          
-         AcquiringDatasetInformation("conf/K-NN/dataset.arff");
+         Init("conf/K-NN/dataset.arff");
          
         File dir = new File(Directory_path);
       for (File nextdir : dir.listFiles()) {
@@ -51,112 +64,108 @@ public class DataSetCreator {
                else{
                  
                    reader=new CsvReader(csv);
-                 
-                 for(int i=0;i<4;i++){
-                 
-                     switch(i){
-                         
-                         case 0:{
-                             data.add(FillInstance());
-                             DataSets.put("data", new Instances(data));
+                   Instance i=DataConverter.FromInputOracleToInstance(reader);
+                   ARFFDataSet.add(i);
+                   UpdateValidationSet(i);
+                   
+                   
                          
                          
                          }
                              
-                          case 1:{
-                                 Instance i1 = new DenseInstance(1);
-                                 i1.setValue(new Attribute(Throughput), Directory_path);
-                                 data.add(FillInstance());
-                                 DataSets.put("data", new Instances(data));
-                         
-                         
-                         }
+                       
                      
                      }
-                 }
-                 data.add(FillInstance());
-                 logger.info(csv.toString()+data.toString());
+               
                
                }  
             }
+      logger.info(ARFFDataSet);
+      
          }
          
-      }
-    }
+      
+    
     
 
-    
-    
-    private Instance FillInstance(){
-        
-       
-        // Create empty instance with numberOffeatures attribute values
-       Instance inst = new DenseInstance(numberOfFeatures);//total number of features needed by oracles
-        // Set instance's values for the attributes
-       for(int i=0;i<data.numAttributes();i++){
-           String parameter=data.attribute(i).name();
-           System.out.println(parameter+"2");
-           
-           try{
-              
-               
-               inst.setValue(data.attribute(i), reader.getParam(Param.valueOf(parameter)));
-               System.out.println(parameter);
-           
-           }
-           
-           catch (IllegalArgumentException e){
-           
-               try{
-                    inst.setValue(data.attribute(i), reader.getForecastParam(ForecastParam.valueOf(parameter)));
-                }
-                  catch (IllegalArgumentException ef){
-                   
-                 try{
-                    inst.setValue(data.attribute(i), reader.getEvaluatedParam(EvaluatedParam.valueOf(parameter)));
-                 }
-                 catch (IllegalArgumentException ex){
-                    throw new IllegalArgumentException(parameter+"is not a valid parameter");
-                 }
-               }
-               
-           }
-           
-           
-           }
-       
-       System.out.println(inst);
-       
-       return inst;
-         
-}
     
     private static boolean csv(File f) {
       System.out.println(f);
       return f.toString().endsWith("csv");
    }
     
-    private void AcquiringDatasetInformation(String f)throws Exception{
+    private void Init(String f)throws Exception{
        System.out.println(new File(f).exists());
         DataSource source = new DataSource(f);
         
-        for(Map.Entry<String, Instances>entry :DataSets.entrySet()){
-        
-          
-        
-        }
-             data = source.getStructure();
+             ARFFDataSet = source.getStructure();
 
-            numberOfFeatures=data.numAttributes();
+            numberOfFeatures=ARFFDataSet.numAttributes();
+            
+            ValidationSet=new HashMap<Instance,OutputOracle>();
+         
+            predictionResults=new HashMap<Oracle,HashMap<Instance,OutputOracle>>(3);
+            
+            for(int i=0;i<predictionResults.size();i++){
+            
+                if(i==0)
+                    predictionResults.put(new TasOracle(), new HashMap<Instance,OutputOracle>());
+                if(i==1)
+                     predictionResults.put(new MorphR(), new HashMap<Instance,OutputOracle>());
+                if(i==2)
+                    predictionResults.put(new SimulatorOracle(), new HashMap<Instance,OutputOracle>());
+            }
+            
          
              }
     
-    public Instances getDataSet() {
-        return data;
+    private void UpdatePredictionSet(Instance i)throws Exception{
+    
+    
+    InputOracle in=DataConverter.FromInstancesToInputOracle(i);
+    
+    TasOracle t = new TasOracle();
+    MorphR morphr = new MorphR();
+    SimulatorOracle simulatorOracle = new SimulatorOracle();
+    int classIndex=1;
+    
+    for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:predictionResults.entrySet()){
+                DatasetOutputOracle dat=new DatasetOutputOracle();
+                entry.getKey().forecast(in).
+                entry.setValue(new HashMap<Instance,OutputOracle>());
+          for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
+        
+            Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(), double.class);
+            
+            method.invoke(dat, entry.getKey().forecast(in).);
+            
+        }
+            }
+    t.forecast(in)
+        
+        ValidationSet.put(i,dat);
+        
+    }
+    
+    private void UpdateValidationSet(Instance i)throws Exception{
+        
+        DatasetOutputOracle dat=new DatasetOutputOracle();
+        for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
+        
+            Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(), double.class);
+            Method method2=CsvReader.class.getDeclaredMethod(f.getName());
+            method.invoke(dat, method2.invoke(reader));
+            
+        }
+        ValidationSet.put(i,dat);
+        
+    
     }
         
         
-    }
+}
+
+
 
 
 

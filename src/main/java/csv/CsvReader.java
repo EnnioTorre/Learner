@@ -38,6 +38,7 @@ import static eu.cloudtm.autonomicManager.commons.Param.RemoteUpdateTxCommitServ
 import static eu.cloudtm.autonomicManager.commons.Param.RemoteUpdateTxPrepareServiceTime;
 import static eu.cloudtm.autonomicManager.commons.Param.RemoteUpdateTxRollbackServiceTime;
 import eu.cloudtm.autonomicManager.commons.ReplicationProtocol;
+import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import java.io.File;
 import java.io.IOException;
 import org.apache.log4j.Logger;
@@ -48,7 +49,7 @@ import testsimulator.testsimulatorforecast;
  *
  * @author etorre
  */
-public class CsvReader {
+public class CsvReader implements InputOracle {
     public Ispn5_2CsvParser csvParser;
     static Logger logger = Logger.getLogger(testsimulatorforecast.class.getName());   
      
@@ -74,6 +75,7 @@ public class CsvReader {
    }
     
      
+    @Override
    public Double getParam(Param param) {
          switch (param) {
          case NumNodes:
@@ -143,27 +145,29 @@ public class CsvReader {
    }
 
   
-   public double getEvaluatedParam(EvaluatedParam evaluatedParam) {
+    @Override
+   public Object getEvaluatedParam(EvaluatedParam evaluatedParam) {
       switch (evaluatedParam) {
          case MAX_ACTIVE_THREADS:
-            return   numThreadsPerNode();
+            return  (double) numThreadsPerNode();
          case ACF:
-            return acf();
+            return (double)acf();
          case CORE_PER_CPU:
-            return   cpus();
+            return  (double) cpus();
          default:
             throw new IllegalArgumentException("Param " + evaluatedParam + " is not present");
       }
    }
    
-   public double getForecastParam(ForecastParam forecastParam) {
+    @Override
+   public Object getForecastParam(ForecastParam forecastParam) {
       switch (forecastParam) {
          case ReplicationProtocol:
-            return replicationProtocol();
+            return (double)replicationProtocol();
          case ReplicationDegree:
-            return replicationDegree();
+            return (double)replicationDegree();
          case NumNodes:
-            return numNodes();
+            return (double)numNodes();
          default:
             throw new IllegalArgumentException("Param " + forecastParam + " is not present");
       }
@@ -324,7 +328,7 @@ public class CsvReader {
    
    public double ResponseTimeWR (){
    
-       return ((numThreadsPerNode() * numNodes())/csvParser.usecThroughput()-((1-csvParser.writePercentageXact()))/csvParser.localResponseTimeROXact());
+       return ((((numThreadsPerNode() * numNodes())/csvParser.usecThroughput())-((1-csvParser.writePercentageXact())*csvParser.localResponseTimeROXact()))/csvParser.writePercentageXact());
    }
    
    public double AbortRateRO (){
