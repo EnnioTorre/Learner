@@ -16,7 +16,7 @@ import csv.CsvInputOracle;
 import tasOracle.TasOracle;
 import Utilities.DataSetCreator;
 import Utilities.NewClass;
-
+import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import eu.cloudtm.autonomicManager.oracles.OutputOracle;
 import morphr.MorphR;
 import org.apache.log4j.Logger;

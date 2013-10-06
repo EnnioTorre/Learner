@@ -11,6 +11,7 @@ import weka.core.Instance;
 import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import java.util.HashMap;
 import weka.core.DenseInstance;
+import weka.core.Instances;
 import weka.core.converters.ConverterUtils;
 import weka.core.converters.ConverterUtils.DataSource;
 /**
@@ -19,34 +20,47 @@ import weka.core.converters.ConverterUtils.DataSource;
  */
 public class DataConverter {
 
-   static InputOracle FromInstancesToInputOracle(Instance data){
+   static InputOracle FromInstancesToInputOracle(Instance data) throws Exception{
         
-         HashMap<Param,Double>param=new HashMap<Param,Double>();
-         HashMap<EvaluatedParam,Double>evaluatedparam= new HashMap<EvaluatedParam,Double>();
-         HashMap<ForecastParam,Double>forecastparam=new HashMap<ForecastParam,Double> ();
+         
+         HashMap<Param,Object>param=new HashMap<Param,Object>();
+         HashMap<EvaluatedParam,Object>evaluatedparam= new HashMap<EvaluatedParam,Object>();
+         HashMap<ForecastParam,Object>forecastparam=new HashMap<ForecastParam,Object> ();
         double[] instValue=data.toDoubleArray();
+        Object value;
+        String parameter;
+        DataSource source = new DataSource("conf/K-NN/dataset.arff");
         
-        for(int i=0;i<data.numAttributes();i++){
-           String parameter=data.attribute(i).name();
+        for(int i=0;i<source.getDataSet().numAttributes();i++){
+           parameter=source.getDataSet().attribute(i).name();
+           
            try{
               
+               value=ParameterClassConversion.ConvertTo(ForecastParam.valueOf(parameter), instValue[i]);
+               System.out.println((ForecastParam.valueOf(parameter))+" ; "+value);
+               forecastparam.put(ForecastParam.valueOf(parameter),value);
                
-               param.put(Param.valueOf(parameter),instValue[i]);
-               //System.out.println(parameter);
            
            }
            
            catch (IllegalArgumentException e){
            
                try{
-                    evaluatedparam.put(EvaluatedParam.valueOf(parameter),instValue[i]);
+                    value=ParameterClassConversion.ConvertTo(EvaluatedParam.valueOf(parameter), instValue[i]);
+                    System.out.println((EvaluatedParam.valueOf(parameter))+" ; "+value);
+                    evaluatedparam.put(EvaluatedParam.valueOf(parameter),value);
                 }
                   catch (IllegalArgumentException ef){
-                   
+                       
                  try{
-                    forecastparam.put(ForecastParam.valueOf(parameter),instValue[i]);
+                     
+                     value=ParameterClassConversion.ConvertTo(Param.valueOf(parameter), instValue[i]);
+                     param.put(Param.valueOf(parameter),value);
+                     System.out.println((Param.valueOf(parameter))+" ; "+value);
+                     
                  }
                  catch (IllegalArgumentException ex){
+                     System.out.println(ex);
                     throw new IllegalArgumentException(parameter+"is not a valid parameter");
                  }
         }
@@ -117,30 +131,33 @@ public class DataConverter {
     
     static class DataInputOracle implements InputOracle{
       
-        private HashMap<Param,Double>param;
-        private HashMap<EvaluatedParam,Double>evaluatedparam;
-        private HashMap<ForecastParam,Double>forecastparam;
+        private HashMap<Param,Object>param;
+        private HashMap<EvaluatedParam,Object>evaluatedparam;
+        private HashMap<ForecastParam,Object>forecastparam;
         
-        public DataInputOracle(HashMap<Param,Double>param,HashMap<EvaluatedParam,Double>evaluatedparam,HashMap<ForecastParam,Double>forecastparam){
+        public DataInputOracle(HashMap<Param,Object>param,HashMap<EvaluatedParam,Object>evaluatedparam,HashMap<ForecastParam,Object>forecastparam){
         
             this.param=param;
             this.evaluatedparam=evaluatedparam;
             this.forecastparam=forecastparam;
+            System.out.println("data set created");
     }
 
         @Override
         public Object getParam(Param param) {
+            System.out.println("required "+param);
            return this.param.get(param);
         }
 
         @Override
         public Object getEvaluatedParam(EvaluatedParam ep) {
-         
+            System.out.println("required "+ep);
             return this.evaluatedparam.get(ep);
         }
 
         @Override
         public Object getForecastParam(ForecastParam fp) {
+            System.out.println("required "+fp);
             return this.forecastparam.get(fp);
         }
       

@@ -67,6 +67,21 @@ public class DataSetCreator {
                    Instance i=DataConverter.FromInputOracleToInstance(reader);
                    ARFFDataSet.add(i);
                    UpdateValidationSet(i);
+                   InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
+                   MorphR morphr = new MorphR();
+                   OutputOracle on = morphr.forecast(inp);
+                   logger.info(on.responseTime(1));
+                   if (inp==null)
+                       System.out.println("stronza");
+                   logger.info(inp.getParam(Param.NumNodes));
+                   SimulatorOracle simulatorOracle = new SimulatorOracle();
+                   OutputOracle o =simulatorOracle.forecast(inp);
+                   logger.info(o.responseTime(1));
+                   
+                   TasOracle t = new TasOracle();
+                   OutputOracle of =simulatorOracle.forecast(inp);
+                   logger.info(of.responseTime(1));
+                   
                    
                    
                          
@@ -131,19 +146,19 @@ public class DataSetCreator {
     
     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:predictionResults.entrySet()){
                 DatasetOutputOracle dat=new DatasetOutputOracle();
-                entry.getKey().forecast(in).
+              //  entry.getKey().forecast(in).
                 entry.setValue(new HashMap<Instance,OutputOracle>());
           for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
         
             Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(), double.class);
             
-            method.invoke(dat, entry.getKey().forecast(in).);
+            //method.invoke(dat, entry.getKey().forecast(in).);
             
         }
             }
-    t.forecast(in)
+   // t.forecast(in)
         
-        ValidationSet.put(i,dat);
+      //  ValidationSet.put(i,dat);
         
     }
     
