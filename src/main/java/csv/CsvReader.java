@@ -311,35 +311,51 @@ public class CsvReader implements InputOracle {
        return csvParser.getAvgParam("AvgClusteredGetCommandReplySize");
    }
    
-   public double ThroughputRO (){
+   public double throughput (int i){
+       
+       switch(i){
+           case 0:
+              return csvParser.usecThroughput()*csvParser.numReadXact();
+           case 1:
+               return csvParser.usecThroughput()*csvParser.numWriteXact();
+           default:
+               throw new IllegalArgumentException("Troughput ( " + i + ") is not present");
    
-       return csvParser.usecThroughput()*csvParser.numReadXact();
+           }
    }
    
-   public double ThroughputWR (){
    
-       return csvParser.usecThroughput()*csvParser.numWriteXact();
+   public double responseTime (int i){
+       
+       switch(i){
+           case 0:
+               return csvParser.localResponseTimeROXact();
+           case 1:
+               return ((((numThreadsPerNode() * numNodes())/csvParser.usecThroughput())-((1-csvParser.writePercentageXact())*csvParser.localResponseTimeROXact()))/csvParser.writePercentageXact());
+           default:
+               throw new IllegalArgumentException("responseTime ( " + i + ") is not present");
+   
+           }
+   }
+       
+   
+   
+   
+   
+   public double abortRate (int i){
+   
+       switch(i){
+           case 0:
+               return 0D;
+           case 1:
+               return csvParser.numAborts();
+           default:
+               throw new IllegalArgumentException("abortRate ( " + i + ") is not present");
+   
+           }
+       
    }
    
-   public double ResponseTimeRO (){
-   
-       return csvParser.localResponseTimeROXact();
-   }
-   
-   public double ResponseTimeWR (){
-   
-       return ((((numThreadsPerNode() * numNodes())/csvParser.usecThroughput())-((1-csvParser.writePercentageXact())*csvParser.localResponseTimeROXact()))/csvParser.writePercentageXact());
-   }
-   
-   public double AbortRateRO (){
-   
-       return 0D;
-   }
-   
-   public double AbortRateWR (){
-   
-       return csvParser.numAborts();
-   }
    
 
 }

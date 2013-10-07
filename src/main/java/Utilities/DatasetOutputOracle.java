@@ -14,56 +14,31 @@ import eu.cloudtm.autonomicManager.oracles.OutputOracle;
 public class DatasetOutputOracle implements OutputOracle {
 
     
-    private double ThroughputWR;
-    private double ThroughputRO;
-    private double AbortRateWR;
-    private double AbortRateRO;
-    private double ResponseTimeWR;
-    private double ResponseTimeRO;
+    private double []throughput=new double [2];
+    private double []abortRate=new double [2];
+    private double []responseTime=new double [2];
+    
     
     
     @Override
     public double throughput(int i) {
-        switch(i){
         
-            case 0:
-                return this.ThroughputRO;
-            case 1:
-                return this.ThroughputWR;
-            default:
-                return -1D;
-                
-        }
+        return this.throughput[i];
+         
     }
 
     @Override
     public double abortRate(int i) {
-        switch(i){
-        
-            case 0:
-                return this.AbortRateRO;
-            case 1:
-                return this.AbortRateWR;
-            default:
-                return -1D;
-                
-        }
+       return this.abortRate[i];
     }
 
     @Override
     public double responseTime(int i) {
-        switch(i){
-        
-            case 0:
-                return this.ResponseTimeRO;
-            case 1:
-                return this.ResponseTimeWR;
-            default:
-                return -1D;
-                
-        }
+        return this.responseTime[i];
     }
 
+    
+    
     @Override
     public double getConfidenceThroughput(int i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -79,28 +54,19 @@ public class DatasetOutputOracle implements OutputOracle {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public void setThroughputWR(double throughputWR) {
-        this.ThroughputWR = throughputWR;
+    public void setthroughput(int i,double t) {
+        
+                 this.throughput[i]=t;        
     }
 
-    public void setThroughputRO(double throughputRO) {
-        this.ThroughputRO = throughputRO;
+    public void setabortRate(int i,double ar) {
+        this.abortRate[i]=ar; 
     }
 
-    public void setAbortRateWR(double abortRateWR) {
-        this.AbortRateWR = abortRateWR;
+    public void setresponseTime(int i,double rt) {
+        this.responseTime[i]=rt;
+    }
+    
     }
 
-    public void setAbortRateRO(double abortRateRO) {
-        this.AbortRateRO = abortRateRO;
-    }
 
-    public void setResponseTimeWR(double responseTimeWR) {
-        this.ResponseTimeWR = responseTimeWR;
-    }
-
-    public void setResponseTimeRO(double responseTimeRO) {
-        this.ResponseTimeRO = responseTimeRO;
-    }
-
-}

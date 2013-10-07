@@ -37,19 +37,19 @@ import weka.core.converters.ConverterUtils.DataSource;
  *
  * @author etorre
  */
-public class DataSetCreator {
-    static Logger logger = Logger.getLogger(DataSetCreator.class.getName());
-    private Instances ARFFDataSet;
-    private HashMap<Instance,OutputOracle>ValidationSet;
-    private HashMap<Oracle,HashMap<Instance,OutputOracle>> predictionResults;
-    private HashMap<Instance,OutputOracle>TrainingSet=new HashMap<Instance,OutputOracle>();
+public class DataSets {
+    static Logger logger = Logger.getLogger(DataSets.class.getName());
+    public static Instances ARFFDataSet;
+    public static HashMap<Instance,OutputOracle>ValidationSet;
+    public static HashMap<Oracle,HashMap<Instance,OutputOracle>> predictionResults;
+    public static HashMap<String,Instance>InstancesMap=new HashMap<String,Instance>();
     private CsvReader reader;
     
     private int numberOfFeatures;
     
     
     
-    public DataSetCreator(String Directory_path) throws Exception{
+    public DataSets(String Directory_path) throws Exception{
          PropertyConfigurator.configure("conf/log4jLearner.properties");
          
          Init("conf/K-NN/dataset.arff");
@@ -66,26 +66,10 @@ public class DataSetCreator {
                    reader=new CsvReader(csv);
                    Instance i=DataConverter.FromInputOracleToInstance(reader);
                    ARFFDataSet.add(i);
+                   InstancesMap.put(i.toStringNoWeight(), i);
                    UpdateValidationSet(i);
-                   InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
-                   MorphR morphr = new MorphR();
-                   OutputOracle on = morphr.forecast(inp);
-                   logger.info(on.responseTime(1));
-                   if (inp==null)
-                       System.out.println("stronza");
-                   logger.info(inp.getParam(Param.NumNodes));
-                   SimulatorOracle simulatorOracle = new SimulatorOracle();
-                   OutputOracle o =simulatorOracle.forecast(inp);
-                   logger.info(o.responseTime(1));
-                   
-                   TasOracle t = new TasOracle();
-                   OutputOracle of =simulatorOracle.forecast(inp);
-                   logger.info(of.responseTime(1));
-                   
-                   
-                   
-                         
-                         
+                   //InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
+                   UpdatePredictionSet(i);                         
                          }
                              
                        
@@ -95,8 +79,9 @@ public class DataSetCreator {
                
                }  
             }
-      logger.info(ARFFDataSet);
-      
+       for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>>entry:predictionResults.entrySet()){
+         DataPrinting.PrintSet(entry.getValue());
+       }
          }
          
       
@@ -121,8 +106,9 @@ public class DataSetCreator {
          
             predictionResults=new HashMap<Oracle,HashMap<Instance,OutputOracle>>(3);
             
-            for(int i=0;i<predictionResults.size();i++){
+            for(int i=0;i<3;i++){
             
+                
                 if(i==0)
                     predictionResults.put(new TasOracle(), new HashMap<Instance,OutputOracle>());
                 if(i==1)
@@ -139,27 +125,23 @@ public class DataSetCreator {
     
     InputOracle in=DataConverter.FromInstancesToInputOracle(i);
     
-    TasOracle t = new TasOracle();
-    MorphR morphr = new MorphR();
-    SimulatorOracle simulatorOracle = new SimulatorOracle();
-    int classIndex=1;
     
     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:predictionResults.entrySet()){
                 DatasetOutputOracle dat=new DatasetOutputOracle();
-              //  entry.getKey().forecast(in).
-                entry.setValue(new HashMap<Instance,OutputOracle>());
+                System.out.println(entry.getKey());
+                OutputOracle output=entry.getKey().forecast(in);
+                 
           for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
         
-            Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(), double.class);
-            
-            //method.invoke(dat, entry.getKey().forecast(in).);
+            Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(),int.class, double.class);
+            Method method2=OutputOracle.class.getDeclaredMethod(f.getName(),int.class);
+            method.invoke(dat,0, method2.invoke(output, 0));
+            method.invoke(dat,1, method2.invoke(output, 1));
             
         }
+          entry.getValue().put(i, dat);
             }
-   // t.forecast(in)
-        
-      //  ValidationSet.put(i,dat);
-        
+              
     }
     
     private void UpdateValidationSet(Instance i)throws Exception{
@@ -167,9 +149,10 @@ public class DataSetCreator {
         DatasetOutputOracle dat=new DatasetOutputOracle();
         for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
         
-            Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(), double.class);
-            Method method2=CsvReader.class.getDeclaredMethod(f.getName());
-            method.invoke(dat, method2.invoke(reader));
+            Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(),int.class, double.class);
+            Method method2=CsvReader.class.getDeclaredMethod(f.getName(),int.class);
+            method.invoke(dat,0, method2.invoke(reader, 0));
+            method.invoke(dat,1, method2.invoke(reader, 1));
             
         }
         ValidationSet.put(i,dat);

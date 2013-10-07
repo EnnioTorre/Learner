@@ -37,7 +37,7 @@ public class DataConverter {
            try{
               
                value=ParameterClassConversion.ConvertTo(ForecastParam.valueOf(parameter), instValue[i]);
-               System.out.println((ForecastParam.valueOf(parameter))+" ; "+value);
+               //System.out.println((ForecastParam.valueOf(parameter))+" ; "+value);
                forecastparam.put(ForecastParam.valueOf(parameter),value);
                
            
@@ -47,7 +47,7 @@ public class DataConverter {
            
                try{
                     value=ParameterClassConversion.ConvertTo(EvaluatedParam.valueOf(parameter), instValue[i]);
-                    System.out.println((EvaluatedParam.valueOf(parameter))+" ; "+value);
+                   // System.out.println((EvaluatedParam.valueOf(parameter))+" ; "+value);
                     evaluatedparam.put(EvaluatedParam.valueOf(parameter),value);
                 }
                   catch (IllegalArgumentException ef){
@@ -56,11 +56,11 @@ public class DataConverter {
                      
                      value=ParameterClassConversion.ConvertTo(Param.valueOf(parameter), instValue[i]);
                      param.put(Param.valueOf(parameter),value);
-                     System.out.println((Param.valueOf(parameter))+" ; "+value);
+                     //System.out.println((Param.valueOf(parameter))+" ; "+value);
                      
                  }
                  catch (IllegalArgumentException ex){
-                     System.out.println(ex);
+                     
                     throw new IllegalArgumentException(parameter+"is not a valid parameter");
                  }
         }
@@ -82,7 +82,7 @@ public class DataConverter {
        
        for(int i=0;i<source.getStructure().numAttributes();i++){
            String parameter=source.getStructure().attribute(i).name();
-           System.out.println(parameter+"2");
+         // System.out.println(parameter+"2");
            
            try{
               
@@ -140,7 +140,7 @@ public class DataConverter {
             this.param=param;
             this.evaluatedparam=evaluatedparam;
             this.forecastparam=forecastparam;
-            System.out.println("data set created");
+            //System.out.println("data set created");
     }
 
         @Override

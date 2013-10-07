@@ -10,17 +10,12 @@ package testsimulator;
  */
 
 
-import eu.cloudtm.autonomicManager.simulator.SimulatorOracle;
-import csv.CsvInputOracle;
 
-import tasOracle.TasOracle;
-import Utilities.DataSetCreator;
-import Utilities.NewClass;
-import eu.cloudtm.autonomicManager.oracles.InputOracle;
-import eu.cloudtm.autonomicManager.oracles.OutputOracle;
-import morphr.MorphR;
+import Utilities.DataSets;
+import Learners.Knearestneighbourg;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import weka.core.Instance;
 
 /**
  * @author Sebastiano Peluso
@@ -37,18 +32,13 @@ static String path="csvfile/new/infinispan4_cloudtm_4.csv";
       logger.info("primo append");
      
           
-          DataSetCreator i=new DataSetCreator("csvfile");
-         
-         SimulatorOracle simulatorOracle = new SimulatorOracle();
-         CsvInputOracle input=new CsvInputOracle(path);
-         TasOracle t = new TasOracle();
-         MorphR morphr = new MorphR();
-
-         OutputOracle o = morphr.forecast(input);
-
-         System.out.println(o.responseTime(1));
-         System.out.println(t.forecast(input).responseTime(1));
-         System.out.println(simulatorOracle.forecast(input).responseTime(1));
+          DataSets i=new DataSets("csvfile");
+          
+          Knearestneighbourg kn= new Knearestneighbourg(DataSets.ARFFDataSet,DataSets.ARFFDataSet.instance(5),"EuclideanDistance","-D");
+          Instance n=kn.getNeighboughood().instance(3);
+          System.out.println(n);
+          System.out.println(DataSets.InstancesMap.get(n.toStringNoWeight()));
+          System.out.println(DataSets.ValidationSet.get(DataSets.InstancesMap.get(n.toStringNoWeight())));
          
      
    }
