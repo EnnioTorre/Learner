@@ -6,10 +6,14 @@
 package Learners;
 
 import Utilities.DataSets;
-import Utilities.DatasetOutputOracle;
+
+import eu.cloudtm.autonomicManager.oracles.Oracle;
 import eu.cloudtm.autonomicManager.oracles.OutputOracle;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 import weka.core.DistanceFunction;
 import weka.core.Instance;
 import weka.core.Instances;
@@ -89,15 +93,38 @@ public class Knearestneighbourg {
         return Neighboughood;
     }
    
-   private double RMSE(String Parameter){
-     double [] rmse;
-     for (int i=0;i<Neighboughood.numInstances();i++){
+   public HashMap<Oracle,Double[]> RMSE(String Parameter) throws Exception{
+     HashMap<Oracle,Double[]> rmse=new  HashMap<Oracle,Double[]>();
+     Double [] RMSe=new Double[2];
+     double errorOutputRO=0D;
+     double errorOutputWO=0D;
+     double SEOutputRO=0D;
+     double SEOutputWO=0D;
+     Method method=OutputOracle.class.getMethod(Parameter, int.class);
+     OutputOracle outputValidationSet;
+     OutputOracle outputOracle;
      
-        Instance inst= DataSets.InstancesMap.get(Neighboughood.instance(i));
-        OutputOracle outputValidationSet=DataSets.ValidationSet.get(inst);
-        OutputOracle [] output;
+        for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:DataSets.predictionResults.entrySet()){
+            for (int i=0;i<Neighboughood.numInstances();i++){
+     
+                Instance inst= DataSets.InstancesMap.get(Neighboughood.instance(i).toStringNoWeight());
+                outputValidationSet=DataSets.ValidationSet.get(inst);
+                outputOracle=entry.getValue().get(inst);
+                
+                errorOutputRO=(Double)method.invoke(outputValidationSet,0)-(Double)method.invoke(outputOracle,0);
+                SEOutputRO=SEOutputRO+Math.pow(errorOutputRO,2);
+                
+                errorOutputWO=(Double)method.invoke(outputValidationSet,1)-(Double)method.invoke(outputOracle,1);
+                SEOutputWO=SEOutputWO+Math.pow(errorOutputWO,2);
+            
+            
+        }
+        RMSe[0]=Math.sqrt(SEOutputRO);
+        RMSe[1]=Math.sqrt(SEOutputWO);
+        System.out.println(entry.getKey().toString()+":"+RMSe[0]+"  "+RMSe[1]);
+        rmse.put(entry.getKey(),RMSe);
      }
-       return 1;
+       return rmse;
    }
 
 

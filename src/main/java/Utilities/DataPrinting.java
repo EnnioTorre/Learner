@@ -6,12 +6,16 @@
 package Utilities;
 
 
+import eu.cloudtm.autonomicManager.oracles.Oracle;
 import eu.cloudtm.autonomicManager.oracles.OutputOracle;
 
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import tasOracle.TasOracle;
+import morphr.MorphR;
+import eu.cloudtm.autonomicManager.simulator.SimulatorOracle;
 import weka.core.Instance;
 
 import weka.core.Attribute;
@@ -25,16 +29,64 @@ import weka.core.converters.ConverterUtils.DataSource;
  * @author Ennio email:ennio_torre@hotmail.it
  */
 public class DataPrinting {
-    static Logger logger = Logger.getLogger(DataSets.class.getName());
-
-   static void PrintARFF(){
    
+    
+   static void PrintARFF(){
+      Logger log = Logger.getLogger(DataPrinting.class.getName());
       PropertyConfigurator.configure("conf/log4j.properties"); 
-      logger.info(DataSets.ARFFDataSet);
+      log.info(DataSets.ARFFDataSet);
    }
    
-   static void PrintSet(HashMap <Instance,OutputOracle> set) throws Exception{
-      PropertyConfigurator.configure("conf/log4j.properties"); 
+   static void PrintTasPrediction() throws Exception{
+     Logger log = Logger.getLogger("TasLogger"); 
+     PropertyConfigurator.configure("conf/log4j.properties");
+     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
+     
+         if(TasOracle.class.isInstance(entry.getKey())){
+           
+               PrintSet(entry.getValue(),log);
+               return;
+         }         
+             
+         }
+          throw new NoSuchFieldException();     
+   }
+   
+    static void PrintMorpheRPrediction() throws Exception{
+       Logger log = Logger.getLogger("MorphRLogger");
+      PropertyConfigurator.configure("conf/log4j.properties");
+     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
+     
+         if(MorphR.class.isInstance(entry.getKey())){
+           
+            PrintSet(entry.getValue(),log);
+            
+            return;
+         }         
+             
+     
+     }
+    throw new NoSuchFieldException();
+   
+   }
+     
+    static void PrintSOPrediction() throws Exception{
+     Logger log = Logger.getLogger("SOLogger");
+     PropertyConfigurator.configure("conf/log4j.properties");
+     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
+     
+         if(SimulatorOracle.class.isInstance(entry.getKey())){
+              PrintSet(entry.getValue(),log);
+               return;
+         }         
+             
+         }
+          throw new NoSuchFieldException();     
+   }
+    
+   
+   private static void PrintSet(HashMap <Instance,OutputOracle> set,Logger log) throws Exception{
+      
       double [] Outputs=new double [6];
       double[] both;
        
@@ -64,7 +116,7 @@ public class DataPrinting {
    }
        
       
-        logger.info(NewData);
+        log.info(NewData);
    }
    
    private static double[] addTwoArray(double[] objArr1, double[] objArr2){

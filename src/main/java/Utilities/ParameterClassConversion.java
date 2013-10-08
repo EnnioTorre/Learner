@@ -27,15 +27,15 @@ public class ParameterClassConversion {
     } 
       if( ForecastParam.class.isInstance(param)){
           
-          System.out.println("conversion FP"+param+"class"+param.getClass()+value);
+          //System.out.println("conversion FP"+param+"class"+param.getClass()+value);
           Object v= GetRequiredForecastParamType((ForecastParam)param,Value);
-          System.out.println("conversion FP"+param+"ok");
+          //System.out.println("conversion FP"+param+"ok");
           return v;
     }
       if(EvaluatedParam.class.isInstance(param)){
-          System.out.println("conversion EP"+param+value);
+         // System.out.println("conversion EP"+param+value);
           Object v= GetRequiredEvaluatedParamType((EvaluatedParam)param,Value);
-          System.out.println("conversion FP"+param+"ok");
+         // System.out.println("conversion FP"+param+"ok");
           return v;
       
     }

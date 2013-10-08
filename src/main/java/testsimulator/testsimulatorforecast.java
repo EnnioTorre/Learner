@@ -39,7 +39,7 @@ static String path="csvfile/new/infinispan4_cloudtm_4.csv";
           System.out.println(n);
           System.out.println(DataSets.InstancesMap.get(n.toStringNoWeight()));
           System.out.println(DataSets.ValidationSet.get(DataSets.InstancesMap.get(n.toStringNoWeight())));
-         
+          kn.RMSE("throughput");
      
    }
 

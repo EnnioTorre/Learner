@@ -4,29 +4,25 @@
  */
 package Utilities;
 import csv.CsvReader;
-import eu.cloudtm.autonomicManager.commons.Param;
-import eu.cloudtm.autonomicManager.commons.EvaluatedParam;
-import eu.cloudtm.autonomicManager.commons.ForecastParam;
-import static eu.cloudtm.autonomicManager.commons.ForecastParam.NumNodes;
-import eu.cloudtm.autonomicManager.oracles.InputOracle;
+
+
+import Utilities.DataConverter.DataInputOracle;
 import eu.cloudtm.autonomicManager.oracles.Oracle;
+import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import eu.cloudtm.autonomicManager.oracles.OutputOracle;
-import eu.cloudtm.autonomicManager.oracles.exceptions.OracleException;
+
 import eu.cloudtm.autonomicManager.simulator.SimulatorOracle;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import testsimulator.testsimulatorforecast;
-import weka.core.Attribute;
-import weka.core.DenseInstance;
+
 import weka.core.Instance;
-import java.io.IOException;
+;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Map.Entry;
+
 import morphr.MorphR;
 import tasOracle.TasOracle;
 
@@ -79,9 +75,9 @@ public class DataSets {
                
                }  
             }
-       for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>>entry:predictionResults.entrySet()){
-         DataPrinting.PrintSet(entry.getValue());
-       }
+          DataPrinting.PrintMorpheRPrediction();
+          DataPrinting.PrintSOPrediction();
+          DataPrinting.PrintTasPrediction();
          }
          
       
@@ -123,12 +119,13 @@ public class DataSets {
     private void UpdatePredictionSet(Instance i)throws Exception{
     
     
-    InputOracle in=DataConverter.FromInstancesToInputOracle(i);
+    DataInputOracle in=DataConverter.FromInstancesToInputOracle(i);
+    logger.info(in.toString());
     
     
     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:predictionResults.entrySet()){
                 DatasetOutputOracle dat=new DatasetOutputOracle();
-                System.out.println(entry.getKey());
+                //System.out.println(entry.getKey());
                 OutputOracle output=entry.getKey().forecast(in);
                  
           for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
@@ -140,6 +137,7 @@ public class DataSets {
             
         }
           entry.getValue().put(i, dat);
+          logger.info(output.toString()+"->"+dat.toString());
             }
               
     }

@@ -10,9 +10,9 @@ import eu.cloudtm.autonomicManager.commons.Param;
 import weka.core.Instance;
 import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import java.util.HashMap;
+import java.util.Map;
 import weka.core.DenseInstance;
-import weka.core.Instances;
-import weka.core.converters.ConverterUtils;
+
 import weka.core.converters.ConverterUtils.DataSource;
 /**
  *
@@ -20,7 +20,7 @@ import weka.core.converters.ConverterUtils.DataSource;
  */
 public class DataConverter {
 
-   static InputOracle FromInstancesToInputOracle(Instance data) throws Exception{
+   static DataInputOracle FromInstancesToInputOracle(Instance data) throws Exception{
         
          
          HashMap<Param,Object>param=new HashMap<Param,Object>();
@@ -160,7 +160,35 @@ public class DataConverter {
             System.out.println("required "+fp);
             return this.forecastparam.get(fp);
         }
+        
+        @Override
+        public String toString(){
+            
+            String stringP="ciao" ,stringEP="ciao",stringFP="ciao";
+            
+            for(Map.Entry<Param,Object> entry:param.entrySet()){
+            
+                stringP=stringP+entry.getKey()+":"+entry.getValue()+"\n";
+             
+            }
+            
+            for(Map.Entry<EvaluatedParam,Object> entry:evaluatedparam.entrySet()){
+            
+                stringEP=stringEP+entry.getKey()+":"+entry.getValue()+"\n";
+             
+            }
+            
+            for(Map.Entry<ForecastParam,Object> entry:forecastparam.entrySet()){
+            
+                stringFP=stringFP+entry.getKey()+":"+entry.getValue()+"\n";
+             
+            }
+         return stringP+stringEP+stringFP;
+    
+    }
+    
+    }
       
     }
     
-}
+
