@@ -7,6 +7,7 @@ package Utilities;
 import eu.cloudtm.autonomicManager.commons.EvaluatedParam;
 import eu.cloudtm.autonomicManager.commons.ForecastParam;
 import eu.cloudtm.autonomicManager.commons.Param;
+import eu.cloudtm.autonomicManager.commons.ReplicationProtocol;
 import weka.core.Instance;
 import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import java.util.HashMap;
@@ -20,7 +21,7 @@ import weka.core.converters.ConverterUtils.DataSource;
  */
 public class DataConverter {
 
-   static DataInputOracle FromInstancesToInputOracle(Instance data) throws Exception{
+  public static DataInputOracle FromInstancesToInputOracle(Instance data) throws Exception{
         
          
          HashMap<Param,Object>param=new HashMap<Param,Object>();
@@ -75,10 +76,13 @@ public class DataConverter {
     }
     
    
-   static Instance FromInputOracleToInstance(InputOracle input) throws Exception{
+ public  static Instance FromInputOracleToInstance(InputOracle input) throws Exception{
    
        DataSource source = new DataSource("conf/K-NN/dataset.arff");
        Instance inst=new DenseInstance(source.getStructure().numAttributes());
+       double ParamValue,EvaluatedParamValue;
+       Object ForecastValue;
+       
        
        for(int i=0;i<source.getStructure().numAttributes();i++){
            String parameter=source.getStructure().attribute(i).name();
@@ -86,7 +90,7 @@ public class DataConverter {
            
            try{
               
-               double ParamValue =Double.class.cast(input.getParam(Param.valueOf(parameter)));
+               ParamValue =new Double(input.getParam(Param.valueOf(parameter))+"");
                inst.setValue(source.getStructure().attribute(i), ParamValue);
                //System.out.println(parameter);
            
@@ -95,14 +99,30 @@ public class DataConverter {
            catch (IllegalArgumentException e){
            
                try{
-                   
-                    double ForecastValue =Double.class.cast(input.getForecastParam(ForecastParam.valueOf(parameter)));
-                    inst.setValue(source.getStructure().attribute(i), ForecastValue);
+                     
+                     ForecastValue=input.getForecastParam(ForecastParam.valueOf(parameter));
+                     if(ReplicationProtocol.class.isInstance(ForecastValue)){
+                        switch((ReplicationProtocol)ForecastValue){
+                            case TO:
+                               ForecastValue=2;
+                            case PB:
+                                ForecastValue=1;
+                            default :
+                                ForecastValue=0;   
+                              
+                        }
+                            
+                     }
+                     double tmp =new Double(ForecastValue+"");
+                    inst.setValue(source.getStructure().attribute(i),tmp);
+                     
                 }
                   catch (IllegalArgumentException ef){
                    
                  try{
-                    double EvaluatedParamValue =Double.class.cast(input.getEvaluatedParam(EvaluatedParam.valueOf(parameter)));
+                     
+             
+                    EvaluatedParamValue =new Double(input.getEvaluatedParam(EvaluatedParam.valueOf(parameter))+"");
                     inst.setValue(source.getStructure().attribute(i),EvaluatedParamValue);
                  }
                  catch (IllegalArgumentException ex){

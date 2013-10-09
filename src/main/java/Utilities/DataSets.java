@@ -34,7 +34,7 @@ import weka.core.converters.ConverterUtils.DataSource;
  * @author etorre
  */
 public class DataSets {
-    static Logger logger = Logger.getLogger(DataSets.class.getName());
+    public static Logger logger = Logger.getLogger(DataSets.class.getName());
     public static Instances ARFFDataSet;
     public static HashMap<Instance,OutputOracle>ValidationSet;
     public static HashMap<Oracle,HashMap<Instance,OutputOracle>> predictionResults;
@@ -46,7 +46,7 @@ public class DataSets {
     
     
     public DataSets(String Directory_path) throws Exception{
-         PropertyConfigurator.configure("conf/log4jLearner.properties");
+         PropertyConfigurator.configure("conf/log4j.properties");
          
          Init("conf/K-NN/dataset.arff");
          

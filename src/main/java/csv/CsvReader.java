@@ -149,11 +149,11 @@ public class CsvReader implements InputOracle {
    public Object getEvaluatedParam(EvaluatedParam evaluatedParam) {
       switch (evaluatedParam) {
          case MAX_ACTIVE_THREADS:
-            return  (double) numThreadsPerNode();
+            return   numThreadsPerNode();
          case ACF:
-            return (double)acf();
+            return acf();
          case CORE_PER_CPU:
-            return  (double) cpus();
+            return   cpus();
          default:
             throw new IllegalArgumentException("Param " + evaluatedParam + " is not present");
       }
@@ -163,11 +163,11 @@ public class CsvReader implements InputOracle {
    public Object getForecastParam(ForecastParam forecastParam) {
       switch (forecastParam) {
          case ReplicationProtocol:
-            return (double)replicationProtocol();
+            return replicationProtocol();
          case ReplicationDegree:
-            return (double)replicationDegree();
+            return replicationDegree();
          case NumNodes:
-            return (double)numNodes();
+            return numNodes();
          default:
             throw new IllegalArgumentException("Param " + forecastParam + " is not present");
       }
@@ -213,10 +213,18 @@ public class CsvReader implements InputOracle {
       return 2;
    }
 
-   private double replicationProtocol() {
-      
+   private ReplicationProtocol replicationProtocol() {
+       String rp=csvParser.getReplicationProtocol();
        
-        return 2;  
+       if(rp.equals("2PC"))
+          return ReplicationProtocol.TWOPC;
+       if(rp.equals("PB"))
+          return ReplicationProtocol.PB;
+       if(rp.equals("TO"))
+          return ReplicationProtocol.TO;
+
+       
+          return ReplicationProtocol.TWOPC; //only because the data were without this info 
           
       
               }

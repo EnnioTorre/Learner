@@ -131,11 +131,11 @@ private static Object GetRequiredForecastParamType(ForecastParam forecastParam,D
       switch (forecastParam) {
          case ReplicationProtocol:
          {
-             if (Value==2)
+             if (Value==0)
              return ReplicationProtocol.TWOPC;
              if (Value==1)
              return ReplicationProtocol.PB;
-             if (Value==0)
+             if (Value==2)
              return ReplicationProtocol.TO;
          
          }
