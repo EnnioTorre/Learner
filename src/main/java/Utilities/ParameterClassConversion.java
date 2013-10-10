@@ -4,16 +4,19 @@
  */
 package Utilities;
 
+
 import eu.cloudtm.autonomicManager.commons.EvaluatedParam;
 import eu.cloudtm.autonomicManager.commons.ForecastParam;
 import eu.cloudtm.autonomicManager.commons.Param;
 import eu.cloudtm.autonomicManager.commons.ReplicationProtocol;
+import org.apache.log4j.Logger;
 
 /**
  *
  * @author ennio
  */
 public class ParameterClassConversion {
+    static Logger logger = Logger.getLogger(ParameterClassConversion.class.getName());
     
     static Object ConvertTo(Object param,Object value) throws Exception{
         
@@ -40,6 +43,7 @@ public class ParameterClassConversion {
       
     }
       else
+          logger.warn(param+" not valid as Parameter Type");
           throw new IllegalArgumentException(param.getClass()+"not valid as Parameter Type");
       
     }
@@ -122,6 +126,7 @@ private static Object GetRequiredParamType(Param param,Double Value) throws Exce
          case AvgClusteredGetCommandReplySize:
              return Value.longValue();
          default:
+             logger.warn("--"+"Param " + param + " is not present");
             throw new Exception("Param " + param + " is not present");
       }
 
@@ -144,6 +149,7 @@ private static Object GetRequiredForecastParamType(ForecastParam forecastParam,D
          case NumNodes:
             return Value.longValue();
          default:
+             logger.warn("--"+"Param " + forecastParam + " is not present");
             throw new Exception("Param " + forecastParam + " is not present");
       }
    }
@@ -157,6 +163,7 @@ private static Object GetRequiredEvaluatedParamType(EvaluatedParam evaluatedPara
          case CORE_PER_CPU:
             return Value.intValue();
          default:
+             logger.warn("--"+"Param " + evaluatedParam + " is not present");
             throw new Exception("Param " + evaluatedParam + " is not present");
       }
    }

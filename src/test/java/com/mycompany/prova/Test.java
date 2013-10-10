@@ -2,27 +2,28 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package testsimulator;
+package com.mycompany.prova;
 
-/**
- *
- * @author Ennio email:ennio_torre@hotmail.it
- */
-
-
-
-import Utilities.DataSets;
 import Learners.Knearestneighbourg;
+import Utilities.DataSets;
 import csv.CsvReader;
 import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import eu.cloudtm.autonomicManager.oracles.OutputOracle;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import testsimulator.testsimulatorforecast;
 import weka.core.Instance;
 
+/**
+ *
+ * @author etorre
+ */
+public class Test {
 
-public final class testsimulatorforecast {
-static String path="csvfile/new/0.csv";
+    /**
+     * @param args the command line arguments
+     */
+    static String path="csvfile/new/0.csv";
 
 
  static Logger logger = Logger.getLogger(testsimulatorforecast.class.getName());   
@@ -46,9 +47,4 @@ static String path="csvfile/new/0.csv";
           System.out.println(result.throughput(0)+"\n"+result.throughput(1));
          
    }
-
-
-
-
 }
-

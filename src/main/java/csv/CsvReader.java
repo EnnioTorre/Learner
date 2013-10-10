@@ -42,34 +42,36 @@ import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import java.io.File;
 import java.io.IOException;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+
 import parse.radargun.Ispn5_2CsvParser;
-import testsimulator.testsimulatorforecast;
+
 /**
  *
  * @author etorre
  */
 public class CsvReader implements InputOracle {
     public Ispn5_2CsvParser csvParser;
-    static Logger logger = Logger.getLogger(testsimulatorforecast.class.getName());   
+    static Logger logger = Logger.getLogger(CsvReader.class.getName());   
      
    
   
     
     public CsvReader(String path) {
       try {
-         PropertyConfigurator.configure("conf/log4jLearner.properties"); 
+       
          this.csvParser = new Ispn5_2CsvParser(path);
       } catch (IOException e) {
+          logger.warn("--"+e.getMessage()+"--"+"Path " + path + " is nonexistent");
          throw new IllegalArgumentException("Path " + path + " is nonexistent");
       }
    }
     
      public CsvReader(File f) {
       try {
-          PropertyConfigurator.configure("conf/log4jLearner.properties");
+         // PropertyConfigurator.configure("conf/log4jLearner.properties");
          this.csvParser = new Ispn5_2CsvParser(f.getAbsolutePath());
       } catch (IOException e) {
+         logger.warn("--"+e.getMessage()+"--"+"Path " + f.getAbsolutePath() + " is nonexistent");
          throw new IllegalArgumentException("Path " + f.getAbsolutePath() + " is nonexistent");
       }
    }
@@ -137,7 +139,8 @@ public class CsvReader implements InputOracle {
          case AvgClusteredGetCommandReplySize:
              return  AvgClusteredGetCommandReplySize();
          default:
-         {logger.warn("Param " + param + " is not present ");
+         {
+             logger.warn("Param " + param + " is not present ");
              throw new IllegalArgumentException("Param " + param + " is not present");
          }
       }
@@ -154,8 +157,10 @@ public class CsvReader implements InputOracle {
             return acf();
          case CORE_PER_CPU:
             return   cpus();
-         default:
+         default:{
+             logger.warn("Param " + evaluatedParam + " is not present ");
             throw new IllegalArgumentException("Param " + evaluatedParam + " is not present");
+        }
       }
    }
    
@@ -168,8 +173,10 @@ public class CsvReader implements InputOracle {
             return replicationDegree();
          case NumNodes:
             return numNodes();
-         default:
+         default:{
+             logger.warn("Param " + forecastParam + " is not present ");
             throw new IllegalArgumentException("Param " + forecastParam + " is not present");
+         }
       }
    }
 
@@ -327,9 +334,12 @@ public class CsvReader implements InputOracle {
            case 1:
                return csvParser.usecThroughput()*csvParser.numWriteXact();
            default:
+           {
+               logger.warn("Troughput ( " + i + ") is not present");
                throw new IllegalArgumentException("Troughput ( " + i + ") is not present");
    
            }
+       }
    }
    
    
@@ -340,10 +350,12 @@ public class CsvReader implements InputOracle {
                return csvParser.localResponseTimeROXact();
            case 1:
                return ((((numThreadsPerNode() * numNodes())/csvParser.usecThroughput())-((1-csvParser.writePercentageXact())*csvParser.localResponseTimeROXact()))/csvParser.writePercentageXact());
-           default:
+           default:{
+               logger.warn("responseTime ( " + i + ") is not present");
                throw new IllegalArgumentException("responseTime ( " + i + ") is not present");
    
            }
+       }
    }
        
    
@@ -357,10 +369,12 @@ public class CsvReader implements InputOracle {
                return 0D;
            case 1:
                return csvParser.numAborts();
-           default:
+           default:{
+               logger.warn("abortRate ( " + i + ") is not present");
                throw new IllegalArgumentException("abortRate ( " + i + ") is not present");
    
            }
+       }
        
    }
    

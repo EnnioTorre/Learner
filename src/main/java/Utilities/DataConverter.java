@@ -12,6 +12,7 @@ import weka.core.Instance;
 import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.log4j.Logger;
 import weka.core.DenseInstance;
 
 import weka.core.converters.ConverterUtils.DataSource;
@@ -20,6 +21,7 @@ import weka.core.converters.ConverterUtils.DataSource;
  * @author Ennio email:ennio_torre@hotmail.it
  */
 public class DataConverter {
+private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
 
   public static DataInputOracle FromInstancesToInputOracle(Instance data) throws Exception{
         
@@ -61,8 +63,8 @@ public class DataConverter {
                      
                  }
                  catch (IllegalArgumentException ex){
-                     
-                    throw new IllegalArgumentException(parameter+"is not a valid parameter");
+                    logger.warn("--"+ex.getMessage()+"--"+parameter+" is not a valid parameter");
+                    throw new IllegalArgumentException(parameter+" is not a valid parameter");
                  }
         }
       
@@ -126,6 +128,7 @@ public class DataConverter {
                     inst.setValue(source.getStructure().attribute(i),EvaluatedParamValue);
                  }
                  catch (IllegalArgumentException ex){
+                    logger.warn("--"+ex.getMessage()+"--"+parameter+" is not a valid parameter");
                     throw new IllegalArgumentException(parameter+"is not a valid parameter");
                  }
                }
@@ -165,26 +168,26 @@ public class DataConverter {
 
         @Override
         public Object getParam(Param param) {
-            System.out.println("required "+param);
+            
            return this.param.get(param);
         }
 
         @Override
         public Object getEvaluatedParam(EvaluatedParam ep) {
-            System.out.println("required "+ep);
+            
             return this.evaluatedparam.get(ep);
         }
 
         @Override
         public Object getForecastParam(ForecastParam fp) {
-            System.out.println("required "+fp);
+            
             return this.forecastparam.get(fp);
         }
         
         @Override
         public String toString(){
             
-            String stringP="ciao" ,stringEP="ciao",stringFP="ciao";
+            String stringP="" ,stringEP="",stringFP="";
             
             for(Map.Entry<Param,Object> entry:param.entrySet()){
             

@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package Learners;
 
@@ -15,12 +11,10 @@ import eu.cloudtm.autonomicManager.oracles.exceptions.OracleException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
 import java.util.StringTokenizer;
+import org.apache.log4j.Logger;
 import weka.core.DistanceFunction;
 import weka.core.Instance;
 import weka.core.Instances;
@@ -30,10 +24,11 @@ import weka.core.neighboursearch.LinearNNSearch;
  *
  * @author Ennio email:ennio_torre@hotmail.it
  */
+
+
+
 public class Knearestneighbourg implements Oracle {
-
-
-    
+    static Logger logger = Logger.getLogger(Knearestneighbourg.class.getName()); 
     protected Instances m_Training = null;
     protected String m_TestSetFile = null;
     protected Instance m_TestSet = null;
@@ -77,7 +72,7 @@ public class Knearestneighbourg implements Oracle {
         
         }
         catch(NullPointerException e){
-        
+            logger.warn("--"+e.getMessage()+"--"+"Datasets Not instanziated");
             throw new InstantiationException("Datasets Not instanziated");
         }
         
@@ -141,7 +136,7 @@ public class Knearestneighbourg implements Oracle {
                 outputValidationSet=DataSets.ValidationSet.get(inst);
                 outputOracle=entry.getValue().get(inst);
                 
-                DataSets.logger.info("Instance :"+inst +"\n"+"validationOutput= "+outputValidationSet+"\n"+"Oracle Output= "+outputOracle);
+               logger.info("Instance :"+inst +"\n"+"validationOutput= "+outputValidationSet+"\n"+"Oracle Output= "+outputOracle);
                 token=new StringTokenizer(Parameter);
                 while(token.hasMoreTokens()){
                     
@@ -150,11 +145,11 @@ public class Knearestneighbourg implements Oracle {
                     method=OutputOracle.class.getMethod(outputname, int.class);
                     errorOutputRO=(Double)method.invoke(outputValidationSet,0)-(Double)method.invoke(outputOracle,0);
                     SEOutputRO=SEOutputRO+Math.pow(errorOutputRO,2);
-                    DataSets.logger.info( outputname+"RMSERO"+entry.getKey().toString()+" = " +errorOutputRO );
+                    logger.info( "error on "+outputname+"RO prediction for "+entry.getKey().toString().split("@")[0]+" = " +errorOutputRO );
                 
                     errorOutputWO=(Double)method.invoke(outputValidationSet,1)-(Double)method.invoke(outputOracle,1);
                     SEOutputWO=SEOutputWO+Math.pow(errorOutputWO,2);
-                    DataSets.logger.info( outputname+"RMSEWO"+entry.getKey().toString()+" = " +errorOutputWO );
+                    logger.info(   "error on "+outputname+"WO prediction for "+entry.getKey().toString().split("@")[0]+" = " +errorOutputWO );
                     }
             
              }
@@ -163,7 +158,7 @@ public class Knearestneighbourg implements Oracle {
             RMSe[1]=Math.sqrt(SEOutputWO)/Neighbourshood.numInstances();
             SEOutputRO=0D;
             SEOutputWO=0D;
-            System.out.println(entry.getKey().toString()+":"+RMSe[0]+"  "+RMSe[1]);
+            logger.info("RESULT considering "+Parameter+" of  "+entry.getKey().toString().split("@")[0]+":"+"RMSERO ="+RMSe[0]+"  RMSEWO ="+RMSe[1]);
             rmse.put(entry.getKey(),RMSe);
      }
        return rmse;
@@ -176,6 +171,7 @@ public class Knearestneighbourg implements Oracle {
         Oracle best=null;
         
         try{
+           
            m_TestSet=DataConverter.FromInputOracleToInstance(io);
            System.out.println(m_TestSet);
            Neighbourshood=KNN.kNearestNeighbours(m_TestSet,NumNeighbours);
@@ -183,11 +179,9 @@ public class Knearestneighbourg implements Oracle {
            RMSE=RMSE(this.ConsideredOutOracle);
            
         }
-        catch(Exception ex){
-            System.out.println(ex.getMessage());
-            System.out.println(ex.getCause());
-            System.out.println(ex.getStackTrace());
-            throw new OracleException(ex.getCause());
+        catch( Exception ex){
+            logger.warn("--"+ex.getClass()+" "+" "+ex.getMessage()+" "+ex.getCause()+"--");
+            throw new OracleException(ex);
         }
  
         double actual;
@@ -203,12 +197,10 @@ public class Knearestneighbourg implements Oracle {
                }
         }
         
-        System.out.println(best.toString());
+       logger.info("ORACLE SELECTED FOR PREDICTION : "+best.toString().split("@")[0]);
         
         return best.forecast(io);
     }
 
  
-
-
 }

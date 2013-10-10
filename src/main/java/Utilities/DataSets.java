@@ -8,7 +8,6 @@ import csv.CsvReader;
 
 import Utilities.DataConverter.DataInputOracle;
 import eu.cloudtm.autonomicManager.oracles.Oracle;
-import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import eu.cloudtm.autonomicManager.oracles.OutputOracle;
 
 import eu.cloudtm.autonomicManager.simulator.SimulatorOracle;
@@ -34,7 +33,8 @@ import weka.core.converters.ConverterUtils.DataSource;
  * @author etorre
  */
 public class DataSets {
-    public static Logger logger = Logger.getLogger(DataSets.class.getName());
+    static Logger logger = Logger.getLogger(DataSets.class.getName());
+    
     public static Instances ARFFDataSet;
     public static HashMap<Instance,OutputOracle>ValidationSet;
     public static HashMap<Oracle,HashMap<Instance,OutputOracle>> predictionResults;
@@ -50,6 +50,9 @@ public class DataSets {
          
          Init("conf/K-NN/dataset.arff");
          
+        logger.info("Start of Datasets Creation");
+        int numFiles=0;
+        try{
         File dir = new File(Directory_path);
       for (File nextdir : dir.listFiles()) {
          if (nextdir.isDirectory()) {
@@ -65,7 +68,8 @@ public class DataSets {
                    InstancesMap.put(i.toStringNoWeight(), i);
                    UpdateValidationSet(i);
                    //InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
-                   UpdatePredictionSet(i);                         
+                   UpdatePredictionSet(i);  
+                   numFiles ++;
                          }
                              
                        
@@ -75,9 +79,15 @@ public class DataSets {
                
                }  
             }
+          //only for data Analisis
           DataPrinting.PrintMorpheRPrediction();
           DataPrinting.PrintSOPrediction();
           DataPrinting.PrintTasPrediction();
+        }
+        finally{
+          logger.info(numFiles+" File Readed");
+        }
+            
          }
          
       
@@ -86,12 +96,12 @@ public class DataSets {
 
     
     private static boolean csv(File f) {
-      System.out.println(f);
+      
       return f.toString().endsWith("csv");
    }
     
     private void Init(String f)throws Exception{
-       System.out.println(new File(f).exists());
+       
         DataSource source = new DataSource(f);
         
              ARFFDataSet = source.getStructure();

@@ -6,13 +6,13 @@
 package Utilities;
 
 
+
 import eu.cloudtm.autonomicManager.oracles.Oracle;
 import eu.cloudtm.autonomicManager.oracles.OutputOracle;
 
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import tasOracle.TasOracle;
 import morphr.MorphR;
 import eu.cloudtm.autonomicManager.simulator.SimulatorOracle;
@@ -29,17 +29,17 @@ import weka.core.converters.ConverterUtils.DataSource;
  * @author Ennio email:ennio_torre@hotmail.it
  */
 public class DataPrinting {
-   
+  static Logger logger = Logger.getLogger(DataPrinting.class.getName()); 
     
    static void PrintARFF(){
-      Logger log = Logger.getLogger(DataPrinting.class.getName());
-      PropertyConfigurator.configure("conf/log4j.properties"); 
-      log.info(DataSets.ARFFDataSet);
+      
+     // PropertyConfigurator.configure("conf/log4j.properties"); 
+      logger.info(DataSets.ARFFDataSet);
    }
    
    static void PrintTasPrediction() throws Exception{
      Logger log = Logger.getLogger("TasLogger"); 
-     PropertyConfigurator.configure("conf/log4j.properties");
+    
      for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
      
          if(TasOracle.class.isInstance(entry.getKey())){
@@ -49,12 +49,13 @@ public class DataPrinting {
          }         
              
          }
+          logger.warn("--Tas Oracle Dataset not present");
           throw new NoSuchFieldException();     
    }
    
     static void PrintMorpheRPrediction() throws Exception{
        Logger log = Logger.getLogger("MorphRLogger");
-      PropertyConfigurator.configure("conf/log4j.properties");
+     
      for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
      
          if(MorphR.class.isInstance(entry.getKey())){
@@ -66,13 +67,14 @@ public class DataPrinting {
              
      
      }
+     logger.warn("--MorphR Oracle Dataset not present");
     throw new NoSuchFieldException();
    
    }
      
     static void PrintSOPrediction() throws Exception{
      Logger log = Logger.getLogger("SOLogger");
-     PropertyConfigurator.configure("conf/log4j.properties");
+    
      for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
      
          if(SimulatorOracle.class.isInstance(entry.getKey())){
@@ -81,6 +83,7 @@ public class DataPrinting {
          }         
              
          }
+          logger.warn("--Simulator Oracle Dataset not present");
           throw new NoSuchFieldException();     
    }
     
