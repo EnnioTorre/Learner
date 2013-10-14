@@ -1,0 +1,1252 @@
+ INFO [main] (DataSets.java:53) - Start of Datasets Creation
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:3817.1666666666665
+RemoteUpdateTxCommitServiceTime:168.86666666666667
+LocalUpdateTxPrepareResponseTime:26848.2
+LocalUpdateTxPrepareServiceTime:2020.3333333333333
+RemoteUpdateTxPrepareServiceTime:550.1
+RemoteUpdateTxRollbackServiceTime:80.63333333333334
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:174.99721390222217
+PercentageWriteTransactions:0.10025516041647428
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:841.4
+LocalUpdateTxLocalRollbackServiceTime:216.43333333333334
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:456.3666666666667
+AvgTxArrivalRate:0.041131365079000594
+LocalUpdateTxLocalServiceTime:3817.1666666666665
+RemoteGetServiceTime:303.8666666666667
+ReadOnlyTxTotalCpuTime:3117.233333333333
+GMUClusteredGetCommandServiceTime:81.53333333333333
+LocalUpdateTxRemoteRollbackServiceTime:756.3
+AvgPrepareCommandSize:3186.133333333333
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1289.0
+LocalUpdateTxLocalResponseTime:33381.2
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.10025516041647428
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:30.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0012335911158285607throughputWO : 1.3745438680479242E-4abortRateRO : 0.0abortRateWO : 29364.0responseTimeRO : 32554.266666666666responseTimeWO : 144348.58223815067
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@18985ba->throughputRO : 600.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.602151responseTimeRO : 177485.343279responseTimeWO : 535554.734452
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0012335911158285607throughputWO : 1.3745438680479242E-4abortRateRO : 0.0abortRateWO : 29364.0responseTimeRO : 32554.266666666666responseTimeWO : 144348.58223815067
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@f73283->throughputRO : 3.6581394476512826E-4throughputWO : 4.076126263973597E-5abortRateRO : 0.0abortRateWO : 0.07703957889871527responseTimeRO : 107511.43616029942responseTimeWO : 507119.1639359511
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0012335911158285607throughputWO : 1.3745438680479242E-4abortRateRO : 0.0abortRateWO : 29364.0responseTimeRO : 32554.266666666666responseTimeWO : 144348.58223815067
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@11a594c->throughputRO : 593.8315941251269throughputWO : 66.16840587487303abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:4062.3
+RemoteUpdateTxCommitServiceTime:171.73333333333332
+LocalUpdateTxPrepareResponseTime:31696.933333333334
+LocalUpdateTxPrepareServiceTime:1932.7666666666667
+RemoteUpdateTxPrepareServiceTime:512.1666666666666
+RemoteUpdateTxRollbackServiceTime:43.6
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:167.64294817777775
+PercentageWriteTransactions:0.8989007114295546
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:834.1333333333333
+LocalUpdateTxLocalRollbackServiceTime:207.0
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:578.9333333333333
+AvgTxArrivalRate:0.004435684326937657
+LocalUpdateTxLocalServiceTime:4062.3
+RemoteGetServiceTime:357.26666666666665
+ReadOnlyTxTotalCpuTime:3778.9
+GMUClusteredGetCommandServiceTime:105.0
+LocalUpdateTxRemoteRollbackServiceTime:679.8333333333334
+AvgPrepareCommandSize:3186.1666666666665
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1289.0666666666666
+LocalUpdateTxLocalResponseTime:39419.73333333333
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.8989007114295546
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:30.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.4948150992549066E-5throughputWO : 1.3290799323870619E-4abortRateRO : 0.0abortRateWO : 125755.0responseTimeRO : 39736.566666666666responseTimeWO : 446970.94850304787
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@8d6877->throughputRO : 60.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.927048responseTimeRO : 336534.194418responseTimeWO : 4824992.953284
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.4948150992549066E-5throughputWO : 1.3290799323870619E-4abortRateRO : 0.0abortRateWO : 125755.0responseTimeRO : 39736.566666666666responseTimeWO : 446970.94850304787
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@162e07d->throughputRO : 1.4068337938014017E-5throughputWO : 1.2508534095470423E-4abortRateRO : 0.0abortRateWO : 0.5430273642297164responseTimeRO : 32721.650390419574responseTimeWO : 475992.3130079524
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.4948150992549066E-5throughputWO : 1.3290799323870619E-4abortRateRO : 0.0abortRateWO : 125755.0responseTimeRO : 39736.566666666666responseTimeWO : 446970.94850304787
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@12d40de->throughputRO : 66.72553045649394throughputWO : 593.274469543506abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:3428.2
+RemoteUpdateTxCommitServiceTime:91.2
+LocalUpdateTxPrepareResponseTime:35070.0
+LocalUpdateTxPrepareServiceTime:2848.2
+RemoteUpdateTxPrepareServiceTime:2015.8
+RemoteUpdateTxRollbackServiceTime:84.4
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:393.69868426666665
+PercentageWriteTransactions:0.9007406234642217
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:583.1
+LocalUpdateTxLocalRollbackServiceTime:233.9
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:402.3
+AvgTxArrivalRate:0.0023713900257878113
+LocalUpdateTxLocalServiceTime:3428.2
+RemoteGetServiceTime:323.0
+ReadOnlyTxTotalCpuTime:3053.7
+GMUClusteredGetCommandServiceTime:531.5
+LocalUpdateTxRemoteRollbackServiceTime:494.1
+AvgPrepareCommandSize:3055.2
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:810.0
+LocalUpdateTxLocalResponseTime:36650.8
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.9007406234642217
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:10.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 2.353826954828614E-5throughputWO : 2.1360073303049496E-4abortRateRO : 0.0abortRateWO : 394.0responseTimeRO : 35977.9responseTimeWO : 89667.96237204061
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@ac1596->throughputRO : 20.0throughputWO : 120.0abortRateRO : 0.0abortRateWO : 0.034714responseTimeRO : 186594.944747responseTimeWO : 295391.70176
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 2.353826954828614E-5throughputWO : 2.1360073303049496E-4abortRateRO : 0.0abortRateWO : 394.0responseTimeRO : 35977.9responseTimeWO : 89667.96237204061
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@1401e69->throughputRO : 6.117663767195292E-6throughputWO : 5.5515443156362334E-5abortRateRO : 0.0abortRateWO : 0.0038280980765728057responseTimeRO : 113917.58154364923responseTimeWO : 347706.6819871306
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 2.353826954828614E-5throughputWO : 2.1360073303049496E-4abortRateRO : 0.0abortRateWO : 394.0responseTimeRO : 35977.9responseTimeWO : 89667.96237204061
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@1990ca->throughputRO : 65.51118851361369throughputWO : 594.4888114863863abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 4919.1171875
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:12749.4
+RemoteUpdateTxCommitServiceTime:120.35
+LocalUpdateTxPrepareResponseTime:123756.5
+LocalUpdateTxPrepareServiceTime:2099.65
+RemoteUpdateTxPrepareServiceTime:1386.55
+RemoteUpdateTxRollbackServiceTime:90.2
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:293.0323546666667
+PercentageWriteTransactions:0.8982964344182184
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:762.75
+LocalUpdateTxLocalRollbackServiceTime:275.35
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:4124.2
+AvgTxArrivalRate:0.0030114077786120973
+LocalUpdateTxLocalServiceTime:12749.4
+RemoteGetServiceTime:1166.2
+ReadOnlyTxTotalCpuTime:12776.4
+GMUClusteredGetCommandServiceTime:1139.25
+LocalUpdateTxRemoteRollbackServiceTime:699.55
+AvgPrepareCommandSize:3129.0
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1049.9
+LocalUpdateTxLocalResponseTime:118630.15
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.8982964344182184
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.5313545425278138E-5throughputWO : 1.3525684350532672E-4abortRateRO : 0.0abortRateWO : 596.0responseTimeRO : 116035.55responseTimeWO : 282596.3059874494
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@1b0d41->throughputRO : 0.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 0.0responseTimeWO : 0.0
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.5313545425278138E-5throughputWO : 1.3525684350532672E-4abortRateRO : 0.0abortRateWO : 596.0responseTimeRO : 116035.55responseTimeWO : 282596.3059874494
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@c7814f->throughputRO : 1.694707206776299E-5throughputWO : 1.496849626187255E-4abortRateRO : 0.0abortRateWO : 0.008054242697945968responseTimeRO : 50045.38006349436responseTimeWO : 261561.86067355503
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.5313545425278138E-5throughputWO : 1.3525684350532672E-4abortRateRO : 0.0abortRateWO : 596.0responseTimeRO : 116035.55responseTimeWO : 282596.3059874494
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@1d7141e->throughputRO : 67.12435328397586throughputWO : 592.8756467160241abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:9737.45
+RemoteUpdateTxCommitServiceTime:325.3
+LocalUpdateTxPrepareResponseTime:487165.5
+LocalUpdateTxPrepareServiceTime:3006.9
+RemoteUpdateTxPrepareServiceTime:3434.8
+RemoteUpdateTxRollbackServiceTime:91.4
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:120.38002466666666
+PercentageWriteTransactions:0.09825233769373967
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:1239.85
+LocalUpdateTxLocalRollbackServiceTime:604.65
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:4681.55
+AvgTxArrivalRate:0.001863560658495707
+LocalUpdateTxLocalServiceTime:9737.45
+RemoteGetServiceTime:1119.1
+ReadOnlyTxTotalCpuTime:9146.65
+GMUClusteredGetCommandServiceTime:905.0
+LocalUpdateTxRemoteRollbackServiceTime:683.75
+AvgPrepareCommandSize:3140.45
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1049.85
+LocalUpdateTxLocalResponseTime:94028.5
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.09825233769373967
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:14.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 8.402307336822094E-5throughputWO : 9.154959556564403E-6abortRateRO : 0.0abortRateWO : 7796.0responseTimeRO : 87288.0responseTimeWO : 3568098.11884011
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@1c573cd->throughputRO : 40.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.712766responseTimeRO : 1673797.383831responseTimeWO : 8701242.256407
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 8.402307336822094E-5throughputWO : 9.154959556564403E-6abortRateRO : 0.0abortRateWO : 7796.0responseTimeRO : 87288.0responseTimeWO : 3568098.11884011
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@8e2e94->throughputRO : 2.5916649945986384E-4throughputWO : 2.8238181797677572E-5abortRateRO : 0.0abortRateWO : 0.20678240028983752responseTimeRO : 92301.04602871166responseTimeWO : 569394.3441350535
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 8.402307336822094E-5throughputWO : 9.154959556564403E-6abortRateRO : 0.0abortRateWO : 7796.0responseTimeRO : 87288.0responseTimeWO : 3568098.11884011
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@86a13f->throughputRO : 595.1534571221318throughputWO : 64.84654287786819abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:4034.5
+RemoteUpdateTxCommitServiceTime:168.3
+LocalUpdateTxPrepareResponseTime:31350.933333333334
+LocalUpdateTxPrepareServiceTime:1937.2
+RemoteUpdateTxPrepareServiceTime:541.5333333333333
+RemoteUpdateTxRollbackServiceTime:45.266666666666666
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:174.97626899555553
+PercentageWriteTransactions:0.5006339921927354
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:828.6333333333333
+LocalUpdateTxLocalRollbackServiceTime:208.2
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:597.2666666666667
+AvgTxArrivalRate:0.008280407371914978
+LocalUpdateTxLocalServiceTime:4034.5
+RemoteGetServiceTime:350.53333333333336
+ReadOnlyTxTotalCpuTime:3597.0
+GMUClusteredGetCommandServiceTime:102.73333333333333
+LocalUpdateTxRemoteRollbackServiceTime:683.7333333333333
+AvgPrepareCommandSize:3186.0333333333333
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1289.0333333333333
+LocalUpdateTxLocalResponseTime:38971.13333333333
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.5006339921927354
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:30.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.378317990777009E-4throughputWO : 1.3818177998613172E-4abortRateRO : 0.0abortRateWO : 113614.0responseTimeRO : 39108.166666666664responseTimeWO : 395201.531165567
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@c197b6->throughputRO : 240.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.869307responseTimeRO : 265222.387059responseTimeWO : 2119662.287928
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.378317990777009E-4throughputWO : 1.3818177998613172E-4abortRateRO : 0.0abortRateWO : 113614.0responseTimeRO : 39108.166666666664responseTimeWO : 395201.531165567
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@89f191->throughputRO : 1.3487950045089673E-4throughputWO : 1.3522198491683547E-4abortRateRO : 0.0abortRateWO : 0.4752924625493331responseTimeRO : 32302.309289280256responseTimeWO : 411494.33425247564
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.378317990777009E-4throughputWO : 1.3818177998613172E-4abortRateRO : 0.0abortRateWO : 113614.0responseTimeRO : 39108.166666666664responseTimeWO : 395201.531165567
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@6cdb70->throughputRO : 329.5815651527946throughputWO : 330.4184348472054abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:2614.9
+RemoteUpdateTxCommitServiceTime:153.3
+LocalUpdateTxPrepareResponseTime:19625.4
+LocalUpdateTxPrepareServiceTime:1866.6
+RemoteUpdateTxPrepareServiceTime:799.1
+RemoteUpdateTxRollbackServiceTime:76.4
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:215.94080154666668
+PercentageWriteTransactions:0.10088258361527584
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:631.5
+LocalUpdateTxLocalRollbackServiceTime:218.7
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:149.3
+AvgTxArrivalRate:0.008965867012110917
+LocalUpdateTxLocalServiceTime:2614.9
+RemoteGetServiceTime:230.0
+ReadOnlyTxTotalCpuTime:2091.1
+GMUClusteredGetCommandServiceTime:61.5
+LocalUpdateTxRemoteRollbackServiceTime:522.0
+AvgPrepareCommandSize:3033.1
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:809.0
+LocalUpdateTxLocalResponseTime:19103.5
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.10088258361527584
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:10.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 8.061367183578195E-4throughputWO : 9.04499828532723E-5abortRateRO : 0.0abortRateWO : 4285.0responseTimeRO : 17959.2responseTimeWO : 61055.06351092091
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@661428->throughputRO : 360.0throughputWO : 20.0abortRateRO : 0.0abortRateWO : 0.376344responseTimeRO : 100029.320958responseTimeWO : 217507.220971
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 8.061367183578195E-4throughputWO : 9.04499828532723E-5abortRateRO : 0.0abortRateWO : 4285.0responseTimeRO : 17959.2responseTimeWO : 61055.06351092091
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@195f1b9->throughputRO : 1.1884617211387051E-4throughputWO : 1.3334753255967186E-5abortRateRO : 0.0abortRateWO : 0.06654759385380771responseTimeRO : 111548.82728415947responseTimeWO : 505659.8156751796
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 8.061367183578195E-4throughputWO : 9.04499828532723E-5abortRateRO : 0.0abortRateWO : 4285.0responseTimeRO : 17959.2responseTimeWO : 61055.06351092091
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@1f67d34->throughputRO : 593.417494813918throughputWO : 66.58250518608206abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:20343.1
+RemoteUpdateTxCommitServiceTime:252.53333333333333
+LocalUpdateTxPrepareResponseTime:1447498.0
+LocalUpdateTxPrepareServiceTime:4887.9
+RemoteUpdateTxPrepareServiceTime:4481.066666666667
+RemoteUpdateTxRollbackServiceTime:125.56666666666666
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:250.68094467555554
+PercentageWriteTransactions:0.09735000041353827
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:1995.1
+LocalUpdateTxLocalRollbackServiceTime:99.73333333333333
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:16462.933333333334
+AvgTxArrivalRate:0.0027057617449375336
+LocalUpdateTxLocalServiceTime:20343.1
+RemoteGetServiceTime:1761.1
+ReadOnlyTxTotalCpuTime:20003.9
+GMUClusteredGetCommandServiceTime:2241.6666666666665
+LocalUpdateTxRemoteRollbackServiceTime:972.8
+AvgPrepareCommandSize:3225.7
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1290.0
+LocalUpdateTxLocalResponseTime:534525.8
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.09735000041353827
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:11.0
+ReplicationProtocol:TWOPC
+NumNodes:30.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 8.141186126496429E-5throughputWO : 8.780196899620165E-6abortRateRO : 0.0abortRateWO : 22.0responseTimeRO : 549600.7responseTimeWO : 1737544.6399308797
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@11120f9->throughputRO : 0.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 0.0responseTimeWO : 0.0
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 8.141186126496429E-5throughputWO : 8.780196899620165E-6abortRateRO : 0.0abortRateWO : 22.0responseTimeRO : 549600.7responseTimeWO : 1737544.6399308797
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@15609e1->throughputRO : 3.96113938713724E-4throughputWO : 4.272053632665583E-5abortRateRO : 0.0abortRateWO : 0.0017300309265335656responseTimeRO : 116598.90700748612responseTimeWO : 323346.77612486726
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 8.141186126496429E-5throughputWO : 8.780196899620165E-6abortRateRO : 0.0abortRateWO : 22.0responseTimeRO : 549600.7responseTimeWO : 1737544.6399308797
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@932bc1->throughputRO : 595.7489997270648throughputWO : 64.25100027293526abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:2654.8
+RemoteUpdateTxCommitServiceTime:111.8
+LocalUpdateTxPrepareResponseTime:24845.0
+LocalUpdateTxPrepareServiceTime:2159.5
+RemoteUpdateTxPrepareServiceTime:1283.9
+RemoteUpdateTxRollbackServiceTime:55.5
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:243.54706159999998
+PercentageWriteTransactions:0.49695503145430325
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:593.6
+LocalUpdateTxLocalRollbackServiceTime:191.3
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:273.3
+AvgTxArrivalRate:0.0031091210584128473
+LocalUpdateTxLocalServiceTime:2654.8
+RemoteGetServiceTime:252.6
+ReadOnlyTxTotalCpuTime:2342.5
+GMUClusteredGetCommandServiceTime:79.1
+LocalUpdateTxRemoteRollbackServiceTime:460.6
+AvgPrepareCommandSize:3033.4
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:809.0
+LocalUpdateTxLocalResponseTime:24029.1
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.49695503145430325
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:10.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.5640277050340542E-4throughputWO : 1.545093353378793E-4abortRateRO : 0.0abortRateWO : 26134.0responseTimeRO : 23756.4responseTimeWO : 105394.49404272097
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@899322->throughputRO : 120.0throughputWO : 60.0abortRateRO : 0.0abortRateWO : 0.597194responseTimeRO : 145748.727293responseTimeWO : 414601.045058
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.5640277050340542E-4throughputWO : 1.545093353378793E-4abortRateRO : 0.0abortRateWO : 26134.0responseTimeRO : 23756.4responseTimeWO : 105394.49404272097
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@ee993e->throughputRO : 3.735744503286425E-5throughputWO : 3.6905190255715696E-5abortRateRO : 0.0abortRateWO : 0.22421484821115645responseTimeRO : 89185.89398366315responseTimeWO : 451650.370918138
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.5640277050340542E-4throughputWO : 1.545093353378793E-4abortRateRO : 0.0abortRateWO : 26134.0responseTimeRO : 23756.4responseTimeWO : 105394.49404272097
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@419444->throughputRO : 332.00967924015987throughputWO : 327.99032075984013abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:3710.1
+RemoteUpdateTxCommitServiceTime:109.0
+LocalUpdateTxPrepareResponseTime:70963.8
+LocalUpdateTxPrepareServiceTime:4186.8
+RemoteUpdateTxPrepareServiceTime:4341.4
+RemoteUpdateTxRollbackServiceTime:83.0
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:399.3277013866667
+PercentageWriteTransactions:0.899067459114485
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:708.6
+LocalUpdateTxLocalRollbackServiceTime:462.1
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:635.6
+AvgTxArrivalRate:0.0017848080602587183
+LocalUpdateTxLocalServiceTime:3710.1
+RemoteGetServiceTime:0.0
+ReadOnlyTxTotalCpuTime:3411.9
+GMUClusteredGetCommandServiceTime:0.0
+LocalUpdateTxRemoteRollbackServiceTime:567.1
+AvgPrepareCommandSize:3107.0
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:0.0
+LocalUpdateTxLocalResponseTime:7266.6
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.899067459114485
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:10.0
+ReplicationProtocol:TWOPC
+NumNodes:10.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.8014521251485972E-5throughputWO : 1.6046628477438585E-4abortRateRO : 0.0abortRateWO : 384.0responseTimeRO : 6410.5responseTimeWO : 123917.10781784971
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@1dc25c9->throughputRO : 20.0throughputWO : 120.0abortRateRO : 0.0abortRateWO : 0.054505responseTimeRO : 156487.046491responseTimeWO : 335792.968062
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.8014521251485972E-5throughputWO : 1.6046628477438585E-4abortRateRO : 0.0abortRateWO : 384.0responseTimeRO : 6410.5responseTimeWO : 123917.10781784971
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@18bf083->throughputRO : 6.251823604306137E-6throughputWO : 5.5688790883913386E-5abortRateRO : 0.0abortRateWO : 0.0038611865023994163responseTimeRO : 111656.12580906184responseTimeWO : 346603.78310848214
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.8014521251485972E-5throughputWO : 1.6046628477438585E-4abortRateRO : 0.0abortRateWO : 384.0responseTimeRO : 6410.5responseTimeWO : 123917.10781784971
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@a6a14b->throughputRO : 66.61547698443987throughputWO : 593.3845230155601abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 0.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:3163.5
+RemoteUpdateTxCommitServiceTime:103.8
+LocalUpdateTxPrepareResponseTime:29839.0
+LocalUpdateTxPrepareServiceTime:2682.1
+RemoteUpdateTxPrepareServiceTime:1788.6
+RemoteUpdateTxRollbackServiceTime:87.9
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:369.36996719999996
+PercentageWriteTransactions:0.5000525937871851
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:599.7
+LocalUpdateTxLocalRollbackServiceTime:318.7
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:319.1
+AvgTxArrivalRate:0.0036329965806306836
+LocalUpdateTxLocalServiceTime:3163.5
+RemoteGetServiceTime:293.9
+ReadOnlyTxTotalCpuTime:2742.5
+GMUClusteredGetCommandServiceTime:460.3
+LocalUpdateTxRemoteRollbackServiceTime:512.6
+AvgPrepareCommandSize:3055.2
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:810.0
+LocalUpdateTxLocalResponseTime:33095.6
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.5000525937871851
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:10.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.8163072172663357E-4throughputWO : 1.816689363364348E-4abortRateRO : 0.0abortRateWO : 215.0responseTimeRO : 32040.2responseTimeWO : 78056.90744769516
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@1c7a917->throughputRO : 100.0throughputWO : 100.0abortRateRO : 0.0abortRateWO : 0.016064responseTimeRO : 171436.815824responseTimeWO : 250993.944947
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.8163072172663357E-4throughputWO : 1.816689363364348E-4abortRateRO : 0.0abortRateWO : 215.0responseTimeRO : 32040.2responseTimeWO : 78056.90744769516
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@1a56ca0->throughputRO : 3.9593246809952614E-5throughputWO : 3.960157712138463E-5abortRateRO : 0.0abortRateWO : 0.0025544291021969423responseTimeRO : 113722.5209919961responseTimeWO : 391331.7924438265
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.8163072172663357E-4throughputWO : 1.816689363364348E-4abortRateRO : 0.0abortRateWO : 215.0responseTimeRO : 32040.2responseTimeWO : 78056.90744769516
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@1bd31c0->throughputRO : 329.9652881004578throughputWO : 330.0347118995422abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 5089.1748046875
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:2978.5
+RemoteUpdateTxCommitServiceTime:148.0
+LocalUpdateTxPrepareResponseTime:21523.4
+LocalUpdateTxPrepareServiceTime:2088.0
+RemoteUpdateTxPrepareServiceTime:934.9
+RemoteUpdateTxRollbackServiceTime:109.0
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:347.78876858666666
+PercentageWriteTransactions:0.09946972087917147
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:623.1
+LocalUpdateTxLocalRollbackServiceTime:277.8
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:153.6
+AvgTxArrivalRate:0.007701653628082011
+LocalUpdateTxLocalServiceTime:2978.5
+RemoteGetServiceTime:263.2
+ReadOnlyTxTotalCpuTime:2397.3
+GMUClusteredGetCommandServiceTime:226.4
+LocalUpdateTxRemoteRollbackServiceTime:580.4
+AvgPrepareCommandSize:3055.0
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:810.0
+LocalUpdateTxLocalResponseTime:24102.9
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.09946972087917147
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:10.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 6.935572291388635E-4throughputWO : 7.660813366933758E-5abortRateRO : 0.0abortRateWO : 26.0responseTimeRO : 22397.5responseTimeWO : 58297.36016855666
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@17a2d32->throughputRO : 300.0throughputWO : 40.0abortRateRO : 0.0abortRateWO : 0.018349responseTimeRO : 114456.491341responseTimeWO : 171555.511304
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 6.935572291388635E-4throughputWO : 7.660813366933758E-5abortRateRO : 0.0abortRateWO : 26.0responseTimeRO : 22397.5responseTimeWO : 58297.36016855666
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@d17a14->throughputRO : 1.2065130779611468E-4throughputWO : 1.3326761118907674E-5abortRateRO : 0.0abortRateWO : 6.714634810512932E-4responseTimeRO : 113318.67208972978responseTimeWO : 474830.6027394071
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 6.935572291388635E-4throughputWO : 7.660813366933758E-5abortRateRO : 0.0abortRateWO : 26.0responseTimeRO : 22397.5responseTimeWO : 58297.36016855666
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@fb224->throughputRO : 594.3499842197468throughputWO : 65.65001578025317abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:3371.3
+RemoteUpdateTxCommitServiceTime:133.55
+LocalUpdateTxPrepareResponseTime:29269.35
+LocalUpdateTxPrepareServiceTime:1810.85
+RemoteUpdateTxPrepareServiceTime:738.55
+RemoteUpdateTxRollbackServiceTime:42.7
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:198.50614520000002
+PercentageWriteTransactions:0.4995092012629977
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:713.15
+LocalUpdateTxLocalRollbackServiceTime:189.8
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:511.0
+AvgTxArrivalRate:0.006258952102968245
+LocalUpdateTxLocalServiceTime:3371.3
+RemoteGetServiceTime:297.2
+ReadOnlyTxTotalCpuTime:3007.4
+GMUClusteredGetCommandServiceTime:91.8
+LocalUpdateTxRemoteRollbackServiceTime:574.6
+AvgPrepareCommandSize:3107.8
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1049.05
+LocalUpdateTxLocalResponseTime:33276.75
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.4995092012629977
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.5662739686356084E-4throughputWO : 1.5632020828485138E-4abortRateRO : 0.0abortRateWO : 69580.0responseTimeRO : 32937.95responseTimeWO : 222882.3452562802
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@1f5f74a->throughputRO : 160.0throughputWO : 40.0abortRateRO : 0.0abortRateWO : 0.803181responseTimeRO : 212894.04808responseTimeWO : 1193888.595091
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.5662739686356084E-4throughputWO : 1.5632020828485138E-4abortRateRO : 0.0abortRateWO : 69580.0responseTimeRO : 32937.95responseTimeWO : 222882.3452562802
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@ca6f82->throughputRO : 1.099553325932913E-4throughputWO : 1.0973968052336458E-4abortRateRO : 0.0abortRateWO : 0.33526818005299874responseTimeRO : 34848.49775554749responseTimeWO : 329581.98589991033
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.5662739686356084E-4throughputWO : 1.5632020828485138E-4abortRateRO : 0.0abortRateWO : 69580.0responseTimeRO : 32937.95responseTimeWO : 222882.3452562802
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@60ec56->throughputRO : 330.3239271664215throughputWO : 329.6760728335785abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:13084.8
+RemoteUpdateTxCommitServiceTime:306.25
+LocalUpdateTxPrepareResponseTime:335788.05
+LocalUpdateTxPrepareServiceTime:3001.95
+RemoteUpdateTxPrepareServiceTime:4863.4
+RemoteUpdateTxRollbackServiceTime:85.4
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:120.35962544
+PercentageWriteTransactions:0.5022085598876356
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:1128.25
+LocalUpdateTxLocalRollbackServiceTime:556.7
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:5433.8
+AvgTxArrivalRate:5.191715187843832E-4
+LocalUpdateTxLocalServiceTime:13084.8
+RemoteGetServiceTime:1232.0
+ReadOnlyTxTotalCpuTime:12208.8
+GMUClusteredGetCommandServiceTime:1330.5
+LocalUpdateTxRemoteRollbackServiceTime:672.35
+AvgPrepareCommandSize:3140.3
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1049.8
+LocalUpdateTxLocalResponseTime:117568.65
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.5022085598876356
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:14.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.292195690005008E-5throughputWO : 1.3036619039169082E-5abortRateRO : 0.0abortRateWO : 12561.0responseTimeRO : 120259.8responseTimeWO : 2949078.1261674264
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@e39f23->throughputRO : 0.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.957404responseTimeRO : 2427907.81739responseTimeWO : 6.3341152412099E7
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.292195690005008E-5throughputWO : 1.3036619039169082E-5abortRateRO : 0.0abortRateWO : 12561.0responseTimeRO : 120259.8responseTimeWO : 2949078.1261674264
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@313714->throughputRO : 7.61129975822728E-5throughputWO : 7.678838128654046E-5abortRateRO : 0.0abortRateWO : 0.3536935693923361responseTimeRO : 84936.20030273109responseTimeWO : 436722.9863404983
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.292195690005008E-5throughputWO : 1.3036619039169082E-5abortRateRO : 0.0abortRateWO : 12561.0responseTimeRO : 120259.8responseTimeWO : 2949078.1261674264
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@174ee1a->throughputRO : 328.5423504741605throughputWO : 331.4576495258395abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:36670.8
+RemoteUpdateTxCommitServiceTime:201.4
+LocalUpdateTxPrepareResponseTime:794775.2
+LocalUpdateTxPrepareServiceTime:3663.0
+RemoteUpdateTxPrepareServiceTime:16604.7
+RemoteUpdateTxRollbackServiceTime:109.6
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:255.77717391999997
+PercentageWriteTransactions:0.49457568570720517
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:1094.95
+LocalUpdateTxLocalRollbackServiceTime:187.4
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:20552.35
+AvgTxArrivalRate:8.942202534543464E-4
+LocalUpdateTxLocalServiceTime:36670.8
+RemoteGetServiceTime:1834.95
+ReadOnlyTxTotalCpuTime:36700.65
+GMUClusteredGetCommandServiceTime:4737.45
+LocalUpdateTxRemoteRollbackServiceTime:1060.35
+AvgPrepareCommandSize:3167.45
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1050.0
+LocalUpdateTxLocalResponseTime:394684.6
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.49457568570720517
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:14.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 2.259803292144461E-5throughputWO : 2.2112979751272707E-5abortRateRO : 0.0abortRateWO : 73.0responseTimeRO : 416995.95responseTimeWO : 1382749.504486436
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@1428308->throughputRO : 0.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 0.0responseTimeWO : 0.0
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 2.259803292144461E-5throughputWO : 2.2112979751272707E-5abortRateRO : 0.0abortRateWO : 73.0responseTimeRO : 416995.95responseTimeWO : 1382749.504486436
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@5797c0->throughputRO : 7.650148835668413E-5throughputWO : 7.485942997136931E-5abortRateRO : 0.0abortRateWO : 0.005269303276516091responseTimeRO : 148403.82718489386responseTimeWO : 382675.7210612444
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 2.259803292144461E-5throughputWO : 2.2112979751272707E-5abortRateRO : 0.0abortRateWO : 73.0responseTimeRO : 416995.95responseTimeWO : 1382749.504486436
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@178d35f->throughputRO : 333.58004743324454throughputWO : 326.4199525667554abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:3199.05
+RemoteUpdateTxCommitServiceTime:154.95
+LocalUpdateTxPrepareResponseTime:24234.75
+LocalUpdateTxPrepareServiceTime:1865.5
+RemoteUpdateTxPrepareServiceTime:609.65
+RemoteUpdateTxRollbackServiceTime:76.25
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:194.91970557333332
+PercentageWriteTransactions:0.10002767685860023
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:746.4
+LocalUpdateTxLocalRollbackServiceTime:215.7
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:329.3
+AvgTxArrivalRate:0.02439544677581798
+LocalUpdateTxLocalServiceTime:3199.05
+RemoteGetServiceTime:257.8
+ReadOnlyTxTotalCpuTime:2576.2
+GMUClusteredGetCommandServiceTime:69.45
+LocalUpdateTxRemoteRollbackServiceTime:660.4
+AvgPrepareCommandSize:3107.9
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1049.0
+LocalUpdateTxLocalResponseTime:26604.45
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.10002767685860023
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0010977613454452638throughputWO : 1.2201099334563508E-4abortRateRO : 0.0abortRateWO : 14184.0responseTimeRO : 25622.1responseTimeWO : 97311.3053610891
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@61d064->throughputRO : 520.0throughputWO : 40.0abortRateRO : 0.0abortRateWO : 0.415584responseTimeRO : 144203.620635responseTimeWO : 307549.759906
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0010977613454452638throughputWO : 1.2201099334563508E-4abortRateRO : 0.0abortRateWO : 14184.0responseTimeRO : 25622.1responseTimeWO : 97311.3053610891
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@1f6929c->throughputRO : 2.432835283842887E-4throughputWO : 2.7039816154902247E-5abortRateRO : 0.0abortRateWO : 0.07400298552840634responseTimeRO : 108191.67394022043responseTimeWO : 505874.2908479706
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0010977613454452638throughputWO : 1.2201099334563508E-4abortRateRO : 0.0abortRateWO : 14184.0responseTimeRO : 25622.1responseTimeWO : 97311.3053610891
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@5bcd16->throughputRO : 593.9817332733238throughputWO : 66.01826672667615abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:2745.7
+RemoteUpdateTxCommitServiceTime:107.8
+LocalUpdateTxPrepareResponseTime:26618.9
+LocalUpdateTxPrepareServiceTime:2145.1
+RemoteUpdateTxPrepareServiceTime:1294.4
+RemoteUpdateTxRollbackServiceTime:48.9
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:238.11174671999996
+PercentageWriteTransactions:0.8985419131429555
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:587.5
+LocalUpdateTxLocalRollbackServiceTime:188.6
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:312.9
+AvgTxArrivalRate:0.001769592512181535
+LocalUpdateTxLocalServiceTime:2745.7
+RemoteGetServiceTime:265.1
+ReadOnlyTxTotalCpuTime:2464.9
+GMUClusteredGetCommandServiceTime:88.2
+LocalUpdateTxRemoteRollbackServiceTime:448.3
+AvgPrepareCommandSize:3033.5
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:809.4
+LocalUpdateTxLocalResponseTime:25219.3
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.8985419131429555
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:10.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.7953947080248975E-5throughputWO : 1.5900530413790454E-4abortRateRO : 0.0abortRateWO : 34534.0responseTimeRO : 25112.4responseTimeWO : 122946.42248152355
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@47668->throughputRO : 20.0throughputWO : 40.0abortRateRO : 0.0abortRateWO : 0.767416responseTimeRO : 165960.703078responseTimeWO : 797956.029334
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.7953947080248975E-5throughputWO : 1.5900530413790454E-4abortRateRO : 0.0abortRateWO : 34534.0responseTimeRO : 25112.4responseTimeWO : 122946.42248152355
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@a76650->throughputRO : 5.9890561380823425E-6throughputWO : 5.304079868779256E-5abortRateRO : 0.0abortRateWO : 0.3204451809426049responseTimeRO : 42666.83913729948responseTimeWO : 372250.5390876855
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.7953947080248975E-5throughputWO : 1.5900530413790454E-4abortRateRO : 0.0abortRateWO : 34534.0responseTimeRO : 25112.4responseTimeWO : 122946.42248152355
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@1911a2d->throughputRO : 66.96233732564937throughputWO : 593.0376626743506abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:3437.2
+RemoteUpdateTxCommitServiceTime:136.65
+LocalUpdateTxPrepareResponseTime:29720.7
+LocalUpdateTxPrepareServiceTime:1798.25
+RemoteUpdateTxPrepareServiceTime:728.6
+RemoteUpdateTxRollbackServiceTime:39.9
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:198.6226682933333
+PercentageWriteTransactions:0.9008510202410722
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:714.4
+LocalUpdateTxLocalRollbackServiceTime:185.75
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:512.35
+AvgTxArrivalRate:0.003448329489760099
+LocalUpdateTxLocalServiceTime:3437.2
+RemoteGetServiceTime:306.1
+ReadOnlyTxTotalCpuTime:3102.3
+GMUClusteredGetCommandServiceTime:96.0
+LocalUpdateTxRemoteRollbackServiceTime:565.15
+AvgPrepareCommandSize:3107.95
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1049.1
+LocalUpdateTxLocalResponseTime:34173.5
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.9008510202410722
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.7094917539116892E-5throughputWO : 1.5532155694888806E-4abortRateRO : 0.0abortRateWO : 82313.0responseTimeRO : 33296.15responseTimeWO : 253865.63099129568
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@efdf29->throughputRO : 40.0throughputWO : 40.0abortRateRO : 0.0abortRateWO : 0.877058responseTimeRO : 252676.000005responseTimeWO : 2287761.708496
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 3
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.7094917539116892E-5throughputWO : 1.5532155694888806E-4abortRateRO : 0.0abortRateWO : 82313.0responseTimeRO : 33296.15responseTimeWO : 253865.63099129568
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@11fc720->throughputRO : 1.1796027360003752E-5throughputWO : 1.0717672847353864E-4abortRateRO : 0.0abortRateWO : 0.34291996958787774responseTimeRO : 34552.659985596074responseTimeWO : 369412.4316103207
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.7094917539116892E-5throughputWO : 1.5532155694888806E-4abortRateRO : 0.0abortRateWO : 82313.0responseTimeRO : 33296.15responseTimeWO : 253865.63099129568
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@162a9bf->throughputRO : 65.43832664089234throughputWO : 594.5616733591077abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:3782.8
+RemoteUpdateTxCommitServiceTime:109.6
+LocalUpdateTxPrepareResponseTime:66033.8
+LocalUpdateTxPrepareServiceTime:4005.9
+RemoteUpdateTxPrepareServiceTime:4468.1
+RemoteUpdateTxRollbackServiceTime:83.1
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:383.54110928
+PercentageWriteTransactions:0.4993128475472253
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:704.2
+LocalUpdateTxLocalRollbackServiceTime:420.9
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:639.7
+AvgTxArrivalRate:0.003114299264616864
+LocalUpdateTxLocalServiceTime:3782.8
+RemoteGetServiceTime:0.0
+ReadOnlyTxTotalCpuTime:3459.0
+GMUClusteredGetCommandServiceTime:0.0
+LocalUpdateTxRemoteRollbackServiceTime:571.1
+AvgPrepareCommandSize:3107.0
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:0.0
+LocalUpdateTxLocalResponseTime:7255.9
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.4993128475472253
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:10.0
+ReplicationProtocol:TWOPC
+NumNodes:10.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.559289630686788E-4throughputWO : 1.555009633930076E-4abortRateRO : 0.0abortRateWO : 319.0responseTimeRO : 6697.9responseTimeWO : 121900.23125679664
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@1c0fef4->throughputRO : 100.0throughputWO : 80.0abortRateRO : 0.0abortRateWO : 0.048117responseTimeRO : 139160.174996responseTimeWO : 318577.832418
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.559289630686788E-4throughputWO : 1.555009633930076E-4abortRateRO : 0.0abortRateWO : 319.0responseTimeRO : 6697.9responseTimeWO : 121900.23125679664
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@141fcda->throughputRO : 3.988055228402986E-5throughputWO : 3.977108664591339E-5abortRateRO : 0.0abortRateWO : 0.002573379333205006responseTimeRO : 112051.50523316888responseTimeWO : 390517.97164411296
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.559289630686788E-4throughputWO : 1.555009633930076E-4abortRateRO : 0.0abortRateWO : 319.0responseTimeRO : 6697.9responseTimeWO : 121900.23125679664
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@e5b6b0->throughputRO : 330.4535206188313throughputWO : 329.5464793811687abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 0.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:4512.533333333334
+RemoteUpdateTxCommitServiceTime:162.46666666666667
+LocalUpdateTxPrepareResponseTime:30546.833333333332
+LocalUpdateTxPrepareServiceTime:2330.0
+RemoteUpdateTxPrepareServiceTime:801.9666666666667
+RemoteUpdateTxRollbackServiceTime:109.9
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:307.69994350222225
+PercentageWriteTransactions:0.10038952212770555
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:900.7666666666667
+LocalUpdateTxLocalRollbackServiceTime:280.76666666666665
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:465.1666666666667
+AvgTxArrivalRate:0.04113943552069588
+LocalUpdateTxLocalServiceTime:4512.533333333334
+RemoteGetServiceTime:361.46666666666664
+ReadOnlyTxTotalCpuTime:3717.3
+GMUClusteredGetCommandServiceTime:283.46666666666664
+LocalUpdateTxRemoteRollbackServiceTime:1018.7
+AvgPrepareCommandSize:3206.8333333333335
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1290.0
+LocalUpdateTxLocalResponseTime:41770.333333333336
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.10038952212770555
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:30.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0012336489082723219throughputWO : 1.3766560908420715E-4abortRateRO : 0.0abortRateWO : 157.0responseTimeRO : 39594.833333333336responseTimeWO : 81021.52134660003
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@783b10->throughputRO : 480.0throughputWO : 60.0abortRateRO : 0.0abortRateWO : 0.019048responseTimeRO : 204307.879151responseTimeWO : 302065.422935
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0012336489082723219throughputWO : 1.3766560908420715E-4abortRateRO : 0.0abortRateWO : 157.0responseTimeRO : 39594.833333333336responseTimeWO : 81021.52134660003
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@13c750c->throughputRO : 3.6832388547812885E-4throughputWO : 4.110207668859329E-5abortRateRO : 0.0abortRateWO : 7.996473715021768E-4responseTimeRO : 110224.18556367769responseTimeWO : 472039.4019630735
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0012336489082723219throughputWO : 1.3766560908420715E-4abortRateRO : 0.0abortRateWO : 157.0responseTimeRO : 39594.833333333336responseTimeWO : 81021.52134660003
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@6d47ff->throughputRO : 593.7429153957144throughputWO : 66.25708460428567abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:4650.6
+RemoteUpdateTxCommitServiceTime:103.5
+LocalUpdateTxPrepareResponseTime:40370.9
+LocalUpdateTxPrepareServiceTime:2326.6
+RemoteUpdateTxPrepareServiceTime:1442.35
+RemoteUpdateTxRollbackServiceTime:91.5
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:351.6416568266667
+PercentageWriteTransactions:0.5004460255068264
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:698.45
+LocalUpdateTxLocalRollbackServiceTime:301.3
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:928.85
+AvgTxArrivalRate:0.010000991522620462
+LocalUpdateTxLocalServiceTime:4650.6
+RemoteGetServiceTime:398.65
+ReadOnlyTxTotalCpuTime:4058.0
+GMUClusteredGetCommandServiceTime:481.15
+LocalUpdateTxRemoteRollbackServiceTime:648.05
+AvgPrepareCommandSize:3128.95
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1050.0
+LocalUpdateTxLocalResponseTime:51488.5
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.5004460255068264
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 2.498017531998794E-4throughputWO : 2.5024782293114374E-4abortRateRO : 0.0abortRateWO : 739.0responseTimeRO : 50036.5responseTimeWO : 109894.24105232333
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@f293db->throughputRO : 0.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 0.0responseTimeWO : 0.0
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 2.498017531998794E-4throughputWO : 2.5024782293114374E-4abortRateRO : 0.0abortRateWO : 739.0responseTimeRO : 50036.5responseTimeWO : 109894.24105232333
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@1757c6f->throughputRO : 1.579459580774662E-4throughputWO : 1.582280013784895E-4abortRateRO : 0.0abortRateWO : 0.005910860294111253responseTimeRO : 33632.47707752302responseTimeWO : 219227.22832412575
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 2.498017531998794E-4throughputWO : 2.5024782293114374E-4abortRateRO : 0.0abortRateWO : 739.0responseTimeRO : 50036.5responseTimeWO : 109894.24105232333
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@f49ef9->throughputRO : 329.7056231654946throughputWO : 330.2943768345054abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 5213.095703125
+ INFO [main] (DataSets.java:134) - AverageWriteTime:2321.0
+RemoteUpdateTxCommitServiceTime:82.0
+LocalUpdateTxPrepareResponseTime:3937.75
+LocalUpdateTxPrepareServiceTime:762.25
+RemoteUpdateTxPrepareServiceTime:141.5
+RemoteUpdateTxRollbackServiceTime:105.25
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:22.637310133333337
+PercentageWriteTransactions:0.010146752131727612
+NumberOfEntries:1000.0
+LocalUpdateTxCommitServiceTime:420.0
+LocalUpdateTxLocalRollbackServiceTime:274.25
+AvgGetsPerWrTransaction:1000.0
+AvgLocalGetTime:1.0
+AvgTxArrivalRate:0.005699150394246515
+LocalUpdateTxLocalServiceTime:2321.0
+RemoteGetServiceTime:0.0
+ReadOnlyTxTotalCpuTime:2092.5
+GMUClusteredGetCommandServiceTime:0.0
+LocalUpdateTxRemoteRollbackServiceTime:0.0
+AvgPrepareCommandSize:2853.0
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:0.0
+LocalUpdateTxLocalResponseTime:2500.25
+AvgGetsPerROTransaction:1000.0
+PercentageSuccessWriteTransactions:0.010146752131727612
+MAX_ACTIVE_THREADS:1.0
+CORE_PER_CPU:2.0
+ACF:0.001
+ReplicationDegree:4.0
+ReplicationProtocol:TWOPC
+NumNodes:4.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0014103306319586644throughputWO : 1.445696660296427E-5abortRateRO : 0.0abortRateWO : 2.0responseTimeRO : 2303.5responseTimeWO : 51968.25931168495
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@36e83b->throughputRO : 0.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 0.0responseTimeWO : 0.0
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0014103306319586644throughputWO : 1.445696660296427E-5abortRateRO : 0.0abortRateWO : 2.0responseTimeRO : 2303.5responseTimeWO : 51968.25931168495
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@6b282d->throughputRO : 1.8303939030936237E-6throughputWO : 1.8762936099986456E-8abortRateRO : 0.0abortRateWO : 0.002275413543725402responseTimeRO : 2161119.8490689015responseTimeWO : 2361005.984010308
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0014103306319586644throughputWO : 1.445696660296427E-5abortRateRO : 0.0abortRateWO : 2.0responseTimeRO : 2303.5responseTimeWO : 51968.25931168495
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@71b273->throughputRO : 653.3031435930598throughputWO : 6.696856406940224abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 5.195954322814941responseTimeWO : 0.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:29423.566666666666
+RemoteUpdateTxCommitServiceTime:178.93333333333334
+LocalUpdateTxPrepareResponseTime:362969.23333333334
+LocalUpdateTxPrepareServiceTime:2578.133333333333
+RemoteUpdateTxPrepareServiceTime:1865.5333333333333
+RemoteUpdateTxRollbackServiceTime:115.56666666666666
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:226.66371415111118
+PercentageWriteTransactions:0.505612737544676
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:1125.9666666666667
+LocalUpdateTxLocalRollbackServiceTime:366.73333333333335
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:11411.1
+AvgTxArrivalRate:0.00372232381622933
+LocalUpdateTxLocalServiceTime:29423.566666666666
+RemoteGetServiceTime:2748.766666666667
+ReadOnlyTxTotalCpuTime:28669.4
+GMUClusteredGetCommandServiceTime:2246.766666666667
+LocalUpdateTxRemoteRollbackServiceTime:994.3333333333334
+AvgPrepareCommandSize:3206.6
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1290.0
+LocalUpdateTxLocalResponseTime:285882.1
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.505612737544676
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:30.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 6.134231604926244E-5throughputWO : 6.273514449171523E-5abortRateRO : 0.0abortRateWO : 362.0responseTimeRO : 286115.1666666667responseTimeWO : 676638.8021223373
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@182b300->throughputRO : 0.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.0499responseTimeRO : 2040250.577752responseTimeWO : 2929953.452281
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 6.134231604926244E-5throughputWO : 6.273514449171523E-5abortRateRO : 0.0abortRateWO : 362.0responseTimeRO : 286115.1666666667responseTimeWO : 676638.8021223373
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@edec51->throughputRO : 1.6470045672285603E-4throughputWO : 1.684401179450429E-4abortRateRO : 0.0abortRateWO : 0.0062599761434742884responseTimeRO : 83965.71786037006responseTimeWO : 274108.14289739914
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 6.134231604926244E-5throughputWO : 6.273514449171523E-5abortRateRO : 0.0abortRateWO : 362.0responseTimeRO : 286115.1666666667responseTimeWO : 676638.8021223373
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@16a59bb->throughputRO : 326.29559322051387throughputWO : 333.70440677948613abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:19625.95
+RemoteUpdateTxCommitServiceTime:236.05
+LocalUpdateTxPrepareResponseTime:1069986.15
+LocalUpdateTxPrepareServiceTime:3635.8
+RemoteUpdateTxPrepareServiceTime:8105.7
+RemoteUpdateTxRollbackServiceTime:126.9
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:261.04139482666665
+PercentageWriteTransactions:0.10381023329479519
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:1327.1
+LocalUpdateTxLocalRollbackServiceTime:46.85
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:9373.75
+AvgTxArrivalRate:0.002241268355143424
+LocalUpdateTxLocalServiceTime:19625.95
+RemoteGetServiceTime:1530.75
+ReadOnlyTxTotalCpuTime:19012.3
+GMUClusteredGetCommandServiceTime:2200.35
+LocalUpdateTxRemoteRollbackServiceTime:386.6
+AvgPrepareCommandSize:3167.5
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1050.0
+LocalUpdateTxLocalResponseTime:301509.65
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.10381023329479519
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:14.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.0043008821598717E-4throughputWO : 1.1633329541184038E-5abortRateRO : 0.0abortRateWO : 16.0responseTimeRO : 307442.75responseTimeWO : 784255.0547403925
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@d5bd16->throughputRO : 0.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.040816responseTimeRO : 3383029.767441responseTimeWO : 6541248.215027
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.0043008821598717E-4throughputWO : 1.1633329541184038E-5abortRateRO : 0.0abortRateWO : 16.0responseTimeRO : 307442.75responseTimeWO : 784255.0547403925
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@10937cb->throughputRO : 2.3829656566366566E-4throughputWO : 2.7603107058274274E-5abortRateRO : 0.0abortRateWO : 0.0024410237051335493responseTimeRO : 112737.90439654017responseTimeWO : 475850.21984865615
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 1.0043008821598717E-4throughputWO : 1.1633329541184038E-5abortRateRO : 0.0abortRateWO : 16.0responseTimeRO : 307442.75responseTimeWO : 784255.0547403925
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@1b05c54->throughputRO : 591.4852460254351throughputWO : 68.51475397456483abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (DataSets.java:134) - AverageWriteTime:3634.45
+RemoteUpdateTxCommitServiceTime:145.3
+LocalUpdateTxPrepareResponseTime:26503.2
+LocalUpdateTxPrepareServiceTime:2115.55
+RemoteUpdateTxPrepareServiceTime:827.7
+RemoteUpdateTxRollbackServiceTime:102.05
+AvgPutsPerWrTransaction:5.0
+MemoryInfo_used:329.0824583466666
+PercentageWriteTransactions:0.09952033136332902
+NumberOfEntries:100000.0
+LocalUpdateTxCommitServiceTime:756.6
+LocalUpdateTxLocalRollbackServiceTime:166.7
+AvgGetsPerWrTransaction:10.0
+AvgLocalGetTime:313.75
+AvgTxArrivalRate:0.022908147307850207
+LocalUpdateTxLocalServiceTime:3634.45
+RemoteGetServiceTime:298.3
+ReadOnlyTxTotalCpuTime:2987.0
+GMUClusteredGetCommandServiceTime:255.85
+LocalUpdateTxRemoteRollbackServiceTime:786.05
+AvgPrepareCommandSize:3128.85
+AvgNTCBTime:0.0
+AvgClusteredGetCommandReplySize:1050.0
+LocalUpdateTxLocalResponseTime:32670.45
+AvgGetsPerROTransaction:10.0
+PercentageSuccessWriteTransactions:0.09952033136332902
+MAX_ACTIVE_THREADS:2.0
+CORE_PER_CPU:2.0
+ACF:1.0E-5
+ReplicationDegree:2.0
+ReplicationProtocol:TWOPC
+NumNodes:20.0
+
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0010314160448426498throughputWO : 1.1399132054986031E-4abortRateRO : 0.0abortRateWO : 96.0responseTimeRO : 30763.2responseTimeWO : 72552.3828428596
+ INFO [main] (DataSets.java:152) - eu.cloudtm.autonomicManager.simulator.SimulatorOutputOracle@1b64611->throughputRO : 440.0throughputWO : 40.0abortRateRO : 0.0abortRateWO : 0.020833responseTimeRO : 159211.631289responseTimeWO : 253008.762249
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0010314160448426498throughputWO : 1.1399132054986031E-4abortRateRO : 0.0abortRateWO : 96.0responseTimeRO : 30763.2responseTimeWO : 72552.3828428596
+ INFO [main] (DataSets.java:152) - tasOracle.TasOutputOracle@14ab6e3->throughputRO : 2.4603800541560456E-4throughputWO : 2.7191934121072453E-5abortRateRO : 0.0abortRateWO : 7.604694161857939E-4responseTimeRO : 110430.79244526732responseTimeWO : 471824.77102131955
+ INFO [main] (DataSets.java:151) - Instance Output-> throughputRO : 0.0010314160448426498throughputWO : 1.1399132054986031E-4abortRateRO : 0.0abortRateWO : 96.0responseTimeRO : 30763.2responseTimeWO : 72552.3828428596
+ INFO [main] (DataSets.java:152) - morphr.OutputOracleMorphR@1b39190->throughputRO : 594.3165813002029throughputWO : 65.68341869979716abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ INFO [main] (DataSets.java:89) - 25 File Readed
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,10,5,3107,383.541109,10,10,3782.8,4005.9,704.2,420.9,571.1,0,0,4468.1,109.6,83.1,3459,0.499313,0.499313,639.7,66033.8,7255.9,3782.8,0.003114,0,100000,0,2,2,0.00001,0
+validationOutput= throughputRO : 1.559289630686788E-4throughputWO : 1.555009633930076E-4abortRateRO : 0.0abortRateWO : 319.0responseTimeRO : 6697.9responseTimeWO : 121900.23125679664
+Oracle Output= throughputRO : 100.0throughputWO : 80.0abortRateRO : 0.0abortRateWO : 0.048117responseTimeRO : 139160.174996responseTimeWO : 318577.832418
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -99.99984407103693
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -79.99984449903661
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,0
+validationOutput= throughputRO : 1.8014521251485972E-5throughputWO : 1.6046628477438585E-4abortRateRO : 0.0abortRateWO : 384.0responseTimeRO : 6410.5responseTimeWO : 123917.10781784971
+Oracle Output= throughputRO : 20.0throughputWO : 120.0abortRateRO : 0.0abortRateWO : 0.054505responseTimeRO : 156487.046491responseTimeWO : 335792.968062
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -19.999981985478748
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -119.99983953371523
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,0
+validationOutput= throughputRO : 2.353826954828614E-5throughputWO : 2.1360073303049496E-4abortRateRO : 0.0abortRateWO : 394.0responseTimeRO : 35977.9responseTimeWO : 89667.96237204061
+Oracle Output= throughputRO : 20.0throughputWO : 120.0abortRateRO : 0.0abortRateWO : 0.034714responseTimeRO : 186594.944747responseTimeWO : 295391.70176
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -19.99997646173045
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -119.99978639926697
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,0
+validationOutput= throughputRO : 1.8163072172663357E-4throughputWO : 1.816689363364348E-4abortRateRO : 0.0abortRateWO : 215.0responseTimeRO : 32040.2responseTimeWO : 78056.90744769516
+Oracle Output= throughputRO : 100.0throughputWO : 100.0abortRateRO : 0.0abortRateWO : 0.016064responseTimeRO : 171436.815824responseTimeWO : 250993.944947
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -99.99981836927827
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -99.99981833106366
+ INFO [main] (Knearestneighbourg.java:139) - Instance :20,2,5,3128.85,329.082458,10,10,3634.45,2115.55,756.6,166.7,786.05,298.3,255.85,827.7,145.3,102.05,2987,0.09952,0.09952,313.75,26503.2,32670.45,3634.45,0.022908,0,100000,1050,2,2,0.00001,0
+validationOutput= throughputRO : 0.0010314160448426498throughputWO : 1.1399132054986031E-4abortRateRO : 0.0abortRateWO : 96.0responseTimeRO : 30763.2responseTimeWO : 72552.3828428596
+Oracle Output= throughputRO : 440.0throughputWO : 40.0abortRateRO : 0.0abortRateWO : 0.020833responseTimeRO : 159211.631289responseTimeWO : 253008.762249
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -439.99896858395516
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -39.999886008679454
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,0
+validationOutput= throughputRO : 6.935572291388635E-4throughputWO : 7.660813366933758E-5abortRateRO : 0.0abortRateWO : 26.0responseTimeRO : 22397.5responseTimeWO : 58297.36016855666
+Oracle Output= throughputRO : 300.0throughputWO : 40.0abortRateRO : 0.0abortRateWO : 0.018349responseTimeRO : 114456.491341responseTimeWO : 171555.511304
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -299.9993064427709
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -39.99992339186633
+ INFO [main] (Knearestneighbourg.java:139) - Instance :30,2,5,3206.833333,307.699944,10,10,4512.533333,2330,900.766667,280.766667,1018.7,361.466667,283.466667,801.966667,162.466667,109.9,3717.3,0.10039,0.10039,465.166667,30546.833333,41770.333333,4512.533333,0.041139,0,100000,1290,2,2,0.00001,0
+validationOutput= throughputRO : 0.0012336489082723219throughputWO : 1.3766560908420715E-4abortRateRO : 0.0abortRateWO : 157.0responseTimeRO : 39594.833333333336responseTimeWO : 81021.52134660003
+Oracle Output= throughputRO : 480.0throughputWO : 60.0abortRateRO : 0.0abortRateWO : 0.019048responseTimeRO : 204307.879151responseTimeWO : 302065.422935
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -479.9987663510917
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -59.99986233439092
+ INFO [main] (Knearestneighbourg.java:139) - Instance :20,2,5,3128.95,351.641657,10,10,4650.6,2326.6,698.45,301.3,648.05,398.65,481.15,1442.35,103.5,91.5,4058,0.500446,0.500446,928.85,40370.9,51488.5,4650.6,0.010001,0,100000,1050,2,2,0.00001,0
+validationOutput= throughputRO : 2.498017531998794E-4throughputWO : 2.5024782293114374E-4abortRateRO : 0.0abortRateWO : 739.0responseTimeRO : 50036.5responseTimeWO : 109894.24105232333
+Oracle Output= throughputRO : 0.0throughputWO : 0.0abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 0.0responseTimeWO : 0.0
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = 2.498017531998794E-4
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = 2.5024782293114374E-4
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,0
+validationOutput= throughputRO : 1.7953947080248975E-5throughputWO : 1.5900530413790454E-4abortRateRO : 0.0abortRateWO : 34534.0responseTimeRO : 25112.4responseTimeWO : 122946.42248152355
+Oracle Output= throughputRO : 20.0throughputWO : 40.0abortRateRO : 0.0abortRateWO : 0.767416responseTimeRO : 165960.703078responseTimeWO : 797956.029334
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -19.99998204605292
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -39.99984099469586
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,0
+validationOutput= throughputRO : 1.5640277050340542E-4throughputWO : 1.545093353378793E-4abortRateRO : 0.0abortRateWO : 26134.0responseTimeRO : 23756.4responseTimeWO : 105394.49404272097
+Oracle Output= throughputRO : 120.0throughputWO : 60.0abortRateRO : 0.0abortRateWO : 0.597194responseTimeRO : 145748.727293responseTimeWO : 414601.045058
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -119.9998435972295
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for eu.cloudtm.autonomicManager.simulator.SimulatorOracle = -59.99984549066466
+ INFO [main] (Knearestneighbourg.java:161) - RESULT considering throughput of  eu.cloudtm.autonomicManager.simulator.SimulatorOracle:RMSERO =74.13483556944952  RMSEWO =23.916476743215853
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,10,5,3107,383.541109,10,10,3782.8,4005.9,704.2,420.9,571.1,0,0,4468.1,109.6,83.1,3459,0.499313,0.499313,639.7,66033.8,7255.9,3782.8,0.003114,0,100000,0,2,2,0.00001,0
+validationOutput= throughputRO : 1.559289630686788E-4throughputWO : 1.555009633930076E-4abortRateRO : 0.0abortRateWO : 319.0responseTimeRO : 6697.9responseTimeWO : 121900.23125679664
+Oracle Output= throughputRO : 3.988055228402986E-5throughputWO : 3.977108664591339E-5abortRateRO : 0.0abortRateWO : 0.002573379333205006responseTimeRO : 112051.50523316888responseTimeWO : 390517.97164411296
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 1.1604841078464893E-4
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 1.1572987674709421E-4
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,0
+validationOutput= throughputRO : 1.8014521251485972E-5throughputWO : 1.6046628477438585E-4abortRateRO : 0.0abortRateWO : 384.0responseTimeRO : 6410.5responseTimeWO : 123917.10781784971
+Oracle Output= throughputRO : 6.251823604306137E-6throughputWO : 5.5688790883913386E-5abortRateRO : 0.0abortRateWO : 0.0038611865023994163responseTimeRO : 111656.12580906184responseTimeWO : 346603.78310848214
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 1.1762697647179835E-5
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 1.0477749389047247E-4
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,0
+validationOutput= throughputRO : 2.353826954828614E-5throughputWO : 2.1360073303049496E-4abortRateRO : 0.0abortRateWO : 394.0responseTimeRO : 35977.9responseTimeWO : 89667.96237204061
+Oracle Output= throughputRO : 6.117663767195292E-6throughputWO : 5.5515443156362334E-5abortRateRO : 0.0abortRateWO : 0.0038280980765728057responseTimeRO : 113917.58154364923responseTimeWO : 347706.6819871306
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 1.742060578109085E-5
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 1.5808528987413262E-4
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,0
+validationOutput= throughputRO : 1.8163072172663357E-4throughputWO : 1.816689363364348E-4abortRateRO : 0.0abortRateWO : 215.0responseTimeRO : 32040.2responseTimeWO : 78056.90744769516
+Oracle Output= throughputRO : 3.9593246809952614E-5throughputWO : 3.960157712138463E-5abortRateRO : 0.0abortRateWO : 0.0025544291021969423responseTimeRO : 113722.5209919961responseTimeWO : 391331.7924438265
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 1.4203747491668096E-4
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 1.4206735921505018E-4
+ INFO [main] (Knearestneighbourg.java:139) - Instance :20,2,5,3128.85,329.082458,10,10,3634.45,2115.55,756.6,166.7,786.05,298.3,255.85,827.7,145.3,102.05,2987,0.09952,0.09952,313.75,26503.2,32670.45,3634.45,0.022908,0,100000,1050,2,2,0.00001,0
+validationOutput= throughputRO : 0.0010314160448426498throughputWO : 1.1399132054986031E-4abortRateRO : 0.0abortRateWO : 96.0responseTimeRO : 30763.2responseTimeWO : 72552.3828428596
+Oracle Output= throughputRO : 2.4603800541560456E-4throughputWO : 2.7191934121072453E-5abortRateRO : 0.0abortRateWO : 7.604694161857939E-4responseTimeRO : 110430.79244526732responseTimeWO : 471824.77102131955
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 7.853780394270453E-4
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 8.679938642878786E-5
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,0
+validationOutput= throughputRO : 6.935572291388635E-4throughputWO : 7.660813366933758E-5abortRateRO : 0.0abortRateWO : 26.0responseTimeRO : 22397.5responseTimeWO : 58297.36016855666
+Oracle Output= throughputRO : 1.2065130779611468E-4throughputWO : 1.3326761118907674E-5abortRateRO : 0.0abortRateWO : 6.714634810512932E-4responseTimeRO : 113318.67208972978responseTimeWO : 474830.6027394071
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 5.729059213427488E-4
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 6.328137255042991E-5
+ INFO [main] (Knearestneighbourg.java:139) - Instance :30,2,5,3206.833333,307.699944,10,10,4512.533333,2330,900.766667,280.766667,1018.7,361.466667,283.466667,801.966667,162.466667,109.9,3717.3,0.10039,0.10039,465.166667,30546.833333,41770.333333,4512.533333,0.041139,0,100000,1290,2,2,0.00001,0
+validationOutput= throughputRO : 0.0012336489082723219throughputWO : 1.3766560908420715E-4abortRateRO : 0.0abortRateWO : 157.0responseTimeRO : 39594.833333333336responseTimeWO : 81021.52134660003
+Oracle Output= throughputRO : 3.6832388547812885E-4throughputWO : 4.110207668859329E-5abortRateRO : 0.0abortRateWO : 7.996473715021768E-4responseTimeRO : 110224.18556367769responseTimeWO : 472039.4019630735
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 8.653250227941931E-4
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 9.656353239561386E-5
+ INFO [main] (Knearestneighbourg.java:139) - Instance :20,2,5,3128.95,351.641657,10,10,4650.6,2326.6,698.45,301.3,648.05,398.65,481.15,1442.35,103.5,91.5,4058,0.500446,0.500446,928.85,40370.9,51488.5,4650.6,0.010001,0,100000,1050,2,2,0.00001,0
+validationOutput= throughputRO : 2.498017531998794E-4throughputWO : 2.5024782293114374E-4abortRateRO : 0.0abortRateWO : 739.0responseTimeRO : 50036.5responseTimeWO : 109894.24105232333
+Oracle Output= throughputRO : 1.579459580774662E-4throughputWO : 1.582280013784895E-4abortRateRO : 0.0abortRateWO : 0.005910860294111253responseTimeRO : 33632.47707752302responseTimeWO : 219227.22832412575
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 9.185579512241318E-5
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 9.201982155265424E-5
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,0
+validationOutput= throughputRO : 1.7953947080248975E-5throughputWO : 1.5900530413790454E-4abortRateRO : 0.0abortRateWO : 34534.0responseTimeRO : 25112.4responseTimeWO : 122946.42248152355
+Oracle Output= throughputRO : 5.9890561380823425E-6throughputWO : 5.304079868779256E-5abortRateRO : 0.0abortRateWO : 0.3204451809426049responseTimeRO : 42666.83913729948responseTimeWO : 372250.5390876855
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 1.1964890942166633E-5
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 1.0596450545011199E-4
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,0
+validationOutput= throughputRO : 1.5640277050340542E-4throughputWO : 1.545093353378793E-4abortRateRO : 0.0abortRateWO : 26134.0responseTimeRO : 23756.4responseTimeWO : 105394.49404272097
+Oracle Output= throughputRO : 3.735744503286425E-5throughputWO : 3.6905190255715696E-5abortRateRO : 0.0abortRateWO : 0.22421484821115645responseTimeRO : 89185.89398366315responseTimeWO : 451650.370918138
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for tasOracle.TasOracle = 1.1904532547054117E-4
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for tasOracle.TasOracle = 1.1760414508216362E-4
+ INFO [main] (Knearestneighbourg.java:161) - RESULT considering throughput of  tasOracle.TasOracle:RMSERO =1.323126375791409E-4  RMSEWO =3.5204525465651016E-5
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,10,5,3107,383.541109,10,10,3782.8,4005.9,704.2,420.9,571.1,0,0,4468.1,109.6,83.1,3459,0.499313,0.499313,639.7,66033.8,7255.9,3782.8,0.003114,0,100000,0,2,2,0.00001,0
+validationOutput= throughputRO : 1.559289630686788E-4throughputWO : 1.555009633930076E-4abortRateRO : 0.0abortRateWO : 319.0responseTimeRO : 6697.9responseTimeWO : 121900.23125679664
+Oracle Output= throughputRO : 330.4535206188313throughputWO : 329.5464793811687abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 0.0
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -330.45336468986824
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -329.5463238802053
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,10,5,3107,399.327701,10,10,3710.1,4186.8,708.6,462.1,567.1,0,0,4341.4,109,83,3411.9,0.899067,0.899067,635.6,70963.8,7266.6,3710.1,0.001785,0,100000,0,2,2,0.00001,0
+validationOutput= throughputRO : 1.8014521251485972E-5throughputWO : 1.6046628477438585E-4abortRateRO : 0.0abortRateWO : 384.0responseTimeRO : 6410.5responseTimeWO : 123917.10781784971
+Oracle Output= throughputRO : 66.61547698443987throughputWO : 593.3845230155601abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 0.0
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -66.61545896991862
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -593.3843625492754
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3055.2,393.698684,10,10,3428.2,2848.2,583.1,233.9,494.1,323,531.5,2015.8,91.2,84.4,3053.7,0.900741,0.900741,402.3,35070,36650.8,3428.2,0.002371,0,100000,810,2,2,0.00001,0
+validationOutput= throughputRO : 2.353826954828614E-5throughputWO : 2.1360073303049496E-4abortRateRO : 0.0abortRateWO : 394.0responseTimeRO : 35977.9responseTimeWO : 89667.96237204061
+Oracle Output= throughputRO : 65.51118851361369throughputWO : 594.4888114863863abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 4919.1171875
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -65.51116497534414
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -594.4885978856533
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3055.2,369.369967,10,10,3163.5,2682.1,599.7,318.7,512.6,293.9,460.3,1788.6,103.8,87.9,2742.5,0.500053,0.500053,319.1,29839,33095.6,3163.5,0.003633,0,100000,810,2,2,0.00001,0
+validationOutput= throughputRO : 1.8163072172663357E-4throughputWO : 1.816689363364348E-4abortRateRO : 0.0abortRateWO : 215.0responseTimeRO : 32040.2responseTimeWO : 78056.90744769516
+Oracle Output= throughputRO : 329.9652881004578throughputWO : 330.0347118995422abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 5089.1748046875
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -329.9651064697361
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -330.0345302306058
+ INFO [main] (Knearestneighbourg.java:139) - Instance :20,2,5,3128.85,329.082458,10,10,3634.45,2115.55,756.6,166.7,786.05,298.3,255.85,827.7,145.3,102.05,2987,0.09952,0.09952,313.75,26503.2,32670.45,3634.45,0.022908,0,100000,1050,2,2,0.00001,0
+validationOutput= throughputRO : 0.0010314160448426498throughputWO : 1.1399132054986031E-4abortRateRO : 0.0abortRateWO : 96.0responseTimeRO : 30763.2responseTimeWO : 72552.3828428596
+Oracle Output= throughputRO : 594.3165813002029throughputWO : 65.68341869979716abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -594.315549884158
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -65.68330470847661
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3055,347.788769,10,10,2978.5,2088,623.1,277.8,580.4,263.2,226.4,934.9,148,109,2397.3,0.09947,0.09947,153.6,21523.4,24102.9,2978.5,0.007702,0,100000,810,2,2,0.00001,0
+validationOutput= throughputRO : 6.935572291388635E-4throughputWO : 7.660813366933758E-5abortRateRO : 0.0abortRateWO : 26.0responseTimeRO : 22397.5responseTimeWO : 58297.36016855666
+Oracle Output= throughputRO : 594.3499842197468throughputWO : 65.65001578025317abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -594.3492906625177
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -65.6499391721195
+ INFO [main] (Knearestneighbourg.java:139) - Instance :30,2,5,3206.833333,307.699944,10,10,4512.533333,2330,900.766667,280.766667,1018.7,361.466667,283.466667,801.966667,162.466667,109.9,3717.3,0.10039,0.10039,465.166667,30546.833333,41770.333333,4512.533333,0.041139,0,100000,1290,2,2,0.00001,0
+validationOutput= throughputRO : 0.0012336489082723219throughputWO : 1.3766560908420715E-4abortRateRO : 0.0abortRateWO : 157.0responseTimeRO : 39594.833333333336responseTimeWO : 81021.52134660003
+Oracle Output= throughputRO : 593.7429153957144throughputWO : 66.25708460428567abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -593.7416817468061
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -66.25694693867658
+ INFO [main] (Knearestneighbourg.java:139) - Instance :20,2,5,3128.95,351.641657,10,10,4650.6,2326.6,698.45,301.3,648.05,398.65,481.15,1442.35,103.5,91.5,4058,0.500446,0.500446,928.85,40370.9,51488.5,4650.6,0.010001,0,100000,1050,2,2,0.00001,0
+validationOutput= throughputRO : 2.498017531998794E-4throughputWO : 2.5024782293114374E-4abortRateRO : 0.0abortRateWO : 739.0responseTimeRO : 50036.5responseTimeWO : 109894.24105232333
+Oracle Output= throughputRO : 329.7056231654946throughputWO : 330.2943768345054abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 5213.095703125
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -329.7053733637414
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -330.29412658668247
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3033.5,238.111747,10,10,2745.7,2145.1,587.5,188.6,448.3,265.1,88.2,1294.4,107.8,48.9,2464.9,0.898542,0.898542,312.9,26618.9,25219.3,2745.7,0.00177,0,1000,809.4,2,2,0.001,0
+validationOutput= throughputRO : 1.7953947080248975E-5throughputWO : 1.5900530413790454E-4abortRateRO : 0.0abortRateWO : 34534.0responseTimeRO : 25112.4responseTimeWO : 122946.42248152355
+Oracle Output= throughputRO : 66.96233732564937throughputWO : 593.0376626743506abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -66.96231937170229
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -593.0375036690465
+ INFO [main] (Knearestneighbourg.java:139) - Instance :10,2,5,3033.4,243.547062,10,10,2654.8,2159.5,593.6,191.3,460.6,252.6,79.1,1283.9,111.8,55.5,2342.5,0.496955,0.496955,273.3,24845,24029.1,2654.8,0.003109,0,1000,809,2,2,0.001,0
+validationOutput= throughputRO : 1.5640277050340542E-4throughputWO : 1.545093353378793E-4abortRateRO : 0.0abortRateWO : 26134.0responseTimeRO : 23756.4responseTimeWO : 105394.49404272097
+Oracle Output= throughputRO : 332.00967924015987throughputWO : 327.99032075984013abortRateRO : 0.0abortRateWO : 0.0responseTimeRO : 100000.0responseTimeWO : 100000.0
+ INFO [main] (Knearestneighbourg.java:148) - error on throughputRO prediction for morphr.MorphR = -332.00952283738934
+ INFO [main] (Knearestneighbourg.java:152) - error on throughputWO prediction for morphr.MorphR = -327.9901662505048
+ INFO [main] (Knearestneighbourg.java:161) - RESULT considering throughput of  morphr.MorphR:RMSERO =122.850188250429  RMSEWO =122.65499172404789
+ INFO [main] (Knearestneighbourg.java:200) - ORACLE SELECTED FOR PREDICTION : tasOracle.TasOracle
+ WARN [main] (CsvParser.java:46) - Parameter exception.ParameterNotFoundException: tOGMUPrepareRttMinusMaxValidationTime not found. Returning -1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 1
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2
+ INFO [main] (RecursiveOpenSolver.java:106) - Num iterations: 2

@@ -60,6 +60,7 @@ public class CsvReader implements InputOracle {
       try {
        
          this.csvParser = new Ispn5_2CsvParser(path);
+         
       } catch (IOException e) {
           logger.warn("--"+e.getMessage()+"--"+"Path " + path + " is nonexistent");
          throw new IllegalArgumentException("Path " + path + " is nonexistent");
@@ -140,6 +141,7 @@ public class CsvReader implements InputOracle {
              return  AvgClusteredGetCommandReplySize();
          default:
          {
+             
              logger.warn("Param " + param + " is not present ");
              throw new IllegalArgumentException("Param " + param + " is not present");
          }
@@ -151,6 +153,7 @@ public class CsvReader implements InputOracle {
     @Override
    public Object getEvaluatedParam(EvaluatedParam evaluatedParam) {
       switch (evaluatedParam) {
+          
          case MAX_ACTIVE_THREADS:
             return   numThreadsPerNode();
          case ACF:
@@ -201,6 +204,7 @@ public class CsvReader implements InputOracle {
    }
 
    private double numThreadsPerNode() {
+       
       return csvParser.numThreads();
    }
 
@@ -329,10 +333,11 @@ public class CsvReader implements InputOracle {
    public double throughput (int i){
        
        switch(i){
-           case 0:
-              return csvParser.usecThroughput()*csvParser.numReadXact();
+           case 0:       
+               return csvParser.usecThroughput()*(1-csvParser.writePercentageXact());
+                      
            case 1:
-               return csvParser.usecThroughput()*csvParser.numWriteXact();
+               return csvParser.usecThroughput()*csvParser.writePercentageXact();
            default:
            {
                logger.warn("Troughput ( " + i + ") is not present");

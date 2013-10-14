@@ -84,6 +84,7 @@ public class DataSets {
           DataPrinting.PrintSOPrediction();
           DataPrinting.PrintTasPrediction();
         }
+        
         finally{
           logger.info(numFiles+" File Readed");
         }
@@ -147,6 +148,7 @@ public class DataSets {
             
         }
           entry.getValue().put(i, dat);
+          logger.info("Instance Output-> "+ValidationSet.get(i).toString());
           logger.info(output.toString()+"->"+dat.toString());
             }
               

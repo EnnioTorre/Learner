@@ -30,7 +30,7 @@ private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
          HashMap<EvaluatedParam,Object>evaluatedparam= new HashMap<EvaluatedParam,Object>();
          HashMap<ForecastParam,Object>forecastparam=new HashMap<ForecastParam,Object> ();
         double[] instValue=data.toDoubleArray();
-        Object value;
+        Object ForecastValue;
         String parameter;
         DataSource source = new DataSource("conf/K-NN/dataset.arff");
         
@@ -38,27 +38,44 @@ private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
            parameter=source.getDataSet().attribute(i).name();
            
            try{
-              
-               value=ParameterClassConversion.ConvertTo(ForecastParam.valueOf(parameter), instValue[i]);
-               //System.out.println((ForecastParam.valueOf(parameter))+" ; "+value);
-               forecastparam.put(ForecastParam.valueOf(parameter),value);
+                     
+                     ForecastValue=instValue[i];
+                     if(parameter.equals("ReplicationProtocol")){
+               
+                        switch(((Number)ForecastValue).intValue()){
+                            case 2:
+                               ForecastValue=ReplicationProtocol.TO;
+                                break;
+                            case 1:
+                                ForecastValue=ReplicationProtocol.PB;
+                                break;
+                            default :
+                                ForecastValue=ReplicationProtocol.TWOPC;
+                                break;
+                              
+                        }
+
                
            
+           
+                     }
+                     
+                     forecastparam.put(ForecastParam.valueOf(parameter),ForecastValue);
            }
            
            catch (IllegalArgumentException e){
            
                try{
-                    value=ParameterClassConversion.ConvertTo(EvaluatedParam.valueOf(parameter), instValue[i]);
+                    
                    // System.out.println((EvaluatedParam.valueOf(parameter))+" ; "+value);
-                    evaluatedparam.put(EvaluatedParam.valueOf(parameter),value);
+                    evaluatedparam.put(EvaluatedParam.valueOf(parameter),instValue[i]);
                 }
                   catch (IllegalArgumentException ef){
                        
                  try{
                      
-                     value=ParameterClassConversion.ConvertTo(Param.valueOf(parameter), instValue[i]);
-                     param.put(Param.valueOf(parameter),value);
+                     
+                     param.put(Param.valueOf(parameter),instValue[i]);
                      //System.out.println((Param.valueOf(parameter))+" ; "+value);
                      
                  }
@@ -107,10 +124,13 @@ private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
                         switch((ReplicationProtocol)ForecastValue){
                             case TO:
                                ForecastValue=2;
+                                break;
                             case PB:
                                 ForecastValue=1;
+                                break;
                             default :
-                                ForecastValue=0;   
+                                ForecastValue=0;
+                                break;
                               
                         }
                             
@@ -144,12 +164,7 @@ private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
        
    }
    
-   static DatasetOutputOracle FromInputOracleToOutputOracle(){
-       
-       
-       return null;
    
-   }
     
     
     static class DataInputOracle implements InputOracle{
