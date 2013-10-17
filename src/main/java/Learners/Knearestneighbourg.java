@@ -180,7 +180,7 @@ public class Knearestneighbourg implements Oracle {
            
         }
         catch( Exception ex){
-            logger.warn("--"+ex.getClass()+" "+" "+ex.getMessage()+" "+ex.getCause()+"--");
+            logger.warn("--error in class "+ex.getClass()+" "+" caused by "+ex.getCause()+" at "+ex.getStackTrace()[0]+" --");
             throw new OracleException(ex);
         }
  

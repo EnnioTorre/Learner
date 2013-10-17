@@ -297,7 +297,7 @@ public class CsvReader implements InputOracle {
    }
 
    private double AvgTxArrivalRate() {
-      return csvParser.usecThroughput() * csvParser.getNumNodes();
+      return csvParser.usecThroughput() ;//TODO sistema chiuso
    }
 
    private double AvgNTCBTime() {
@@ -331,13 +331,14 @@ public class CsvReader implements InputOracle {
    }
    
    public double throughput (int i){
-       
+                
+            
        switch(i){
            case 0:       
-               return csvParser.usecThroughput()*(1-csvParser.writePercentageXact());
+               return csvParser.readThroughput();
                       
            case 1:
-               return csvParser.usecThroughput()*csvParser.writePercentageXact();
+               return csvParser.writeThroughput();
            default:
            {
                logger.warn("Troughput ( " + i + ") is not present");
@@ -352,9 +353,9 @@ public class CsvReader implements InputOracle {
        
        switch(i){
            case 0:
-               return csvParser.localResponseTimeROXact();
+               return csvParser.totalResponseTimeROXact();
            case 1:
-               return ((((numThreadsPerNode() * numNodes())/csvParser.usecThroughput())-((1-csvParser.writePercentageXact())*csvParser.localResponseTimeROXact()))/csvParser.writePercentageXact());
+               return csvParser.totalResponseTimeWrXact();
            default:{
                logger.warn("responseTime ( " + i + ") is not present");
                throw new IllegalArgumentException("responseTime ( " + i + ") is not present");
@@ -368,14 +369,15 @@ public class CsvReader implements InputOracle {
    
    
    public double abortRate (int i){
-   
+                
        switch(i){
            case 0:
                return 0D;
            case 1:
-               return csvParser.numAborts();
+               return 1-csvParser.writeXactCommitProbability();
            default:{
                logger.warn("abortRate ( " + i + ") is not present");
+               
                throw new IllegalArgumentException("abortRate ( " + i + ") is not present");
    
            }

@@ -37,6 +37,22 @@ public class DataPrinting {
       logger.info(DataSets.ARFFDataSet);
    }
    
+   static void PrintValidationSet() throws Exception{
+    Logger log = Logger.getLogger("VLogger"); 
+    
+    
+        if(DataSets.ValidationSet!=null)  
+               PrintSet(DataSets.ValidationSet,log);       
+        
+        else{
+          logger.warn("--Tas Oracle Dataset not present");
+          throw new NoSuchFieldException();  
+        } 
+          
+   }
+   
+   
+   
    static void PrintTasPrediction() throws Exception{
      Logger log = Logger.getLogger("TasLogger"); 
     
@@ -111,7 +127,7 @@ public class DataPrinting {
            Outputs[5]=entry.getValue().responseTime(1);
 
            both = addTwoArray(entry.getKey().toDoubleArray(),Outputs);
-           Instance I=new DenseInstance(0,both);
+           Instance I=new DenseInstance(1,both);
            
            NewData.add(I);
            

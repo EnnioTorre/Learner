@@ -68,7 +68,7 @@ public class DataSets {
                    InstancesMap.put(i.toStringNoWeight(), i);
                    UpdateValidationSet(i);
                    //InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
-                   UpdatePredictionSet(i);  
+                   //UpdatePredictionSet(i);  
                    numFiles ++;
                          }
                              
@@ -80,6 +80,7 @@ public class DataSets {
                }  
             }
           //only for data Analisis
+          DataPrinting.PrintValidationSet();
           DataPrinting.PrintMorpheRPrediction();
           DataPrinting.PrintSOPrediction();
           DataPrinting.PrintTasPrediction();
