@@ -3,6 +3,8 @@ package Learners;
 
 import Utilities.DataConverter;
 import Utilities.DataSets;
+import eu.cloudtm.autonomicManager.commons.ForecastParam;
+import eu.cloudtm.autonomicManager.commons.ReplicationProtocol;
 import eu.cloudtm.autonomicManager.oracles.InputOracle;
 
 import eu.cloudtm.autonomicManager.oracles.Oracle;
@@ -19,6 +21,9 @@ import weka.core.DistanceFunction;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.neighboursearch.LinearNNSearch;
+import weka.filters.unsupervised.instance.RemoveWithValues;
+import weka.core.Utils;
+import weka.filters.Filter;
 
 /**
  *
@@ -66,13 +71,14 @@ public class Knearestneighbourg implements Oracle {
         
         
        
-        try{
-            
-        KNN.setInstances(DataSets.ARFFDataSet);
+        if(DataSets.ARFFDataSet!=null){
+        
+            this.m_Training=DataSets.ARFFDataSet;
+        
         
         }
-        catch(NullPointerException e){
-            logger.warn("--"+e.getMessage()+"--"+"Datasets Not instanziated");
+        else{
+            logger.warn("--"+"Datasets Not instanziated");
             throw new InstantiationException("Datasets Not instanziated");
         }
         
@@ -172,6 +178,9 @@ public class Knearestneighbourg implements Oracle {
         
         try{
            
+           
+           SelectInstancesRP(io);
+           KNN.setInstances(m_Training);
            m_TestSet=DataConverter.FromInputOracleToInstance(io);
            System.out.println(m_TestSet);
            Neighbourshood=KNN.kNearestNeighbours(m_TestSet,NumNeighbours);
@@ -200,6 +209,47 @@ public class Knearestneighbourg implements Oracle {
        logger.info("ORACLE SELECTED FOR PREDICTION : "+best.toString().split("@")[0]);
         
         return best.forecast(io);
+    }
+    
+    private Instances FilterInstances(String[] options) throws Exception{        //attribute ,value greater select the split number,every instance with a value greater is deleted 
+        
+     
+        RemoveWithValues remove = new RemoveWithValues();                         // new instance of filter
+        
+        remove.setOptions(options);                                            // set options
+        
+        remove.setInputFormat(this.m_Training);                          // inform filter about dataset **AFTER** setting options
+           
+        Instances newData = Filter.useFilter(this.m_Training, remove);   // apply filter
+    
+    return newData;
+    }
+    
+    private void SelectInstancesRP(InputOracle io) throws Exception{
+        int index=DataSets.ARFFDataSet.attribute("ReplicationProtocol").index()+1;
+        String[] options;
+        switch((ReplicationProtocol)io.getForecastParam(ForecastParam.ReplicationProtocol)){
+                            case TO:{
+                                options = Utils.splitOptions("-C "+index+" -S "+1);
+                                this.m_Training=FilterInstances(options);
+                                 break;
+                            }
+                            case PB:{
+                                options = Utils.splitOptions("-C "+index+" -S "+1.1+" -V ");
+                                this.m_Training=FilterInstances(options);
+                                options = Utils.splitOptions("-C "+index+" -S "+0.9);
+                                this.m_Training=FilterInstances(options);
+                                break;
+                            }
+                            default :{
+                                options = Utils.splitOptions("-C "+index+" -S "+1+" -V ");
+                                this.m_Training=FilterInstances(options);
+                                break;
+                            
+                            }
+                              
+                        }
+    
     }
 
  

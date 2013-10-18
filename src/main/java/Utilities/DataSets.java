@@ -68,7 +68,7 @@ public class DataSets {
                    InstancesMap.put(i.toStringNoWeight(), i);
                    UpdateValidationSet(i);
                    //InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
-                   //UpdatePredictionSet(i);  
+                   UpdatePredictionSet(i);  
                    numFiles ++;
                          }
                              
@@ -138,7 +138,28 @@ public class DataSets {
     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:predictionResults.entrySet()){
                 DatasetOutputOracle dat=new DatasetOutputOracle();
                 //System.out.println(entry.getKey());
-                OutputOracle output=entry.getKey().forecast(in);
+                int errorflag=1;
+                OutputOracle output=null;
+                while(errorflag>0){//try several time to forecast,bug in the DAGS Oracle
+                
+                    try{
+                
+                    output=entry.getKey().forecast(in);
+                    errorflag=0;
+              
+                    }
+                
+                    catch(Exception ex){
+                   
+                        if(errorflag<10){
+                            errorflag++;
+                            continue;
+                        }
+                        dat=new DatasetOutputOracle();
+                        dat.initOnOracleError();
+                        return;
+                    }
+                }
                  
           for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
         

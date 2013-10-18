@@ -78,6 +78,13 @@ public class DatasetOutputOracle implements OutputOracle {
     
     }
     
+    public void initOnOracleError(){
+        
+    throughput[0]=abortRate[0]=responseTime[0]=0;
+    throughput[1]=abortRate[1]=responseTime[1]=0;
+    
+    }
+    
     }
 
 
