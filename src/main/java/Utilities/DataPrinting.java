@@ -31,10 +31,19 @@ import weka.core.converters.ConverterUtils.DataSource;
 public class DataPrinting {
   static Logger logger = Logger.getLogger(DataPrinting.class.getName()); 
     
-   static void PrintARFF(){
+   static void PrintARFF() throws Exception{
       
-     // PropertyConfigurator.configure("conf/log4j.properties"); 
-      logger.info(DataSets.ARFFDataSet);
+     LearnerConfiguration LK=LearnerConfiguration.getInstance();
+     if(LK.isTasARFFenable())
+         PrintTasPrediction();
+     if(LK.isMorphRARFFenable())
+         PrintMorpheRPrediction();
+     if(LK.isValidationSetARFFenable())
+         PrintValidationSet();
+     if(LK.isDAGSARFFenable())
+         PrintSOPrediction();
+         
+      //logger.info(DataSets.ARFFDataSet);
    }
    
    static void PrintValidationSet() throws Exception{
@@ -109,7 +118,7 @@ public class DataPrinting {
       double [] Outputs=new double [6];
       double[] both;
        
-       Instances NewData=new DataSource("conf/K-NN/dataset.arff").getStructure();
+       Instances NewData=new DataSource(LearnerConfiguration.getInstance().getOracleInputDescription()).getStructure();
        NewData.insertAttributeAt(new Attribute("ThroughputRO"), NewData.numAttributes());
         
        NewData.insertAttributeAt(new Attribute("ThroughputWO"), NewData.numAttributes());

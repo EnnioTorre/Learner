@@ -1,0 +1,11 @@
+To Use DAGS Configure the SimulatorOracle.properties.Fill up directory and execute path.
+
+Compile:
+
+cd Debug/ make clean make
+
+Execute:
+
+./Debug/DAGSWithCubist
+
+

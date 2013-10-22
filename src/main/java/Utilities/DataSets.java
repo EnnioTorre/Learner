@@ -28,6 +28,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import morphr.MorphR;
 import tasOracle.common.TasOracle;
+import eu.cloudtm.autonomicManager.simulator.SimulatorOracle;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
 import CsvOracles.params.CsvRgParams;
@@ -51,7 +52,7 @@ public class DataSets {
     public DataSets(String Directory_path) throws Exception{
          PropertyConfigurator.configure("conf/log4j.properties");
          
-         Init("conf/K-NN/dataset.arff");
+         init();
          
         logger.info("Start of Datasets Creation");
         int numFiles=0;
@@ -72,7 +73,7 @@ public class DataSets {
                    InstancesMap.put(i.toStringNoWeight(), i);
                    UpdateValidationSet(i);
                    //InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
-                   UpdatePredictionSet(reader);  
+                   UpdatePredictionSet(i);  
                    numFiles ++;
                          }
                              
@@ -84,10 +85,7 @@ public class DataSets {
                }  
             }
           //only for data Analisis
-          DataPrinting.PrintValidationSet();
-          DataPrinting.PrintMorpheRPrediction();
-          DataPrinting.PrintSOPrediction();
-          DataPrinting.PrintTasPrediction();
+          DataPrinting.PrintARFF();
         }
         
         catch(Exception e){
@@ -95,9 +93,9 @@ public class DataSets {
             e.printStackTrace();
         }
         
-        /*finally{
+        finally{
           logger.info(numFiles+" File Readed");
-        }*/
+        }
             
          }
          
@@ -111,9 +109,11 @@ public class DataSets {
       return f.toString().endsWith("csv");
    }
     
-    private void Init(String f)throws Exception{
+    private void init()throws Exception{
        
-        DataSource source = new DataSource(f);
+        LearnerConfiguration LK=LearnerConfiguration.getInstance();
+        
+        DataSource source = new DataSource(LK.getOracleInputDescription());
         
              ARFFDataSet = source.getStructure();
 
@@ -123,25 +123,17 @@ public class DataSets {
          
             predictionResults=new HashMap<Oracle,HashMap<Instance,OutputOracle>>(3);
             
-            for(int i=0;i<3;i++){
-            
-                
-                if(i==0)
-                    predictionResults.put(new TasOracle(), new HashMap<Instance,OutputOracle>());
-               if(i==1)
-                     predictionResults.put(new MorphR(), new HashMap<Instance,OutputOracle>());
-               /* if(i==2)
-                    predictionResults.put(new SimulatorOracle(), new HashMap<Instance,OutputOracle>());
-               */
-            }
+           for (Class c:LK.getOracles()){
+              predictionResults.put((Oracle)c.newInstance(), new HashMap<Instance,OutputOracle>());
+          }
             
          
              }
     
-    private void UpdatePredictionSet(InputOracle i)throws Exception{
+    private void UpdatePredictionSet(Instance i)throws Exception{
     
     
-    InputOracle in=i;//DataConverter.FromInstancesToInputOracle(i);
+    DataInputOracle in=DataConverter.FromInstancesToInputOracle(i);
     logger.info(in.toString());
     
     
@@ -180,8 +172,8 @@ public class DataSets {
             method.invoke(dat,1, method2.invoke(output, 1));
             
         }
-          //entry.getValue().put(i, dat);
-         // logger.info("Instance Output-> "+ValidationSet.get(i).toString());
+          entry.getValue().put(i, dat);
+          logger.info("Instance Output-> "+ValidationSet.get(i).toString());
           logger.info(output.toString()+"->"+dat.toString());
             }
               

@@ -32,5 +32,7 @@
 @ATTRIBUTE CORE_PER_CPU                                  NUMERIC
 @ATTRIBUTE ACF                                           NUMERIC
 @ATTRIBUTE ReplicationProtocol                           NUMERIC
-
+@ATTRIBUTE ISOLATION_LEVEL                               NUMERIC
+@ATTRIBUTE AvgNumPutsBySuccessfulLocalTx                 NUMERIC
+@ATTRIBUTE LocalReadOnlyTxLocalServiceTime               NUMERIC
 @DATA

@@ -19,7 +19,7 @@ import eu.cloudtm.autonomicManager.commons.IsolationLevel;
  */
 public class ParameterClassConversion {
     static Logger logger = Logger.getLogger(ParameterClassConversion.class.getName());
-    
+             
     public static Object ConvertTo(Object param,Double value) throws Exception{
         
         //PARAM
@@ -33,15 +33,15 @@ public class ParameterClassConversion {
       if( ForecastParam.class.isInstance(param)){
           
           //System.out.println("conversion FP"+param+"class"+param.getClass()+value);
-          Object v= GetRequiredForecastParamType((ForecastParam)param,value);
+          return GetRequiredForecastParamType((ForecastParam)param,value);
           //System.out.println("conversion FP"+param+"ok");
-          return v;
+          
     }
       if(EvaluatedParam.class.isInstance(param)){
          // System.out.println("conversion EP"+param+value);
-          Object v= GetRequiredEvaluatedParamType((EvaluatedParam)param,value);
+          return GetRequiredEvaluatedParamType((EvaluatedParam)param,value);
          // System.out.println("conversion FP"+param+"ok");
-          return v;
+          
       
     }
       else
@@ -51,9 +51,8 @@ public class ParameterClassConversion {
     }
     
     
-    
-      
-    public static Object ConvertTo(Object param,Object value) throws Exception{
+   
+    public static Number ConvertTo(Object param,Object value) throws Exception{
         
         //PARAM
       //Double Value=GetaDouble(value);
@@ -66,15 +65,15 @@ public class ParameterClassConversion {
       if( ForecastParam.class.isInstance(param)){
           
           //System.out.println("conversion FP"+param+"class"+param.getClass()+value);
-          Object v= GetRequiredForecastParamType((ForecastParam)param,value);
+          return GetRequiredForecastParamType((ForecastParam)param,value);
           //System.out.println("conversion FP"+param+"ok");
-          return v;
+          
     }
       if(EvaluatedParam.class.isInstance(param)){
          // System.out.println("conversion EP"+param+value);
-          Object v= GetRequiredEvaluatedParamType((EvaluatedParam)param,value);
+         return GetRequiredEvaluatedParamType((EvaluatedParam)param,value);
          // System.out.println("conversion FP"+param+"ok");
-          return v;
+          
       
     }
       else
@@ -83,45 +82,17 @@ public class ParameterClassConversion {
       
     }
     
-    
-    
-    
 
-   
-   
-
-  
-   
-
-        
-     
-
-private static Double GetaDouble(Object value){
-
-    String temp=value+"";
-    Double v=new Double(temp);
-    return v;
-}
-
-private static Object GetRequiredParamType(Param param,Double Value) throws Exception{
+private static Number GetRequiredParamType(Param param,Object Value) throws Exception{
 
        switch ((Param)param) {
          default:
-             logger.warn("--"+"Param " + param + " is not present");
-            throw new Exception("Param " + param + " is not present");
+            return ((Number)Value).doubleValue();
       }
 
    }
 
-private static Object GetRequiredParamType(Param param,Object Value) throws Exception{
 
-       switch ((Param)param) {
-         default:
-             logger.warn("--"+"Param " + param + " is not present");
-            throw new Exception("Param " + param + " is not present");
-      }
-
-   }
 
 private static Object GetRequiredForecastParamType(ForecastParam forecastParam,Double Value) throws Exception {
       switch (forecastParam) {
@@ -140,7 +111,7 @@ private static Object GetRequiredForecastParamType(ForecastParam forecastParam,D
       }
    }
 
-private static Object GetRequiredForecastParamType(ForecastParam forecastParam,Object Value) throws Exception {
+private static Number GetRequiredForecastParamType(ForecastParam forecastParam,Object Value) throws Exception {
      
          switch(forecastParam){
                             case ReplicationProtocol:
@@ -157,7 +128,7 @@ private static Object GetRequiredForecastParamType(ForecastParam forecastParam,O
                               
                         }
                             default:
-                                return Value;
+                                return (Number)Value;
                                   
                               
                         }
@@ -176,17 +147,12 @@ private static Object GetRequiredEvaluatedParamType(EvaluatedParam evaluatedPara
              return IsolationLevel.RR;
          
             }
-         case ACF:
-            return Value;
-         case CORE_PER_CPU:
-            return Value.intValue();
          default:
-             logger.warn("--"+"Param " + evaluatedParam + " is not present");
-            throw new Exception("Param " + evaluatedParam + " is not present");
+             return Value;
       }
    }
 
-private static Object GetRequiredEvaluatedParamType(EvaluatedParam evaluatedParam,Object Value) throws Exception {
+private static Number GetRequiredEvaluatedParamType(EvaluatedParam evaluatedParam,Object Value) throws Exception {
       switch (evaluatedParam) {
           case ISOLATION_LEVEL:
               switch((IsolationLevel)Value){
@@ -199,12 +165,14 @@ private static Object GetRequiredEvaluatedParamType(EvaluatedParam evaluatedPara
        
                  }
           default:
-              return Value;
+              return (Number)Value;
                                   
                               
                         }
      
    }
+
+
 
 }
     

@@ -30,7 +30,7 @@ private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
          HashMap<EvaluatedParam,Object>evaluatedparam= new HashMap<EvaluatedParam,Object>();
          HashMap<ForecastParam,Object>forecastparam=new HashMap<ForecastParam,Object> ();
         double[] instValue=data.toDoubleArray();
-        Object ForecastValue;
+        Object ForecastValue,EvaluatedValue;
         String parameter;
         DataSource source = new DataSource("conf/K-NN/dataset.arff");
         
@@ -39,36 +39,19 @@ private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
            
            try{
                      
-                     ForecastValue=instValue[i];
-                     if(parameter.equals("ReplicationProtocol")){
-               
-                        switch(((Number)ForecastValue).intValue()){
-                            case 2:
-                               ForecastValue=ReplicationProtocol.TO;
-                                break;
-                            case 1:
-                                ForecastValue=ReplicationProtocol.PB;
-                                break;
-                            default :
-                                ForecastValue=ReplicationProtocol.TWOPC;
-                                break;
-                              
-                        }
-
-               
+                     ForecastValue=ParameterClassConversion.ConvertTo(ForecastParam.valueOf(parameter), instValue[i]);           
            
-           
+                     forecastparam.put(ForecastParam.valueOf(parameter),ForecastValue);
                      }
                      
-                     forecastparam.put(ForecastParam.valueOf(parameter),ForecastValue);
-           }
            
            catch (IllegalArgumentException e){
            
                try{
                     
                    // System.out.println((EvaluatedParam.valueOf(parameter))+" ; "+value);
-                    evaluatedparam.put(EvaluatedParam.valueOf(parameter),instValue[i]);
+                    EvaluatedValue=ParameterClassConversion.ConvertTo(EvaluatedParam.valueOf(parameter), instValue[i]);
+                    evaluatedparam.put(EvaluatedParam.valueOf(parameter),EvaluatedValue);
                 }
                   catch (IllegalArgumentException ef){
                        
@@ -99,8 +82,8 @@ private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
    
        DataSource source = new DataSource("conf/K-NN/dataset.arff");
        Instance inst=new DenseInstance(source.getStructure().numAttributes());
-       double ParamValue,EvaluatedParamValue;
-       Object ForecastValue;
+       double ParamValue;
+       Number ForecastValue,EvaluatedParamValue;
        
        
        for(int i=0;i<source.getStructure().numAttributes();i++){
@@ -119,33 +102,18 @@ private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
            
                try{
                      
-                     ForecastValue=input.getForecastParam(ForecastParam.valueOf(parameter));
-                     if(ReplicationProtocol.class.isInstance(ForecastValue)){
-                        switch((ReplicationProtocol)ForecastValue){
-                            case TO:
-                               ForecastValue=2;
-                                break;
-                            case PB:
-                                ForecastValue=1;
-                                break;
-                            default :
-                                ForecastValue=0;
-                                break;
-                              
-                        }
-                            
-                     }
-                     double tmp =new Double(ForecastValue+"");
-                    inst.setValue(source.getStructure().attribute(i),tmp);
+                     ForecastValue=ParameterClassConversion.ConvertTo(ForecastParam.valueOf(parameter),input.getForecastParam(ForecastParam.valueOf(parameter)));
+        
+                     inst.setValue(source.getStructure().attribute(i),ForecastValue.doubleValue());
                      
                 }
                   catch (IllegalArgumentException ef){
                    
                  try{
                      
-             
-                    EvaluatedParamValue =new Double(input.getEvaluatedParam(EvaluatedParam.valueOf(parameter))+"");
-                    inst.setValue(source.getStructure().attribute(i),EvaluatedParamValue);
+                    EvaluatedParamValue=ParameterClassConversion.ConvertTo(EvaluatedParam.valueOf(parameter),input.getEvaluatedParam(EvaluatedParam.valueOf(parameter)));
+                    
+                    inst.setValue(source.getStructure().attribute(i),EvaluatedParamValue.doubleValue());
                  }
                  catch (IllegalArgumentException ex){
                     logger.warn("--"+ex.getMessage()+"--"+parameter+" is not a valid parameter");

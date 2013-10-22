@@ -14,6 +14,7 @@ package testsimulator;
 import CsvOracles.params.CsvRgParams;
 import Utilities.DataSets;
 import Learners.Knearestneighbourg;
+import Utilities.LearnerConfiguration;
 import csv.CsvReader;
 import eu.cloudtm.autonomicManager.oracles.InputOracle;
 import eu.cloudtm.autonomicManager.oracles.OutputOracle;
@@ -37,14 +38,28 @@ static String path="csvfile/new/0.csv";
       
       logger.info("primo append");
      
+      
+      try{
+      
+          LearnerConfiguration LK=new LearnerConfiguration();
+          for (Class c:LK.getOracles()){
+              System.out.println(c);
+          }
           
-          //DataSets i=new DataSets("csvfile");
+          System.out.println(LK.getOracleInputDescription());
+      }
+          
+        catch(Exception e){
+           e.printStackTrace();
+        }
+      
+          
+          DataSets i=new DataSets("csvfile");/*
           InputOracle csvI =new CsvReader(new CsvRgParams(path));
           
-          System.out.println(ParameterClassConversion.ConvertTo(EvaluatedParam.ISOLATION_LEVEL, 0D));
-          System.out.println(ParameterClassConversion.ConvertTo(ForecastParam.ReplicationProtocol,ReplicationProtocol.TO ));
           
-          /*
+          
+          
           Knearestneighbourg kn= new Knearestneighbourg("EuclideanDistance","-D",10,"throughput");
           OutputOracle result=kn.forecast(csvI);
          //Instance n=kn.getNeighboughood().instance(3);
