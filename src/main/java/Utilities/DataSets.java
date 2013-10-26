@@ -11,7 +11,7 @@ import Utilities.DataConverter.DataInputOracle;
 import csv.CsvReader;
 import eu.cloudtm.autonomicManager.oracles.Oracle;
 import eu.cloudtm.autonomicManager.oracles.OutputOracle;
-
+import java.lang.instrument.Instrumentation;
 
 import java.io.File;
 import java.util.HashMap;
@@ -32,6 +32,9 @@ import eu.cloudtm.autonomicManager.simulator.SimulatorOracle;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
 import CsvOracles.params.CsvRgParams;
+import csv.PrintDataOnCsv;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectOutputStream;
 /**
  *
  * @author etorre
@@ -51,8 +54,10 @@ public class DataSets {
     
     public DataSets(String Directory_path) throws Exception{
          PropertyConfigurator.configure("conf/log4j.properties");
-         
+         InputOracle input;
          init();
+         
+                 
          
         logger.info("Start of Datasets Creation");
         int numFiles=0;
@@ -67,13 +72,20 @@ public class DataSets {
                else{
                    
                    reader=new CsvReader(new CsvRgParams(csv.getPath()));
-                   System.out.println(reader);
+                   
                    Instance i=DataConverter.FromInputOracleToInstance(reader);
+                   ByteArrayOutputStream out = new ByteArrayOutputStream();
+                ObjectOutputStream os = new ObjectOutputStream(out);
+                  os.writeObject(i);
+                   
+                   System.out.println("SIZE "+ out.toByteArray().length);
+                   System.out.println("oracle on csv "+csv.getAbsolutePath());
                    ARFFDataSet.add(i);
                    InstancesMap.put(i.toStringNoWeight(), i);
                    UpdateValidationSet(i);
                    //InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
-                   UpdatePredictionSet(i);  
+                   UpdatePredictionSet(i);
+                   PrintDataOnCsv.setCsvPath(i,csv.getAbsolutePath());
                    numFiles ++;
                          }
                              
@@ -86,6 +98,8 @@ public class DataSets {
             }
           //only for data Analisis
           DataPrinting.PrintARFF();
+          PrintDataOnCsv.PrintCsvFile();
+          DataPrinting.PrintCombinedPrediction();
         }
         
         catch(Exception e){
@@ -145,16 +159,17 @@ public class DataSets {
                 while(errorflag>0){//try several time to forecast,bug in the DAGS Oracle!!!
                 
                     try{
-                    System.out.println(entry.getKey());
+                    
                     output=entry.getKey().forecast(in);
-                    System.out.println(output);
+                    
+                    
                     errorflag=0;
               
                     }
                    
                     catch(Exception ex){
                         ex.printStackTrace();
-                        if(errorflag<10){
+                        if(errorflag<1){
                             errorflag++;
                             continue;
                         }

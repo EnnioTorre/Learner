@@ -69,12 +69,12 @@ public class DatasetOutputOracle implements OutputOracle {
     
     @Override
     public String toString(){
-    return "throughputRO : "+throughput[0]+
-           "throughputWO : " +throughput[1]+
-           "abortRateRO : " +abortRate[0]+
-           "abortRateWO : " +abortRate[1]+
-           "responseTimeRO : "+responseTime[0]+
-           "responseTimeWO : "+responseTime[1];
+    return "throughputRO="+throughput[0]+
+           " throughputWO=" +throughput[1]+
+           " abortRateRO=" +abortRate[0]+
+           " abortRateWO=" +abortRate[1]+
+           " responseTimeRO="+responseTime[0]+
+           " responseTimeWO="+responseTime[1];
     
     }
     

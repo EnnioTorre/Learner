@@ -46,13 +46,15 @@ public class DataPrinting {
       //logger.info(DataSets.ARFFDataSet);
    }
    
-   static void PrintValidationSet() throws Exception{
+  private static void PrintValidationSet() throws Exception{
     Logger log = Logger.getLogger("VLogger"); 
     
-    
-        if(DataSets.ValidationSet!=null)  
-               PrintSet(DataSets.ValidationSet,log);       
-        
+    Instances i=new DataSource(LearnerConfiguration.getInstance().getOracleInputDescription()).getStructure();
+        if(DataSets.ValidationSet!=null) { 
+               HashMap []tmp = {DataSets.ValidationSet};
+               String []oracle ={"training set"};
+             log.info( PrintSet(tmp,oracle));       
+        }
         else{
           logger.warn("--Tas Oracle Dataset not present");
           throw new NoSuchFieldException();  
@@ -62,89 +64,161 @@ public class DataPrinting {
    
    
    
-   static void PrintTasPrediction() throws Exception{
+  private static void PrintTasPrediction() throws Exception{
      Logger log = Logger.getLogger("TasLogger"); 
+     
+    try{
+        Instances i=new DataSource(LearnerConfiguration.getInstance().getOracleInputDescription()).getStructure();
     
-     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
+        for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
      
          if(TasOracle.class.isInstance(entry.getKey())){
            
-               PrintSet(entry.getValue(),log);
+               HashMap []tmp = {entry.getValue()};
+               String []oracle ={""};
+             log.info( PrintSet(tmp,oracle));
                return;
          }         
              
          }
+    }
+    catch(Exception e){
           logger.warn("--Tas Oracle Dataset not present");
-          throw new NoSuchFieldException();     
+          e.printStackTrace();
+          throw new NoSuchFieldException();
+    } 
+   ;   
+    
    }
    
-    static void PrintMorpheRPrediction() throws Exception{
+   private static void PrintMorpheRPrediction() throws Exception{
        Logger log = Logger.getLogger("MorphRLogger");
-     
+      
+       Instances i=new DataSource(LearnerConfiguration.getInstance().getOracleInputDescription()).getStructure();
+     try{
      for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
      
          if(MorphR.class.isInstance(entry.getKey())){
            
-            PrintSet(entry.getValue(),log);
+            HashMap []tmp = {entry.getValue()};
+            String []oracle ={""};
+             log.info( PrintSet(tmp,oracle));
             
             return;
          }         
              
      
      }
+     
+     }
+     catch(Exception e){
      logger.warn("--MorphR Oracle Dataset not present");
     throw new NoSuchFieldException();
-   
+     }
+         
+    
+    
    }
      
-    static void PrintSOPrediction() throws Exception{
+    private static void PrintSOPrediction() throws Exception{
      Logger log = Logger.getLogger("SOLogger");
-    
-     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
      
+     try{
+         Instances i=new DataSource(LearnerConfiguration.getInstance().getOracleInputDescription()).getStructure();
+     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
+         
          if(SimulatorOracle.class.isInstance(entry.getKey())){
-              PrintSet(entry.getValue(),log);
+             HashMap []tmp = {entry.getValue()};
+             String []oracle ={""};
+             log.info( PrintSet(tmp,oracle));
                return;
          }         
              
          }
+     } catch(Exception e){
           logger.warn("--Simulator Oracle Dataset not present");
-          throw new NoSuchFieldException();     
+          throw new NoSuchFieldException(); 
+          
+     }
+     
    }
     
-   
-   private static void PrintSet(HashMap <Instance,OutputOracle> set,Logger log) throws Exception{
+    
+    public static void PrintCombinedPrediction() throws  Exception{
+        Logger log = Logger.getLogger("CombinedLogger");
+     try{
+         
+     
+         String []Oracles=new String[DataSets.predictionResults.size()+1];
+         HashMap <Instance,OutputOracle>[]tmp = new HashMap[DataSets.predictionResults.size()+1];
+         int position=0;
+         for(Map.Entry<Oracle,HashMap<Instance,OutputOracle> >entry:DataSets.predictionResults.entrySet()){
+         
+         
+            tmp[position]=entry.getValue();
+            Oracles[position++]=entry.getKey().toString().split("@")[0];
+                 
+             
+         }
+        tmp[position]=DataSets.ValidationSet;
+        Oracles[position]="training output";
+        log.info(PrintSet(tmp,Oracles));
+     } 
+     catch(Exception e){
+          logger.warn("--error in PrintCombinedPrediction "+e.getStackTrace()[0]);
+          e.printStackTrace();
+          throw new Exception(e.getCause());
+          
+          
+     }
+    
+    }
+    
+    
+   //add a set of instances and relative oracle output to another instances set .
+   private static Instances PrintSet(HashMap <Instance,OutputOracle>[] set,String [] Oracles) throws Exception{
       
       double [] Outputs=new double [6];
-      double[] both;
-       
-       Instances NewData=new DataSource(LearnerConfiguration.getInstance().getOracleInputDescription()).getStructure();
-       NewData.insertAttributeAt(new Attribute("ThroughputRO"), NewData.numAttributes());
-        
-       NewData.insertAttributeAt(new Attribute("ThroughputWO"), NewData.numAttributes());
-       NewData.insertAttributeAt(new Attribute("AbortRateRO"), NewData.numAttributes());
-       NewData.insertAttributeAt(new Attribute("AbortRateWO"), NewData.numAttributes());
-       NewData.insertAttributeAt(new Attribute("ResponseTimeRO"), NewData.numAttributes());
-       NewData.insertAttributeAt(new Attribute("ResponseTimeWO"), NewData.numAttributes());
-       for(Map.Entry<Instance,OutputOracle> entry:set.entrySet()){
-           
-           Outputs[0]=entry.getValue().throughput(0);
-           Outputs[1]=entry.getValue().throughput(1);
-           Outputs[2]=entry.getValue().abortRate(0);
-           Outputs[3]=entry.getValue().abortRate(1);
-           Outputs[4]=entry.getValue().responseTime(0);
-           Outputs[5]=entry.getValue().responseTime(1);
-
-           both = addTwoArray(entry.getKey().toDoubleArray(),Outputs);
-           Instance I=new DenseInstance(1,both);
-           
-           NewData.add(I);
-           
-   
-   }
-       
+      double[] both=null;
+      HashMap <Instance,OutputOracle> tmp=new HashMap <Instance,OutputOracle>();
       
-        log.info(NewData);
+       Instances NewData=new DataSource(LearnerConfiguration.getInstance().getOracleInputDescription()).getStructure();
+       for(String o:Oracles){
+       NewData.insertAttributeAt(new Attribute("ThroughputRO"+o), NewData.numAttributes());
+        
+       NewData.insertAttributeAt(new Attribute("ThroughputWO"+o), NewData.numAttributes());
+       NewData.insertAttributeAt(new Attribute("AbortRateRO"+o), NewData.numAttributes());
+       NewData.insertAttributeAt(new Attribute("AbortRateWO"+o), NewData.numAttributes());
+       NewData.insertAttributeAt(new Attribute("ResponseTimeRO"+o), NewData.numAttributes());
+       NewData.insertAttributeAt(new Attribute("ResponseTimeWO"+o), NewData.numAttributes());
+       }
+       
+       for(Map.Entry<Instance,OutputOracle> entry:set[0].entrySet()){
+           both = addTwoArray(entry.getKey().toDoubleArray(),null);
+           for(HashMap <Instance,OutputOracle> s:set){
+           
+               Outputs[0]=s.get(entry.getKey()).throughput(0);
+           
+               Outputs[1]=s.get(entry.getKey()).throughput(1);
+           
+               Outputs[2]=s.get(entry.getKey()).abortRate(0);
+           
+               Outputs[3]=s.get(entry.getKey()).abortRate(1);
+           
+               Outputs[4]=s.get(entry.getKey()).responseTime(0);
+           
+               Outputs[5]=s.get(entry.getKey()).responseTime(1);
+
+           
+           both = addTwoArray(both,Outputs);
+           
+      
+           }
+           Instance I=new DenseInstance(1,both);
+           NewData.add(I);
+       }
+           
+           return NewData;
    }
    
    private static double[] addTwoArray(double[] objArr1, double[] objArr2){
@@ -164,6 +238,6 @@ public class DataPrinting {
 }
    
   // public static PrintAdditionalInfo()
-   
+  
    
 }
