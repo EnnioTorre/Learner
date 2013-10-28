@@ -1,14 +1,18 @@
 <ispn_53.gmu.solver.GmuClosedSolver>
     <common.config.ClosedSolverConfig
-            convergenceThreshold="5e-2"
+            convergenceThreshold="1e-2"
             validateUnstable="true"
             cpuUtilizationCutPoint="1"
-            convex="true">
+            convex="false">
         <common.solver.closed.lambda.LambdaGeneratorStack timeUnit="SECONDS">
-            <common.solver.closed.lambda.IterativeLambdaGenerator
-                    minLambda="0"
-                    maxLambda="8000"
-                    stepLambda="100"/>
+	<common.solver.closed.lambda.PrudentRecursiveLambdaGenerator
+		minLambda="10"
+		discountFactor=".5"
+		maxIterations="50"/>   
+        <common.solver.closed.lambda.IterativeLambdaGenerator
+                    minLambda="10"
+                    maxLambda="22000"
+                    stepLambda="10"/> 
         </common.solver.closed.lambda.LambdaGeneratorStack>
     </common.config.ClosedSolverConfig>
 </ispn_53.gmu.solver.GmuClosedSolver>

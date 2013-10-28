@@ -57,7 +57,7 @@ public class PrintDataOnCsv {
                 while(st.hasMoreTokens()){
                 
                     StringTokenizer st1 =new StringTokenizer (st.nextToken(),"=");
-                    Names=Names+innerentry.getKey().toString().split("@")[0]+st1.nextToken()+",";
+                    Names=Names+","+innerentry.getKey().toString().split("@")[0]+st1.nextToken();
                     Values=Values+","+st1.nextToken();
                 }
                 
@@ -106,7 +106,7 @@ public class PrintDataOnCsv {
            
              
             
-              fstream = new FileWriter("CsvTrainingSet.csv",true);//TODO chage to false
+              fstream = new FileWriter("CsvTrainingSet.csv",false);//TODO change to false
          
               out = new PrintWriter(fstream);
               PrintStringSet(out);
@@ -153,7 +153,7 @@ public class PrintDataOnCsv {
               
               out = new PrintWriter(fstream);
               if(headerPrint)
-                  out.println(header);
+              out.println(header);
               out.println(Values);
              
          

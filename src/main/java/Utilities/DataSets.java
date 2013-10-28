@@ -33,8 +33,12 @@ import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
 import CsvOracles.params.CsvRgParams;
 import csv.PrintDataOnCsv;
+import csv.ReadDataFromCsv;
 import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.InvocationTargetException;
 /**
  *
  * @author etorre
@@ -46,7 +50,7 @@ public class DataSets {
     public static HashMap<Instance,OutputOracle>ValidationSet;
     public static HashMap<Oracle,HashMap<Instance,OutputOracle>> predictionResults;
     public static HashMap<String,Instance>InstancesMap=new HashMap<String,Instance>();
-    private CsvReader reader;
+    
     
     private int numberOfFeatures;
     
@@ -54,53 +58,38 @@ public class DataSets {
     
     public DataSets(String Directory_path) throws Exception{
          PropertyConfigurator.configure("conf/log4j.properties");
-         InputOracle input;
+         int numFiles=0;
+         logger.info("Start of Datasets Creation");
+         
+         try{
+             
+             
          init();
          
-                 
+         File dir=new File("dataset");
          
-        logger.info("Start of Datasets Creation");
-        int numFiles=0;
-        try{
-        File dir = new File(Directory_path);
-      for (File nextdir : dir.listFiles()) {
-         if (nextdir.isDirectory()) {
-            for (File csv : nextdir.listFiles()) {
-               if (!csv(csv)) {
-                  continue;
-               }
-               else{
-                   
-                   reader=new CsvReader(new CsvRgParams(csv.getPath()));
-                   
-                   Instance i=DataConverter.FromInputOracleToInstance(reader);
-                   ByteArrayOutputStream out = new ByteArrayOutputStream();
-                ObjectOutputStream os = new ObjectOutputStream(out);
-                  os.writeObject(i);
-                   
-                   System.out.println("SIZE "+ out.toByteArray().length);
-                   System.out.println("oracle on csv "+csv.getAbsolutePath());
-                   ARFFDataSet.add(i);
-                   InstancesMap.put(i.toStringNoWeight(), i);
-                   UpdateValidationSet(i);
-                   //InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
-                   UpdatePredictionSet(i);
-                   PrintDataOnCsv.setCsvPath(i,csv.getAbsolutePath());
-                   numFiles ++;
-                         }
-                             
-                       
-                     
-                     }
-               
-               
-               }  
-            }
+         if( dir.exists()&&dir.list().length>0) {
+        
+             logger.info("Datasets Creation from Csv File" );
+                 numFiles=ImportDataset("dataset");
+             }
+         
+         else{
+             
+                logger.info("Datasets Creation from Queries to Oracles" );
+                 numFiles=CreateDataset(Directory_path);
+                 PrintDataOnCsv.PrintCsvFile();
+             }
+         
+        
+       
           //only for data Analisis
           DataPrinting.PrintARFF();
-          PrintDataOnCsv.PrintCsvFile();
+          
           DataPrinting.PrintCombinedPrediction();
         }
+    
+       
         
         catch(Exception e){
           
@@ -108,7 +97,7 @@ public class DataSets {
         }
         
         finally{
-          logger.info(numFiles+" File Readed");
+          logger.info("Dataset Created "+numFiles+" File Readed");
         }
             
          }
@@ -144,11 +133,11 @@ public class DataSets {
          
              }
     
-    private void UpdatePredictionSet(Instance i)throws Exception{
+    private void UpdatePredictionSet(InputOracle i,Instance inst)throws Exception{
     
     
-    DataInputOracle in=DataConverter.FromInstancesToInputOracle(i);
-    logger.info(in.toString());
+    
+   
     
     
     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:predictionResults.entrySet()){
@@ -160,7 +149,7 @@ public class DataSets {
                 
                     try{
                     
-                    output=entry.getKey().forecast(in);
+                    output=entry.getKey().forecast(i);
                     
                     
                     errorflag=0;
@@ -187,26 +176,128 @@ public class DataSets {
             method.invoke(dat,1, method2.invoke(output, 1));
             
         }
-          entry.getValue().put(i, dat);
-          logger.info("Instance Output-> "+ValidationSet.get(i).toString());
-          logger.info(output.toString()+"->"+dat.toString());
+          
+          entry.getValue().put(inst, dat);
+          
+          logger.info(entry.getKey().toString()+"->"+dat.toString());
             }
               
     }
     
-    private void UpdateValidationSet(Instance i)throws Exception{
+    private void UpdateValidationSet(InputOracle i,Instance inst)throws Exception{
         
         DatasetOutputOracle dat=new DatasetOutputOracle();
         for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
         
             Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(),int.class, double.class);
             Method method2=CsvReader.class.getDeclaredMethod(f.getName(),int.class);
-            method.invoke(dat,0, method2.invoke(reader, 0));
-            method.invoke(dat,1, method2.invoke(reader, 1));
+            method.invoke(dat,0, method2.invoke(i, 0));
+            method.invoke(dat,1, method2.invoke(i, 1));
             
         }
-        ValidationSet.put(i,dat);
+        ValidationSet.put(inst,dat);
+        logger.info("Instance Output-> "+ValidationSet.get(inst).toString());
         
+    
+    }
+    
+    private void UpdatePredictionSet(ReadDataFromCsv i,Instance inst) throws  Exception {
+    
+        // DataInputOracle in=DataConverter.FromInstancesToInputOracle(i);
+        //  logger.info(in.toString());
+    
+    
+    for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:predictionResults.entrySet()){
+                DatasetOutputOracle dat=i.getOutputOracle(entry.toString().split("@")[0]);
+                
+                entry.getValue().put(inst, dat);
+               
+               logger.info(entry.getKey().toString()+"->"+dat.toString());
+    }
+    
+            
+            
+    
+    }
+    
+    private void UpdateValidationSet(ReadDataFromCsv i,Instance inst) throws  Exception {
+    
+        // DataInputOracle in=DataConverter.FromInstancesToInputOracle(i);
+        //  logger.info(in.toString());
+    
+                DatasetOutputOracle dat=i.getOutputOracle("Output");
+                ValidationSet.put(inst, dat);
+
+               logger.info("Instance Output-> "+ValidationSet.get(inst).toString());
+               
+       }
+    
+    
+    
+    private int CreateDataset(String Directory_path) throws Exception{
+    
+        int numFiles=0;
+        
+        File dir = new File(Directory_path);
+      for (File nextdir : dir.listFiles()) {
+         if (nextdir.isDirectory()) {
+            for (File csv : nextdir.listFiles()) {
+               if (!csv(csv)) {
+                  continue;
+               }
+               else{
+                   
+                 CsvReader  reader=new CsvReader(new CsvRgParams(csv.getPath()));
+                   
+                   Instance i=DataConverter.FromInputOracleToInstance(reader);
+                   logger.info(i.toString());
+                   ByteArrayOutputStream out = new ByteArrayOutputStream();
+                   
+                   System.out.println("SIZE "+ out.toByteArray().length);
+                   System.out.println("oracle on csv "+csv.getAbsolutePath());
+                   ARFFDataSet.add(i);
+                   InstancesMap.put(i.toStringNoWeight(), i);
+                   UpdateValidationSet(reader,i);
+                   //InputOracle inp=DataConverter.FromInstancesToInputOracle(i);
+                   UpdatePredictionSet(reader,i);
+                   PrintDataOnCsv.setCsvPath(i,csv.getAbsolutePath());
+                   numFiles ++;
+                         }
+                             
+                       
+                     
+                     }
+               
+               
+               }  
+            }
+    
+         return numFiles;
+    
+    }
+    
+    
+    
+    private int ImportDataset(String Directory_path) throws FileNotFoundException, IOException, Exception{
+    
+        int numFIles=0;
+        ReadDataFromCsv reader=new ReadDataFromCsv(Directory_path);
+        
+        while(reader.ReadNextRow()){
+            Instance i=DataConverter.FromInputOracleToInstance(reader);
+            logger.info(i.toString());
+            UpdatePredictionSet(reader,i);
+            UpdateValidationSet(reader, i);
+             ARFFDataSet.add(i);
+            InstancesMap.put(i.toStringNoWeight(), i);
+            
+            numFIles++;
+        
+    
+    
+    
+        } 
+        return numFIles;
     
     }
         

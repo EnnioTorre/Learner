@@ -104,7 +104,10 @@ private static Object GetRequiredForecastParamType(ForecastParam forecastParam,D
              return ReplicationProtocol.PB;
              if (Value==2)
              return ReplicationProtocol.TO;
-         
+             else{
+                 logger.warn(forecastParam+" not valid as Parameter Type");
+                 throw new IllegalArgumentException(forecastParam.getClass()+"not valid as Parameter Type");
+             }
          }
          default:
              return Value;
@@ -122,9 +125,14 @@ private static Number GetRequiredForecastParamType(ForecastParam forecastParam,O
                                          case PB:
                                         return 1;
                                          
-                                        default :
+                                         case TWOPC :
                                          return 0;
-                                         
+                                             
+                                         default:
+                                         {
+                                            logger.warn(forecastParam+" not valid as Parameter Type");
+                                            throw new IllegalArgumentException(forecastParam.getClass()+"not valid as Parameter Type");
+                                         }
                               
                         }
                             default:
@@ -145,7 +153,10 @@ private static Object GetRequiredEvaluatedParamType(EvaluatedParam evaluatedPara
              return IsolationLevel.RC;
              if (Value==2)
              return IsolationLevel.RR;
-         
+             else{
+                 logger.warn(evaluatedParam+" not valid as Parameter Type");
+                 throw new IllegalArgumentException(evaluatedParam.getClass()+"not valid as Parameter Type");
+             }
             }
          default:
              return Value;
@@ -160,9 +171,13 @@ private static Number GetRequiredEvaluatedParamType(EvaluatedParam evaluatedPara
                       return 2;
                   case RC:
                       return 1;
-                  default :
+                  case GMU:
                       return 0;
-       
+                  default:
+                  {
+                      logger.warn(evaluatedParam+" not valid as Parameter Type");
+                      throw new IllegalArgumentException(evaluatedParam.getClass()+"not valid as Parameter Type");
+                  }
                  }
           default:
               return (Number)Value;

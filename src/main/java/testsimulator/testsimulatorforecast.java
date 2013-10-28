@@ -53,7 +53,7 @@ static String path="csvfile/new/0.csv";
           
           
           
-          Test_on_Testset test=new Test_on_Testset();
+        Test_on_Testset test=new Test_on_Testset();
     try {
         test.test("csvtest");
         
@@ -74,10 +74,10 @@ static String path="csvfile/new/0.csv";
     } catch (Exception ex) {
         java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);
     }
-         
+        
    }
    
-   
+  
     
 
 }

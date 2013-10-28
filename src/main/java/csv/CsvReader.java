@@ -4,13 +4,9 @@
  */
 package csv;
 import CsvOracles.RadargunCsvInputOracle;
-import eu.cloudtm.autonomicManager.commons.Param;
-import eu.cloudtm.autonomicManager.commons.EvaluatedParam;
 
-import eu.cloudtm.autonomicManager.commons.ReplicationProtocol;
 import eu.cloudtm.autonomicManager.oracles.InputOracle;
-import java.io.File;
-import java.io.IOException;
+
 import org.apache.log4j.Logger;
 import CsvOracles.params.CsvRgParams;
 
@@ -22,12 +18,12 @@ import CsvOracles.params.CsvRgParams;
  */
 public class CsvReader extends RadargunCsvInputOracle implements InputOracle {
     
-    static Logger logger = Logger.getLogger(CsvReader.class.getName());   
+    static Logger logger = Logger.getLogger(CsvReader.class.getName()); 
+    
 
     public CsvReader(CsvRgParams param) throws Exception {
         super(param);
-    }
-     
+    }     
 
   
    
