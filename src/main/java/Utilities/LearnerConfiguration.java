@@ -5,8 +5,10 @@
 
 package Utilities;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.StringTokenizer;
@@ -105,6 +107,23 @@ public class LearnerConfiguration {
           return myself;
      
       
+    }
+    
+    public String getCsvOutputDir(){
+       
+        String filename=defaultProps.getProperty("CsvOutputDirectory");
+       if (!filename.equals("")){
+       File f=new File(filename);
+       if(!f.exists())
+           f.mkdir();
+       filename=filename+"/";
+    }
+       return filename;
+    }
+    
+    public String getCsvInputDir(){
+       
+       return defaultProps.getProperty("CsvInputDirectory");
     }
     
     

@@ -16,6 +16,7 @@ import org.apache.log4j.Logger;
 import tasOracle.common.TasOracle;
 import morphr.MorphR;
 import eu.cloudtm.autonomicManager.simulator.SimulatorOracle;
+import java.util.logging.Level;
 import weka.core.Instance;
 
 import weka.core.Attribute;
@@ -31,19 +32,22 @@ import weka.core.converters.ConverterUtils.DataSource;
 public class DataPrinting {
   static Logger logger = Logger.getLogger(DataPrinting.class.getName()); 
     
-   static void PrintARFF() throws Exception{
-      
-     LearnerConfiguration LK=LearnerConfiguration.getInstance();
-     if(LK.isTasARFFenable())
-         PrintTasPrediction();
-     if(LK.isMorphRARFFenable())
-         PrintMorpheRPrediction();
-     if(LK.isValidationSetARFFenable())
-         PrintValidationSet();
-     if(LK.isDAGSARFFenable())
-         PrintSOPrediction();
-         
-      //logger.info(DataSets.ARFFDataSet);
+   static void PrintARFF(){
+      try {
+          LearnerConfiguration LK=LearnerConfiguration.getInstance();
+          if(LK.isTasARFFenable())
+              PrintTasPrediction();
+          if(LK.isMorphRARFFenable())
+              PrintMorpheRPrediction();
+          if(LK.isValidationSetARFFenable())
+              PrintValidationSet();
+          if(LK.isDAGSARFFenable())
+              PrintSOPrediction();
+              
+           //logger.info(DataSets.ARFFDataSet);
+      } catch (Exception ex) {
+          logger.error("Arff Files Generation failed"+ex);
+      }
    }
    
   private static void PrintValidationSet() throws Exception{
@@ -165,9 +169,9 @@ public class DataPrinting {
         log.info(PrintSet(tmp,Oracles));
      } 
      catch(Exception e){
-          logger.warn("--error in PrintCombinedPrediction "+e.getStackTrace()[0]);
-          e.printStackTrace();
-          throw new Exception(e.getCause());
+          logger.warn("--error in PrintCombinedPrediction "+e);
+          
+          throw new Exception(e);
           
           
      }

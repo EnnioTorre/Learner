@@ -117,7 +117,7 @@ private  static Logger logger = Logger.getLogger(DataConverter.class.getName());
                  }
                  catch (IllegalArgumentException ex){
                     logger.warn("--"+ex.getMessage()+"--"+parameter+" is not a valid parameter");
-                    throw new IllegalArgumentException(parameter+"is not a valid parameter");
+                    throw new IllegalArgumentException(parameter+" is not a valid parameter");
                  }
                }
                

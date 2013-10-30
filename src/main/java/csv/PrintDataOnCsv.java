@@ -16,6 +16,7 @@ import java.io.PrintWriter;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.StringTokenizer;
 import org.apache.log4j.Logger;
 import weka.core.Instance;
@@ -32,7 +33,7 @@ public class PrintDataOnCsv {
     private static String Values;
     private static boolean isInit=false;
     private static HashMap<Instance,String>csvHash=new HashMap<Instance,String>();
-   
+    private static Logger logger = Logger.getLogger(PrintDataOnCsv.class.getName());
 
      private static void PrintStringSet(PrintWriter out) throws Exception{
      
@@ -96,7 +97,7 @@ public class PrintDataOnCsv {
      
      
      
-     public static void PrintCsvFile() throws Exception{
+     public static void PrintCsvFile() {
             LearnerConfiguration LK=LearnerConfiguration.getInstance();
             PrintWriter out=null;
             FileWriter fstream=null;
@@ -104,9 +105,14 @@ public class PrintDataOnCsv {
          
          try{
            
+             String Filename=LK.getCsvOutputDir()+"/"+getAfileName();
              
-            
-              fstream = new FileWriter("CsvTrainingSet.csv",false);//TODO change to false
+            while( new File(Filename).exists())
+                  Filename=LK.getCsvOutputDir()+"/"+getAfileName();
+             
+              fstream = new FileWriter(Filename,false);//TODO change to false
+             
+              
          
               out = new PrintWriter(fstream);
               PrintStringSet(out);
@@ -115,6 +121,7 @@ public class PrintDataOnCsv {
          }
          catch(Exception e){
          
+             logger.error("impossible to print Datasets on Csv"+e);
              e.printStackTrace();
          }
          finally{
@@ -160,6 +167,8 @@ public class PrintDataOnCsv {
          }
          catch(Exception e){
          
+             logger.error("impossible to print Datasets on Csv"+e);
+             
              e.printStackTrace();
          }
          finally{
@@ -170,5 +179,20 @@ public class PrintDataOnCsv {
          }
          
      
+     }
+     
+     private static String getAfileName(){
+       char c []={'a','b','c','d','e','f','g','h','i','l','m','n','o','p','r','s','t','x','y','z',};
+       String word="CsvTrainingSet-";
+       Random generator = new Random(); 
+       int index=0;
+       for(int i=0;i<10;i++){
+           
+           index=generator.nextInt(20);
+           word=word+c[index];
+       
+       }
+       word=word+index+".csv";
+       return word;  
      }
 }

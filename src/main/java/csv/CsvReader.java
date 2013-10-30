@@ -38,7 +38,7 @@ public class CsvReader extends RadargunCsvInputOracle implements InputOracle {
                return csvParser.writeThroughput();
            default:
            {
-               logger.warn("Troughput ( " + i + ") is not present");
+               logger.error("Troughput ( " + i + ") is not present");
                throw new IllegalArgumentException("Troughput ( " + i + ") is not present");
    
            }
@@ -54,7 +54,7 @@ public class CsvReader extends RadargunCsvInputOracle implements InputOracle {
            case 1:
                return csvParser.totalResponseTimeWrXact();
            default:{
-               logger.warn("responseTime ( " + i + ") is not present");
+               logger.error("responseTime ( " + i + ") is not present");
                throw new IllegalArgumentException("responseTime ( " + i + ") is not present");
    
            }
@@ -73,7 +73,7 @@ public class CsvReader extends RadargunCsvInputOracle implements InputOracle {
            case 1:
                return 1-csvParser.writeXactCommitProbability();
            default:{
-               logger.warn("abortRate ( " + i + ") is not present");
+               logger.error("abortRate ( " + i + ") is not present");
                
                throw new IllegalArgumentException("abortRate ( " + i + ") is not present");
    

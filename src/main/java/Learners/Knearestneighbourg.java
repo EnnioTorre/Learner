@@ -66,7 +66,7 @@ public class Knearestneighbourg extends Learner implements Oracle {
         
         }
         else{
-            logger.warn("--"+"Datasets Not instanziated");
+            logger.error("--"+"Datasets Not instanziated");
             throw new InstantiationException("Datasets Not instanziated");
         }
         
@@ -117,7 +117,7 @@ public class Knearestneighbourg extends Learner implements Oracle {
            
         }
         catch( Exception ex){
-            logger.warn("--error in class "+ex.getClass()+" "+" caused by "+ex.getCause()+" at "+ex.getStackTrace()[0]+" --");
+            logger.error("forecast error  "+ex);
             throw new OracleException(ex);
         }
  

@@ -23,7 +23,7 @@ import weka.core.Instance;
 
 
 import eu.cloudtm.autonomicManager.oracles.InputOracle;
-
+import eu.cloudtm.autonomicManager.oracles.exceptions.OracleException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import morphr.MorphR;
@@ -39,6 +39,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.InvocationTargetException;
+import java.util.logging.Level;
 /**
  *
  * @author etorre
@@ -59,14 +60,16 @@ public class DataSets {
     public DataSets(String Directory_path) throws Exception{
          PropertyConfigurator.configure("conf/log4j.properties");
          int numFiles=0;
-         logger.info("Start of Datasets Creation");
+         logger.info("//******************************************");
+         logger.info("          Start of Datasets Creation        ");
+         logger.info("*******************************************//");
          
          try{
              
              
          init();
          
-         File dir=new File("dataset");
+         File dir=new File(LearnerConfiguration.getInstance().getCsvInputDir());
          
          if( dir.exists()&&dir.list().length>0) {
         
@@ -93,11 +96,14 @@ public class DataSets {
         
         catch(Exception e){
           
+            logger.error("Dataset Creation Failed "+e);
             e.printStackTrace();
         }
         
         finally{
-          logger.info("Dataset Created "+numFiles+" File Readed");
+          logger.info("//******************************************");
+          logger.info("  Dataset Created "+numFiles+" File Readed");
+          logger.info("******************************************//");
         }
             
          }
@@ -133,7 +139,7 @@ public class DataSets {
          
              }
     
-    private void UpdatePredictionSet(InputOracle i,Instance inst)throws Exception{
+    private void UpdatePredictionSet(InputOracle i,Instance inst) throws Exception{
     
     
     
@@ -149,33 +155,48 @@ public class DataSets {
                 
                     try{
                     
-                    output=entry.getKey().forecast(i);
                     
+                        output=entry.getKey().forecast(i);
                     
-                    errorflag=0;
-              
+                        
+                        
+                        for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
+                            
+                            Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(),int.class, double.class);
+            
+                            Method method2=OutputOracle.class.getDeclaredMethod(f.getName(),int.class);
+            
+                            method.invoke(dat,0, method2.invoke(output, 0));
+           
+                            method.invoke(dat,1, method2.invoke(output, 1));
+                        }
+                      
+                        break;
                     }
                    
-                    catch(Exception ex){
+                    catch(OracleException ex){
                         ex.printStackTrace();
-                        if(errorflag<1){
+                        logger.error("Prediction failed "+ex);
+                        if(errorflag<2){
                             errorflag++;
                             continue;
                         }
-                        
-                        dat.initOnOracleError();
-                        return;
+                     
+                       dat.initOnOracleError();
+                 
+                        logger.error("Error on prediction for "+entry.getKey().toString().split("@")[0]);
+                        break;
                     }
+                    
+                    catch(Exception ex){
+                         logger.error("Prediction failed"+ex);
+                         throw new Exception(ex);
+                    } 
+                    
+                    
                 }
                  
-          for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
-        
-            Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(),int.class, double.class);
-            Method method2=OutputOracle.class.getDeclaredMethod(f.getName(),int.class);
-            method.invoke(dat,0, method2.invoke(output, 0));
-            method.invoke(dat,1, method2.invoke(output, 1));
-            
-        }
+          
           
           entry.getValue().put(inst, dat);
           
@@ -184,21 +205,27 @@ public class DataSets {
               
     }
     
-    private void UpdateValidationSet(InputOracle i,Instance inst)throws Exception{
+    private void UpdateValidationSet(InputOracle i,Instance inst) throws Exception{
         
         DatasetOutputOracle dat=new DatasetOutputOracle();
+        try{
         for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
         
             Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(),int.class, double.class);
             Method method2=CsvReader.class.getDeclaredMethod(f.getName(),int.class);
             method.invoke(dat,0, method2.invoke(i, 0));
             method.invoke(dat,1, method2.invoke(i, 1));
-            
+          
         }
         ValidationSet.put(inst,dat);
         logger.info("Instance Output-> "+ValidationSet.get(inst).toString());
-        
+        }
+        catch(Exception e)
     
+        {
+            logger.error("Prediction failed"+e);
+            throw new Exception(e);
+        }
     }
     
     private void UpdatePredictionSet(ReadDataFromCsv i,Instance inst) throws  Exception {
@@ -250,7 +277,7 @@ public class DataSets {
                  CsvReader  reader=new CsvReader(new CsvRgParams(csv.getPath()));
                    
                    Instance i=DataConverter.FromInputOracleToInstance(reader);
-                   logger.info(i.toString());
+                   logger.info(i);
                    ByteArrayOutputStream out = new ByteArrayOutputStream();
                    
                    System.out.println("SIZE "+ out.toByteArray().length);
@@ -281,11 +308,17 @@ public class DataSets {
     private int ImportDataset(String Directory_path) throws FileNotFoundException, IOException, Exception{
     
         int numFIles=0;
-        ReadDataFromCsv reader=new ReadDataFromCsv(Directory_path);
+          File dir = new File(Directory_path);
+            for (File csv : dir.listFiles()) {
+               if (!csv(csv)) {
+                  continue;
+               }
+               else{
+        ReadDataFromCsv reader=new ReadDataFromCsv(csv);
         
         while(reader.ReadNextRow()){
             Instance i=DataConverter.FromInputOracleToInstance(reader);
-            logger.info(i.toString());
+            logger.info(i);
             UpdatePredictionSet(reader,i);
             UpdateValidationSet(reader, i);
              ARFFDataSet.add(i);
@@ -297,8 +330,12 @@ public class DataSets {
     
     
         } 
-        return numFIles;
+        
     
+    }
+            
+      }
+      return numFIles;
     }
         
         

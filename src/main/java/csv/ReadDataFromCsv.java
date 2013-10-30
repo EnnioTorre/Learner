@@ -39,37 +39,39 @@ public class ReadDataFromCsv implements InputOracle {
     private BufferedReader buffReader ;
     private String Header;
     
-    public ReadDataFromCsv(String Directory_path) throws FileNotFoundException, IOException{
-         
+    public ReadDataFromCsv(File file) throws FileNotFoundException, IOException{
+         try{
           tmprow=new HashMap<String,Double>();
-         File dir = new File(Directory_path);
-         if (dir.list().length<2 ){
-           reader = new FileReader(dir.listFiles()[0]);
+         //File dir = new File(Directory_path);
+         //if (dir.list().length<2 ){
+           //reader = new FileReader(dir.listFiles()[0]);
+           reader = new FileReader(file);
+           System.out.println(file.getName());
            buffReader = new BufferedReader(reader);  
            getHeader(); 
          }
-      
-         else{
-             logger.error("Directory "+Directory_path+"exsist but contains More than just a file,decide wich one to use ");
-             throw new IOException(Directory_path+" too many files "); 
-         }
-    }
-    
-    private void getHeader() throws IOException{
-        try{
-        Header=buffReader.readLine();
-        }
-        catch(NullPointerException ex){
+         
+          catch(IOException e){
         
             buffReader.close();
             reader.close();
-            ex.printStackTrace();
+            throw new IOException(e);
+            
         }
+         
+    }
+    
+    private void getHeader() throws IOException{
+        
+        Header=buffReader.readLine();
+        System.out.println(Header);
+       
+       
     } 
     
     public boolean ReadNextRow() throws IOException{
     
-        
+        try{
         String next=buffReader.readLine();
         double value;
         if(next!=null){
@@ -103,6 +105,14 @@ public class ReadDataFromCsv implements InputOracle {
             return false;
             
         }
+        }
+        catch(Exception e){
+        
+            buffReader.close();
+            reader.close();
+            throw new IOException(e);
+            
+        }
     }
 
     @Override
@@ -113,7 +123,7 @@ public class ReadDataFromCsv implements InputOracle {
             
             return ParameterClassConversion.ConvertTo(param,tmprow.get(param.toString()));
         } catch (Exception ex) {
-            logger.info("Impossible to Get Parameter "+param+ex.getCause());
+            logger.info("Impossible to Get Parameter "+param+ex);
             ex.printStackTrace();
             return null;
         }
@@ -126,7 +136,7 @@ public class ReadDataFromCsv implements InputOracle {
            System.out.println(ParameterClassConversion.ConvertTo(ep,tmprow.get(ep.toString())));
            return ParameterClassConversion.ConvertTo(ep,tmprow.get(ep.toString()));
        } catch (Exception ex) {
-            logger.info("Impossible to Get Parameter "+ep+ex.getCause());
+            logger.info("Impossible to Get Parameter "+ep+ex);
             ex.printStackTrace();
             return null;
         }
@@ -139,7 +149,7 @@ public class ReadDataFromCsv implements InputOracle {
             System.out.println(ParameterClassConversion.ConvertTo(fp,tmprow.get(fp.toString())));
          return ParameterClassConversion.ConvertTo(fp,tmprow.get(fp.toString()));
         } catch (Exception ex) {
-            logger.info("Impossible to Get Parameter "+fp+ex.getCause());
+            logger.info("Impossible to Get Parameter "+fp+ex);
             ex.printStackTrace();
             return null;
         }
@@ -150,12 +160,19 @@ public class ReadDataFromCsv implements InputOracle {
         String keyRO=Oracle;
         DatasetOutputOracle OO=new DatasetOutputOracle();
         
+        
+        try{
         for (Field f: DatasetOutputOracle.class.getDeclaredFields()){
         
             Method method=DatasetOutputOracle.class.getDeclaredMethod("set"+f.getName(),int.class, double.class);
             method.invoke(OO,0,tmprow.get(keyWO+f.getName()+"RO"));
             method.invoke(OO,1, tmprow.get(keyRO+f.getName()+"WO"));
-            
+        }
+        }
+        catch(NullPointerException e){
+        
+            logger.error("For Oracle : "+Oracle+ " OutputOracle does not exist in the csv File");
+            throw new NullPointerException();
             
         }
     

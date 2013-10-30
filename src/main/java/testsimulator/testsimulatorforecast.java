@@ -43,19 +43,26 @@ static String path="csvfile/new/0.csv";
     PropertyConfigurator.configure("conf/log4j.properties");
       
       logger.info("primo append");
+      
+      int choose=Integer.parseInt(args[0]);
+      
+      if(choose==1){
+      logger.info("DATSET CREATION SETTED UP");
     try {
         DataSets i=new DataSets("csvfile");
         //InputOracle csvI =new CsvReader(new CsvRgParams(path));
     } catch (Exception ex) {
         java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);
     }
+      }    
+        
           
-          
-          
-          
+   if(choose==2){ 
+        logger.info("TEST SETTED UP");
         Test_on_Testset test=new Test_on_Testset();
     try {
-        test.test("csvtest");
+        DataSets i=new DataSets("csvfile");
+        test.test(args[1]);
         
         
         //Knearestneighbourg kn= new Knearestneighbourg("EuclideanDistance","-D",10,"throughput");
@@ -73,6 +80,7 @@ static String path="csvfile/new/0.csv";
         java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);
     } catch (Exception ex) {
         java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }
         
    }
