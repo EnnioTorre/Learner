@@ -50,9 +50,9 @@ public class CsvReader extends RadargunCsvInputOracle implements InputOracle {
        
        switch(i){
            case 0:
-               return csvParser.totalResponseTimeROXact();
+               return csvParser.totalResponseTimeROXact()*1e-3;
            case 1:
-               return csvParser.totalResponseTimeWrXact();
+               return csvParser.totalResponseTimeWrXact()*1e-3;
            default:{
                logger.error("responseTime ( " + i + ") is not present");
                throw new IllegalArgumentException("responseTime ( " + i + ") is not present");

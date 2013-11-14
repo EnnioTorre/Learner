@@ -110,6 +110,7 @@ public class Knearestneighbourg extends Learner implements Oracle {
            SelectInstancesRP(io);
            KNN.setInstances(m_Training);
            m_TestSet=DataConverter.FromInputOracleToInstance(io);
+           logger.info("PREDICT TARGET VALUE FOR  : "+m_TestSet.toStringNoWeight());
            System.out.println(m_TestSet);
            Neighbourshood=KNN.kNearestNeighbours(m_TestSet,NumNeighbours);
            

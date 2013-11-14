@@ -46,7 +46,7 @@ public class ReadDataFromCsv implements InputOracle {
          //if (dir.list().length<2 ){
            //reader = new FileReader(dir.listFiles()[0]);
            reader = new FileReader(file);
-           System.out.println(file.getName());
+           //System.out.println(file.getName());
            buffReader = new BufferedReader(reader);  
            getHeader(); 
          }
@@ -64,7 +64,7 @@ public class ReadDataFromCsv implements InputOracle {
     private void getHeader() throws IOException{
         
         Header=buffReader.readLine();
-        System.out.println(Header);
+        //System.out.println(Header);
        
        
     } 
@@ -118,8 +118,8 @@ public class ReadDataFromCsv implements InputOracle {
     @Override
     public Object getParam(Param param) {
         try {
-            System.out.println(param.toString());
-            System.out.println(ParameterClassConversion.ConvertTo(param,tmprow.get(param.toString())));
+            //System.out.println(param.toString());
+            //System.out.println(ParameterClassConversion.ConvertTo(param,tmprow.get(param.toString())));
             
             return ParameterClassConversion.ConvertTo(param,tmprow.get(param.toString()));
         } catch (Exception ex) {
@@ -132,8 +132,8 @@ public class ReadDataFromCsv implements InputOracle {
     @Override
     public Object getEvaluatedParam(EvaluatedParam ep) {
        try{
-           System.out.println(ep.toString());
-           System.out.println(ParameterClassConversion.ConvertTo(ep,tmprow.get(ep.toString())));
+           //System.out.println(ep.toString());
+           //System.out.println(ParameterClassConversion.ConvertTo(ep,tmprow.get(ep.toString())));
            return ParameterClassConversion.ConvertTo(ep,tmprow.get(ep.toString()));
        } catch (Exception ex) {
             logger.info("Impossible to Get Parameter "+ep+ex);
@@ -145,8 +145,8 @@ public class ReadDataFromCsv implements InputOracle {
     @Override
     public Object getForecastParam(ForecastParam fp) {
         try{
-            System.out.println(fp.toString());
-            System.out.println(ParameterClassConversion.ConvertTo(fp,tmprow.get(fp.toString())));
+            //System.out.println(fp.toString());
+            //System.out.println(ParameterClassConversion.ConvertTo(fp,tmprow.get(fp.toString())));
          return ParameterClassConversion.ConvertTo(fp,tmprow.get(fp.toString()));
         } catch (Exception ex) {
             logger.info("Impossible to Get Parameter "+fp+ex);
