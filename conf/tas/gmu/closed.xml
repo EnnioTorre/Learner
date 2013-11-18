@@ -11,7 +11,7 @@
 		maxIterations="50"/>   
         <common.solver.closed.lambda.IterativeLambdaGenerator
                     minLambda="10"
-                    maxLambda="40000"
+                    maxLambda="45000"
                     stepLambda="25"/> 
         </common.solver.closed.lambda.LambdaGeneratorStack>
     </common.config.ClosedSolverConfig>
