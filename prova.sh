@@ -4,7 +4,7 @@ options=$1
 dir=$2
 fn=""
 tmpdir=".$dir.tmp"
-cp="combinedLearner-1.0-1.0-SNAPSHOT.jar:.:lib/*:dependencies/*"
+cp="combinedLearner-1.0-SNAPSHOT.jar:.:lib/*:dependencies/*"
 javaOpts="-Djava.library.path=lib/"
 rundir="runnable"
 N=0
