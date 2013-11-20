@@ -126,6 +126,11 @@ public class LearnerConfiguration {
        return defaultProps.getProperty("CsvInputDirectory");
     }
     
+    public int getknearestneighbourg(){
+    
+       return Integer.parseInt(defaultProps.getProperty("K-number"));
+    }
+    
     
     
     
