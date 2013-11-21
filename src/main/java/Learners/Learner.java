@@ -40,6 +40,7 @@ public abstract class Learner {
     protected String m_TrainingFile = null;
     protected HashMap<Oracle,Double[]> RMSE;
     protected Instances Neighbourshood;
+    protected double [] distances;
     
     
     
@@ -79,7 +80,7 @@ public abstract class Learner {
                 outputValidationSet=DataSets.ValidationSet.get(inst);
                 outputOracle=entry.getValue().get(inst);
                 
-               logger.info("Instance :"+inst +"\n"+"validationOutput= "+outputValidationSet+"\n"+"Oracle Output= "+outputOracle);
+               logger.info("Instance :"+inst +"\n"+"validationOutput= "+outputValidationSet+"\n"+"Oracle Output= "+outputOracle+"\n"+"Distance= "+distances[i]);
                 token=new StringTokenizer(Parameter);
                 while(token.hasMoreTokens()){
                     

@@ -52,7 +52,7 @@ run(){
 if [ ! -z $dir ] ;then
   
   echo "run application"
-  java ${javaOpts} -classpath ${cp} testsimulator.testsimulatorforecast 1 $dir
+  java ${javaOpts} -classpath ${cp} testsimulator.testsimulatorforecast $fn $dir
 
   else echo "-c need a dir "
 fi
@@ -93,17 +93,32 @@ case $options in
            echo "   -pt --prediction on testset        runs prediction on files in dir "
            echo "   -ptl --prediction on testset with loop 	behaves as -cl";;
 
-	-cl) 
+	-cl) if [ ! -d dataset ];then
              fn=1 
              run_with_loop ;;
-             
-	-c)  run ;;
+             else
+             echo "Wrong Choise , Training Set Already Exist !!!"
+             fi
+	-c)  if [ ! -d dataset ];then
+             fn=1
+             run ;;
+             else
+             echo "Wrong Choise , Training Set Already Exist !!!"
+             fi
 
 	-p)  packaging ;;
-	-ptl)
+        -pt) if [ -d dataset ];then
+             fn=2
+             run ;;
+             else
+             echo "Wrong Choise , Training Set Does Not Exist !!!"
+             fi
+	-ptl)if [ -d dataset ];then
              fn=2 
              run_with_loop  ;;
-             
+             else
+             echo "Wrong Choise , Training Set Does Not Exist !!!"
+             fi
 	7) echo "seven" ;;
 	8) echo "eight" ;;
 	9) echo "nine" ;;
