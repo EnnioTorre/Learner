@@ -33,7 +33,8 @@ public void test(String Directory_path) throws ClassNotFoundException, Instantia
                   oracles[NumOracles++]=(Oracle)c.newInstance();
                    System.out.println(c);
                  }
-        oracles[NumOracles]=new Knearestneighbourg("EuclideanDistance","",LearnerConfiguration.getInstance().getknearestneighbourg(),"throughput");
+        String[] Parameters={LearnerConfiguration.getInstance().getDistanceFunction(),LearnerConfiguration.getInstance().getIsNormalized(),LearnerConfiguration.getInstance().getknearestneighbourg(),"throughput",LearnerConfiguration.getInstance().getCutoff()};
+        oracles[NumOracles]=new Knearestneighbourg(Parameters);
         
         OutputOracle result;
         CsvReader Input;

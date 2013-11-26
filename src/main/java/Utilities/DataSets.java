@@ -278,10 +278,8 @@ public class DataSets {
                    
                    Instance i=DataConverter.FromInputOracleToInstance(reader);
                    logger.info(i);
-                   ByteArrayOutputStream out = new ByteArrayOutputStream();
                    
-                   System.out.println("SIZE "+ out.toByteArray().length);
-                   System.out.println("oracle on csv "+csv.getAbsolutePath());
+                   
                    ARFFDataSet.add(i);
                    InstancesMap.put(i.toStringNoWeight(), i);
                    UpdateValidationSet(reader,i);

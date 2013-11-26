@@ -41,6 +41,7 @@ public abstract class Learner {
     protected HashMap<Oracle,Double[]> RMSE;
     protected Instances Neighbourshood;
     protected double [] distances;
+    protected double cutoff;
     
     
     
@@ -66,8 +67,8 @@ public abstract class Learner {
      double errorOutputWO;
      double SEOutputRO=0D;
      double SEOutputWO=0D;
-     double AVGcontribution=0D;
-     double meanAVGcontribution=20000D;
+     //double AVGcontribution=0D;
+     //double meanAVGcontribution=20000D;
      double SUMavgComponent=0D;
      Method method;
      OutputOracle outputValidationSet;
@@ -94,9 +95,10 @@ public abstract class Learner {
                     errorOutputRO=(Double)method.invoke(outputValidationSet,0)-(Double)method.invoke(outputOracle,0);
                     errorOutputWO=(Double)method.invoke(outputValidationSet,1)-(Double)method.invoke(outputOracle,1);
                     
-                    AVGcontribution=(Math.abs(errorOutputRO)+Math.abs(errorOutputWO))/(i+1);
+                    //AVGcontribution=(Math.abs(errorOutputRO)+Math.abs(errorOutputWO))/(i+1);
                     
-                    if(AVGcontribution<(3*meanAVGcontribution)){//consider the point in accuracy computation only if its under a threshold
+                    //if(AVGcontribution<(3*meanAVGcontribution)){//consider the point in accuracy computation only if its under a threshold
+                    if(distances[i]<cutoff){//does not consider in the accuracy computation  points too distant
                     SEOutputRO=SEOutputRO+Math.pow(errorOutputRO,2);
                     logger.info( "error on "+outputname+"RO prediction for "+entry.getKey().toString().split("@")[0]+" = " +errorOutputRO );
                 
@@ -106,14 +108,14 @@ public abstract class Learner {
                     
                     //update the threshold
                     
-                    SUMavgComponent=SUMavgComponent+(Math.abs(errorOutputRO)+Math.abs(errorOutputWO));
-                    meanAVGcontribution=SUMavgComponent/Math.pow((i+1),2);
+                    //SUMavgComponent=SUMavgComponent+(Math.abs(errorOutputRO)+Math.abs(errorOutputWO));
+                    //meanAVGcontribution=SUMavgComponent/Math.pow((i+1),2);
                     
                     }
                     else{
                     logger.info(   "error on "+outputname+"WO prediction for "+entry.getKey().toString().split("@")[0]+" = " +errorOutputWO );
                     logger.info( "error on "+outputname+"RO prediction for "+entry.getKey().toString().split("@")[0]+" = " +errorOutputRO );
-                    logger.info( "point not considered during accuracy computation due to the high AVG contribution ("+AVGcontribution+"> 3* "+meanAVGcontribution+")" );
+                    logger.info( "point not considered during accuracy computation due to the high AVG contribution ("+distances[i]+"> 1* " );
                     }
                     
                 }
@@ -124,8 +126,8 @@ public abstract class Learner {
             RMSe[1]=Math.sqrt(SEOutputWO)/Neighbourshood.numInstances();
             SEOutputRO=0D;
             SEOutputWO=0D;
-            meanAVGcontribution=10000D;
-            SUMavgComponent=0;
+            //meanAVGcontribution=10000D;
+            //SUMavgComponent=0;
             logger.info("RESULT considering "+Parameter+" of  "+entry.getKey().toString().split("@")[0]+":"+"RMSERO ="+RMSe[0]+"  RMSEWO ="+RMSe[1]);
             rmse.put(entry.getKey(),RMSe);
      }

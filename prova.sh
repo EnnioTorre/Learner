@@ -95,32 +95,44 @@ case $options in
 
 	-cl) if [ ! -d dataset ];then
              fn=1 
-             run_with_loop ;;
+             run_with_loop 
              else
              echo "Wrong Choise , Training Set Already Exist !!!"
-             fi
+             fi  ;;
 	-c)  if [ ! -d dataset ];then
              fn=1
-             run ;;
+             run 
              else
              echo "Wrong Choise , Training Set Already Exist !!!"
-             fi
-
+             fi ;;
+           
 	-p)  packaging ;;
         -pt) if [ -d dataset ];then
              fn=2
-             run ;;
+             run 
              else
              echo "Wrong Choise , Training Set Does Not Exist !!!"
-             fi
+             fi ;;
 	-ptl)if [ -d dataset ];then
              fn=2 
-             run_with_loop  ;;
+             run_with_loop  
              else
              echo "Wrong Choise , Training Set Does Not Exist !!!"
-             fi
-	7) echo "seven" ;;
-	8) echo "eight" ;;
+             fi ;;
+	-cpt) echo "Dataset creation and prediction "
+	     if [ !-d dataset ];then
+             fn=2
+             run 
+             else
+             echo "Wrong Choise , Training Set Already Exist run with option -pt or -ptl !!!"
+             fi ;; 
+	-r) echo "Dataset reading"
+           if [ -d dataset ];then
+             fn=1
+             run 
+             else
+             echo "Wrong Choise , Training Set Does Not Exist !!!"
+             fi ;;
 	9) echo "nine" ;;
 	10) echo "ten" ;;
 	*) echo "prova miss options  use --help for more info" ;;

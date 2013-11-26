@@ -17,6 +17,7 @@ import org.apache.log4j.Logger;
 import weka.core.DistanceFunction;
 import weka.core.Instance;
 import weka.core.Instances;
+import weka.core.NormalizableDistance;
 import weka.core.neighboursearch.LinearNNSearch;
 
 /**
@@ -34,29 +35,32 @@ public class Knearestneighbourg extends Learner implements Oracle {
 
    
    
-    public Knearestneighbourg (String distance,String option,int Numnearest,String outputs) throws Exception{
+    public Knearestneighbourg (String[] parameters) throws Exception{
       
         
        //this.m_TrainingFile=trainingset;
        //this.m_TestSetFile=testset;
+       if(parameters.length<5||parameters.length>5)
+           throw new Exception("Bad configuration of KnearestNeighbourg ,parameters number is wrong");
+      
        String[] options=new String[1];
-       options[0] =option;
+       options[0] =parameters[1];
        Method method;
-       this.NumNeighbours=Numnearest;
-       this.ConsideredOutOracle=outputs;
+       NumNeighbours=Integer.parseInt(parameters[2]);      
+       ConsideredOutOracle=parameters[3];
+       cutoff=Double.parseDouble(parameters[4]);
        //setTraining(this.m_TrainingFile);
        //setTestSet(this.m_TestSetFile);
        KNN=new LinearNNSearch();
        
        
-       Class c = Class.forName("weka.core."+distance);
+       Class c = Class.forName("weka.core."+parameters[0]);
 	    Object distanceFunc = c.newInstance();
              method=distanceFunc.getClass().getMethod("setOptions", String[].class);
         method.invoke(distanceFunc, (Object) options);
         
         KNN.setDistanceFunction((DistanceFunction)distanceFunc);
-       
-        
+      
         
        
         if(DataSets.ARFFDataSet!=null){
@@ -112,16 +116,13 @@ public class Knearestneighbourg extends Learner implements Oracle {
            m_TestSet=DataConverter.FromInputOracleToInstance(io);
            logger.info("PREDICT TARGET VALUE FOR  : "+m_TestSet.toStringNoWeight());
            System.out.println(m_TestSet);
-           Neighbourshood=KNN.kNearestNeighbours(m_TestSet,NumNeighbours);
+           Neighbourshood=KNN.kNearestNeighbours(m_TestSet,NumNeighbours);//>k neighbours are returned if there are more than one neighbours at the kth boundary.
            distances=KNN.getDistances();
+           
            
            RMSE=RMSE(this.ConsideredOutOracle);
            
-        }
-        catch( Exception ex){
-            logger.error("forecast error  "+ex);
-            throw new OracleException(ex);
-        }
+       
  
         double actual;
         for(Map.Entry<Oracle,Double[]>entry:RMSE.entrySet()){
@@ -139,6 +140,12 @@ public class Knearestneighbourg extends Learner implements Oracle {
        logger.info("ORACLE SELECTED FOR PREDICTION : "+best.toString().split("@")[0]);
         
         return best.forecast(io);
+        
+         }
+        catch( Exception ex){
+            logger.error("forecast error  "+ex);
+            throw new OracleException(ex);
+        }
     }
     
    

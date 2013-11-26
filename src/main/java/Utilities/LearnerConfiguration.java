@@ -126,12 +126,27 @@ public class LearnerConfiguration {
        return defaultProps.getProperty("CsvInputDirectory");
     }
     
-    public int getknearestneighbourg(){
+    public String getknearestneighbourg(){
     
-       return Integer.parseInt(defaultProps.getProperty("K-number"));
+       return defaultProps.getProperty("K-number");
     }
     
+    public String getDistanceFunction(){
+    return defaultProps.getProperty("DistanceFunction");
     
+    }
+    
+    public String getCutoff(){
+    
+       return defaultProps.getProperty("CutoffValue");
+    }
+    
+    public String getIsNormalized(){
+    if (defaultProps.getProperty("Normalization").equals("true"))
+         return "";
+     return "-D";
+    
+    }
     
     
     

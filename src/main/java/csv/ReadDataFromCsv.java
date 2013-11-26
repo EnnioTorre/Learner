@@ -169,7 +169,7 @@ public class ReadDataFromCsv implements InputOracle {
             method.invoke(OO,1, tmprow.get(keyRO+f.getName()+"WO"));
         }
         }
-        catch(NullPointerException e){
+        catch(IllegalArgumentException e){
         
             logger.error("For Oracle : "+Oracle+ " OutputOracle does not exist in the csv File");
             throw new NullPointerException();

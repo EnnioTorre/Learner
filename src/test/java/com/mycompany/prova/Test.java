@@ -39,13 +39,13 @@ public class Test {
           InputOracle csvI =new CsvReader(new CsvRgParams(path));
           
           
-          Knearestneighbourg kn= new Knearestneighbourg("EuclideanDistance","-D",10,"throughput");
-          OutputOracle result=kn.forecast(csvI);
-          Instance n=kn.getNeighboughood().instance(3);
+       /* Knearestneighbourg kn= new Knearestneighbourg("EuclideanDistance","-D",10,"throughput");
+         // OutputOracle result=kn.forecast(csvI);
+         // Instance n=kn.getNeighboughood().instance(3);
           System.out.println(n);
           System.out.println(DataSets.InstancesMap.get(n.toStringNoWeight()));
           System.out.println(DataSets.ValidationSet.get(DataSets.InstancesMap.get(n.toStringNoWeight())));
           System.out.println(result.throughput(0)+"\n"+result.throughput(1));
-         
+       */  
    }
 }
