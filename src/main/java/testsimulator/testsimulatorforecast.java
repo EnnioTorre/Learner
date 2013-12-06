@@ -44,13 +44,13 @@ static String path="csvfile/new/0.csv";
       
       logger.info("primo append");
       
-      int choose=Integer.parseInt(args[0]);
-      //int choose=1;
+      //int choose=Integer.parseInt(args[0]);
+      int choose=1;
       
       if(choose==1){
       logger.info("DATSET CREATION SETTED UP");
     try {
-        DataSets i=new DataSets(args[1]);
+        DataSets i=new DataSets("csvfile");//(args[1]);
         //InputOracle csvI =new CsvReader(new CsvRgParams(path));
     } catch (Exception ex) {
         java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);

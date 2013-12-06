@@ -42,6 +42,7 @@ public abstract class Learner {
     protected Instances Neighbourshood;
     protected double [] distances;
     protected double cutoff;
+    protected double [][] SquaredErrors;
     
     
     
@@ -76,7 +77,9 @@ public abstract class Learner {
      StringTokenizer token;
      String outputname;
      
-        for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:DataSets.predictionResults.entrySet()){
+     SquaredErrors=new double[2][Neighbourshood.numInstances()];
+       
+     for(Map.Entry<Oracle,HashMap<Instance,OutputOracle>> entry:DataSets.predictionResults.entrySet()){
             for (int i=0;i<Neighbourshood.numInstances();i++){
      
                 Instance inst= DataSets.InstancesMap.get(Neighbourshood.instance(i).toStringNoWeight());
@@ -95,16 +98,23 @@ public abstract class Learner {
                     errorOutputRO=(Double)method.invoke(outputValidationSet,0)-(Double)method.invoke(outputOracle,0);
                     errorOutputWO=(Double)method.invoke(outputValidationSet,1)-(Double)method.invoke(outputOracle,1);
                     
+                 
                     //AVGcontribution=(Math.abs(errorOutputRO)+Math.abs(errorOutputWO))/(i+1);
                     
                     //if(AVGcontribution<(3*meanAVGcontribution)){//consider the point in accuracy computation only if its under a threshold
                     if(distances[i]<cutoff){//does not consider in the accuracy computation  points too distant
+                    
                     SEOutputRO=SEOutputRO+Math.pow(errorOutputRO,2);
                     logger.info( "error on "+outputname+"RO prediction for "+entry.getKey().toString().split("@")[0]+" = " +errorOutputRO );
                 
                     
                     SEOutputWO=SEOutputWO+Math.pow(errorOutputWO,2);
                     logger.info(   "error on "+outputname+"WO prediction for "+entry.getKey().toString().split("@")[0]+" = " +errorOutputWO );
+                    
+                    
+                    SquaredErrors[0][i]=SEOutputRO;
+                    SquaredErrors[1][i]=SEOutputWO;
+                    
                     
                     //update the threshold
                     
@@ -134,6 +144,26 @@ public abstract class Learner {
        return rmse;
    }
     
+    
+    public Double[]VarianceRMSE(Double[] RMSE){
+        
+    Double [] sd=new Double [2] ;
+    
+    
+    for (int i=0;i<2;i++){
+        
+        sd[i]=0D;
+    for (double error :SquaredErrors[i])
+      {
+         sd[i] = sd[i] + Math.pow(error-RMSE[i], 2);
+      }
+      sd[i]=Math.sqrt(sd[i]);
+    }
+    return sd;
+    }
+    
+    
+    
     protected Instances FilterInstances(String[] options) throws Exception{        
         
      
@@ -147,6 +177,8 @@ public abstract class Learner {
     
     return newData;
     }
+    
+    
     
     protected void SelectInstancesRP(InputOracle io) throws Exception{
         int index=DataSets.ARFFDataSet.attribute("ReplicationProtocol").index()+1;

@@ -102,9 +102,8 @@ public class LearnerConfiguration {
     }
     
     public static LearnerConfiguration getInstance(){
-        if (myself==null)
-          myself=new LearnerConfiguration();
-          return myself;
+        return (myself==null)?myself=new LearnerConfiguration():myself;
+           
      
       
     }

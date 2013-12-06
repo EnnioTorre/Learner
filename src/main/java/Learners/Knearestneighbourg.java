@@ -32,6 +32,7 @@ public class Knearestneighbourg extends Learner implements Oracle {
     protected LinearNNSearch KNN;
     protected int NumNeighbours;
     protected String ConsideredOutOracle;
+   
 
    
    
@@ -128,8 +129,8 @@ public class Knearestneighbourg extends Learner implements Oracle {
         for(Map.Entry<Oracle,Double[]>entry:RMSE.entrySet()){
             
           
+           // actual=(entry.getValue()[0]*VarianceRMSE(entry.getValue())[0]+entry.getValue()[1]*VarianceRMSE(entry.getValue())[1])/2;
             actual=(entry.getValue()[0]+entry.getValue()[1])/2;
-            
             if(actual<=AVGrmse){
                  AVGrmse=actual;
                  best=entry.getKey();

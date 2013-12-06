@@ -35,5 +35,4 @@
 @ATTRIBUTE ISOLATION_LEVEL                               NUMERIC
 @ATTRIBUTE AvgNumPutsBySuccessfulLocalTx                 NUMERIC
 @ATTRIBUTE LocalReadOnlyTxLocalServiceTime               NUMERIC
-@ATTRIBUTE AvgRemoteGetRtt                               NUMERIC
 @DATA
