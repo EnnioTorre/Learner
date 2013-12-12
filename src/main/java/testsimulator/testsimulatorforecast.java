@@ -28,6 +28,7 @@ import eu.cloudtm.autonomicManager.commons.EvaluatedParam;
 import eu.cloudtm.autonomicManager.commons.ForecastParam;
 import eu.cloudtm.autonomicManager.commons.ReplicationProtocol;
 import eu.cloudtm.autonomicManager.oracles.Oracle;
+import eu.cloudtm.autonomicManager.oracles.exceptions.OracleException;
 import java.io.File;
 import java.util.HashMap;
 import java.util.logging.Level;
@@ -44,26 +45,26 @@ static String path="csvfile/new/0.csv";
       
       logger.info("primo append");
       
-      //int choose=Integer.parseInt(args[0]);
-      int choose=1;
+      int choose=Integer.parseInt(args[0]);
+      //int choose=2;
       
       if(choose==1){
-      logger.info("DATSET CREATION SETTED UP");
+      logger.info("^^DATSET CREATION SETTED UP^^");
     try {
-        DataSets i=new DataSets("csvfile");//(args[1]);
+        DataSets i=new DataSets(args[1]);
         //InputOracle csvI =new CsvReader(new CsvRgParams(path));
     } catch (Exception ex) {
-        java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);
+        ex.printStackTrace();
     }
       }    
         
-          
-   if(choose==2){ 
-        logger.info("TEST SETTED UP");
+   
+    if(choose==2){ 
+        logger.info("^^DATASET CREATION FROM DIR AND TEST SETTED UP^^");
         Test_on_Testset test=new Test_on_Testset();
     try {
-        DataSets i=new DataSets("csvfile");
-        test.test(args[1]);
+        DataSets i=new DataSets(args[1]);
+        test.test(args[2]);
         
         
         //Knearestneighbourg kn= new Knearestneighbourg("EuclideanDistance","-D",10,"throughput");
@@ -74,20 +75,49 @@ static String path="csvfile/new/0.csv";
         //System.out.println(result.throughput(0)+result.toString());
         //System.out.println(result.throughput(0)+result.toString());
     } catch (ClassNotFoundException ex) {
-        java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);
+        ex.printStackTrace();
     } catch (InstantiationException ex) {
-        java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);
+        ex.printStackTrace();
     } catch (IllegalAccessException ex) {
-        java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);
+        ex.printStackTrace();
+    } catch (OracleException ex) {
+        ex.printStackTrace();
     } catch (Exception ex) {
-        java.util.logging.Logger.getLogger(testsimulatorforecast.class.getName()).log(Level.SEVERE, null, ex);
+        ex.printStackTrace();
+    }
+    }   
+      
+   if(choose==3){ 
+        logger.info("^^TEST SETTED UP^^");
+        Test_on_Testset test=new Test_on_Testset();
+    try {
+        DataSets i=new DataSets();
+        test.test(args[1]);
+        
+        
+    } catch (ClassNotFoundException ex) {
+        ex.printStackTrace();
+    } catch (InstantiationException ex) {
+        ex.printStackTrace();
+    } catch (IllegalAccessException ex) {
+        ex.printStackTrace();
+    } catch (OracleException ex) {
+        ex.printStackTrace();
+    } catch (Exception ex) {
+        ex.printStackTrace();
     }
     }
         
-   }
-   
-  
-    
 
+    if(choose==4){
+      logger.info("^^DATSET CREATION SETTED UP^^");
+    try {
+        DataSets i=new DataSets();
+        //InputOracle csvI =new CsvReader(new CsvRgParams(path));
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+      }  
+  }
 }
 

@@ -2,6 +2,7 @@
 
 options=$1
 dir=$2
+dir2=$3
 fn=""
 tmpdir=".$dir.tmp"
 cp="combinedLearner-1.0-SNAPSHOT.jar:.:lib/*:dependencies/*"
@@ -11,11 +12,12 @@ N=0
 
 run_with_loop(){
 N=$(ls $dir | wc -w)
+if [ ! -d $tmpdir ];then
+rm -r $tmpdir
+fi
 mkdir $tmpdir
 echo "$N folders in $dir"
-if [ ! -z $dir ] ;then
-   
-   
+  
    for i in ${dir}/*; do
 
    if [ "$(ls -A ${dir})" ]; then
@@ -30,32 +32,14 @@ if [ ! -z $dir ] ;then
   echo "$N folders to read left"
   done
   rm -r $tmpdir
-  else echo "-cl need a dir "
- fi
 
 }
 
-
-run_with_loop_2(){
-
-if [ ! -z $dir ] ;then
-  for i in ${dir}/*; do
-  echo "run application"
-  java ${javaOpts} -classpath ${cp} testsimulator.testsimulatorforecast 2 $tmpdir
-  done
-  else echo "-cl need a dir "
- fi
-
-}
 
 run(){
-if [ ! -z $dir ] ;then
-  
+ 
   echo "run application"
-  java ${javaOpts} -classpath ${cp} testsimulator.testsimulatorforecast $fn $dir
-
-  else echo "-c need a dir "
-fi
+  java ${javaOpts} -classpath ${cp} testsimulator.testsimulatorforecast $fn $dir $dir2
 
 }
 
@@ -75,31 +59,47 @@ packaging(){
 
 control_on_dir(){
 
- if [ ! -z $dir ] ;then
-  run_with_loop
-  else echo "-c need a dir $dir $2"
+ if [ -z $dir ] ;then
+  echo "$options need a dir $dir $2"
+  exit
  fi
 }
 
 
+control_on_2dir(){
+ if [ -z $dir -o -z $dir2] ;then
+   echo "$options need a trainingset dir and test set dir"
+   exit
+ fi
+}
+ 
+
 
 
 case $options in
-	--help) echo "Usage prova [options] [dir] " 
-           echo "used to run application"
-	   echo "   -c --create datasets	creates dataset from folders in dir if dataset not already present"
-           echo "   -cl --create datasets with loop	creates dataset from folders in dir choosing one at time if dataset not already present " 
-           echo "   -p --packaging		maven packaging"
-           echo "   -pt --prediction on testset        runs prediction on files in dir "
-           echo "   -ptl --prediction on testset with loop 	behaves as -cl";;
+	--help) echo "Usage prova [options] [dir] [dir2]" 
+           echo "used to run application
+             
+	     -c   [dir]					--create datasets
+							    creates dataset 								    from folders in  								    dir if dataset 								    does not already 								    present 	        
+             -cl  [dir]					--create datasets with loop	
+							    creates dataset 							  	    from folders in 								    dir choosing one 								    at time if 	                                                           dataset does 								    not already 							    present  
+             -p						--packaging		        maven packaging
+             -pt  [dir]=testdir				--prediction on testset         
+							    runs prediction 								    on files in dir 
+             -ptl [dir]=testdir				--prediction on testset with loop 							  	    behaves as -cl
+             -cpt [dir]=trainingdir [dir2]=test		--datast creation and  test prediction  						            creates datasets 								    form dir and runs        								    prediction on 							            files in dir2 
+             ";;
 
 	-cl) if [ ! -d dataset ];then
+             control_on_dir
              fn=1 
              run_with_loop 
              else
              echo "Wrong Choise , Training Set Already Exist !!!"
              fi  ;;
 	-c)  if [ ! -d dataset ];then
+             control_on_dir
              fn=1
              run 
              else
@@ -108,27 +108,29 @@ case $options in
            
 	-p)  packaging ;;
         -pt) if [ -d dataset ];then
-             fn=2
+             control_on_dir
+             fn=3
              run 
              else
              echo "Wrong Choise , Training Set Does Not Exist !!!"
              fi ;;
 	-ptl)if [ -d dataset ];then
-             fn=2 
+             control_on_dir
+             fn=3 
              run_with_loop  
              else
              echo "Wrong Choise , Training Set Does Not Exist !!!"
              fi ;;
 	-cpt) echo "Dataset creation and prediction "
-	     if [ !-d dataset ];then
+             control_on_2dir
+	     if [ -d dataset ];then
+		echo "training set dir already exist,it will be updated (remove dataset dir or chamge learner configuration to avoid this) !!!"
+	     fi
              fn=2
-             run 
-             else
-             echo "Wrong Choise , Training Set Already Exist run with option -pt or -ptl !!!"
-             fi ;; 
+             run ;; 
 	-r) echo "Dataset reading"
            if [ -d dataset ];then
-             fn=1
+             fn=4
              run 
              else
              echo "Wrong Choise , Training Set Does Not Exist !!!"

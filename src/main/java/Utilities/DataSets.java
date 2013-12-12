@@ -55,9 +55,7 @@ public class DataSets {
     
     private int numberOfFeatures;
     
-    
-    
-    public DataSets(String Directory_path) throws Exception{
+    public DataSets() throws Exception{
          PropertyConfigurator.configure("conf/log4j.properties");
          int numFiles=0;
          logger.info("//******************************************");
@@ -74,14 +72,13 @@ public class DataSets {
          if( dir.exists()&&dir.list().length>0) {
         
              logger.info("Datasets Creation from Csv File" );
-                 numFiles=ImportDataset("dataset");
+                 numFiles=ImportDataset(dir.getName());
              }
          
          else{
              
-                logger.info("Datasets Creation from Queries to Oracles" );
-                 numFiles=CreateDataset(Directory_path);
-                 PrintDataOnCsv.PrintCsvFile();
+                logger.error("Dataset does not exist" );
+                
              }
          
         
@@ -90,6 +87,46 @@ public class DataSets {
           DataPrinting.PrintARFF();
           
           DataPrinting.PrintCombinedPrediction();
+        }
+    
+       
+        
+        catch(Exception e){
+          
+            logger.error("Dataset Creation Failed "+e);
+            e.printStackTrace();
+        }
+        
+        finally{
+          logger.info("//******************************************");
+          logger.info("  Dataset Created "+numFiles+" File Readed");
+          logger.info("******************************************//");
+        }
+            
+         }
+         
+    
+    public DataSets(String Directory_path) throws Exception{
+         PropertyConfigurator.configure("conf/log4j.properties");
+         int numFiles=0;
+         logger.info("//******************************************");
+         logger.info("          Start of Datasets Creation        ");
+         logger.info("*******************************************//");
+         
+         try{
+             
+             
+            init();
+            logger.info("Datasets Creation from Queries to Oracles" );
+            numFiles=CreateDataset(Directory_path);
+            PrintDataOnCsv.PrintCsvFile();
+         
+        
+       
+          //only for data Analisis
+            DataPrinting.PrintARFF();
+          
+            DataPrinting.PrintCombinedPrediction();
         }
     
        
